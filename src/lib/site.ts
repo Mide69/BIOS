@@ -3,13 +3,13 @@ export const site = {
   fullName: "Black In Open Source",
   description:
     "BIOS (Black In Open Source) is a global community connecting, supporting, and amplifying Black developers, engineers, architects, contributors, maintainers, and technology leaders in open source.",
-  url: "https://bios-community.org", // TODO: replace with your real domain once live
+  url: "https://blackinopensource.org",
   foundedDate: "2024-01-15",
   founder: "Olamide Kosile",
   linkedinGroup: "https://www.linkedin.com/groups/25140003/",
   facebook: "https://www.facebook.com/groups/1027019636324994/",
   github: "https://github.com/Mide69/BIOS",
-  email: "hello@bios-community.org", // TODO: replace with your real contact email
+  email: "hello@blackinopensource.org", // TODO: activate this mailbox (see free business email options we discussed)
 };
 
 export const navLinks = [
