@@ -1,0 +1,69 @@
+[
+  {
+    "slug": "welcome-to-bios",
+    "title": "Welcome to BIOS: Why We're Building This Community",
+    "excerpt": "Open source has transformed the technology industry, but representation, visibility, mentorship, and opportunity for Black professionals still need to grow. Here's why BIOS exists.",
+    "category": "Announcement",
+    "date": "2024-01-15",
+    "author": "BIOS Founding Team",
+    "readTime": "3 min read",
+    "accent": "gold",
+    "content": [
+      "Open source has transformed the technology industry, but representation, visibility, mentorship, and opportunities for Black professionals in the ecosystem still need to grow.",
+      "That's why we launched BIOS (Black In Open Source), a community dedicated to connecting, supporting, and amplifying Black developers, engineers, architects, contributors, maintainers, students, and technology leaders who are passionate about open source.",
+      "Our goal is simple: share knowledge and opportunities, build meaningful professional networks, support learning and mentorship, increase Black representation in open source communities, and celebrate contributions and achievements.",
+      "Whether you're contributing to your first GitHub repository, maintaining projects used by thousands, speaking at conferences, or simply interested in open source, BIOS is a place for you.",
+      "This is more than a LinkedIn group. It's a community where we can learn from one another, collaborate on projects, create opportunities, and help the next generation of Black technologists thrive.",
+      "Let's build, contribute, and grow together."
+    ]
+  },
+  {
+    "slug": "five-ways-to-make-your-first-contribution",
+    "title": "5 Ways to Make Your First Open Source Contribution",
+    "excerpt": "Not sure where to start contributing? Here are five approachable entry points the BIOS community recommends for first-time contributors.",
+    "category": "Guide",
+    "date": "2024-07-02",
+    "author": "BIOS Founding Team",
+    "readTime": "4 min read",
+    "accent": "white",
+    "content": [
+      "Making your first open source contribution can feel intimidating. Here are five low-pressure ways to get started.",
+      "1. Fix documentation. Typos, unclear setup instructions, and missing examples are real contributions, and a great way to learn a project's workflow.",
+      "2. Look for 'good first issue' labels. Many popular repositories tag beginner-friendly issues specifically to welcome new contributors.",
+      "3. Triage issues. Reproducing bugs, adding reproduction steps, or confirming an issue still exists is genuinely useful work maintainers value.",
+      "4. Improve test coverage. Adding a missing test case is low-risk and teaches you how a codebase is structured.",
+      "5. Join a community sprint. Pairing with someone else lowers the barrier to that first pull request. Reach out in the BIOS LinkedIn group to find a contribution partner."
+    ]
+  },
+  {
+    "slug": "announcing-mentorship-circles",
+    "title": "Announcing Our Mentorship Circles Pilot",
+    "excerpt": "We're piloting small-group mentorship circles to help members land their first merged PR, grow into maintainership, and advance their careers.",
+    "category": "Program Update",
+    "date": "2025-02-19",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "content": [
+      "One of the pillars BIOS was built on is mentorship, and today we're opening sign-ups for our first Mentorship Circles pilot.",
+      "Each circle pairs a small group of mentees with an experienced mentor for structured, focused support over several weeks.",
+      "We're looking for both mentors and mentees. If you have experience contributing to or maintaining open source projects and want to give back, or if you're looking for guidance on your open source journey, we want to hear from you.",
+      "Head to the Join page to express interest and we'll follow up with details on matching and scheduling."
+    ]
+  },
+  {
+    "slug": "community-spotlight-call-for-nominations",
+    "title": "Community Spotlight: Call for Nominations",
+    "excerpt": "Know someone doing great work in open source? Nominate them for our upcoming Community Spotlight series.",
+    "category": "Community",
+    "date": "2025-09-30",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "content": [
+      "Part of celebrating our community means making sure great work doesn't go unnoticed.",
+      "We're launching a recurring Community Spotlight series to highlight members who are shipping releases, maintaining widely-used projects, speaking at conferences, mentoring others, or simply showing up consistently for the community.",
+      "Nominations are open, including self-nominations. Reach out through our LinkedIn group with a short note about who you'd like to nominate and why."
+    ]
+  }
+]
