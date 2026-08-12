@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { Pillars } from "@/components/Pillars";
@@ -70,6 +71,45 @@ export default function AboutPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-b border-border-soft bg-background py-20">
+        <div className="container-page">
+          <span className="text-xs font-semibold uppercase tracking-widest text-gold">
+            Leadership
+          </span>
+          <h2 className="mt-4 font-display text-2xl font-bold text-foreground sm:text-3xl">
+            Who&apos;s behind BIOS
+          </h2>
+          <div className="mt-8 flex flex-col items-start gap-6 rounded-2xl border border-border-soft bg-surface-raised p-8 sm:flex-row sm:items-center">
+            <div className="relative h-28 w-28 shrink-0 overflow-hidden rounded-full ring-2 ring-gold/40">
+              <Image
+                src="/team/olamide-kosile.jpg"
+                alt={site.founder}
+                fill
+                sizes="112px"
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="font-display text-lg font-semibold text-foreground">
+                {site.founder}
+              </h3>
+              <p className="mt-1 text-sm font-semibold uppercase tracking-wider text-gold">
+                Founder &amp; Community Lead
+              </p>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted">
+                Olamide is a Senior AWS Cloud Engineer and cloud security
+                leader with 8+ years of experience across government and
+                enterprise environments. He&apos;s the founder of Tek Tribe,
+                where he runs cloud engineering, cybersecurity, and AI
+                mentorship programmes, and holds multiple AWS certifications
+                including Solutions Architect Professional. He brings that
+                same hands-on, community-first approach to leading BIOS.
+              </p>
+            </div>
           </div>
         </div>
       </section>
