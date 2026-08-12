@@ -28,6 +28,10 @@ export function Hero() {
             Open Source
           </h1>
 
+          <p className="mt-4 font-display text-sm font-bold uppercase tracking-[0.25em] text-gold">
+            Building. Contributing. Leading.
+          </p>
+
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
             BIOS connects, supports, and amplifies Black developers,
             engineers, architects, contributors, maintainers, students, and

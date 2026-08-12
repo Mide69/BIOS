@@ -1,12 +1,13 @@
 import { pillars } from "@/data/pillars";
-import { BookIcon, NetworkIcon, CompassIcon, GlobeIcon, TrophyIcon } from "./Icons";
+import { BookIcon, CodeIcon, NetworkIcon, CompassIcon, RocketIcon, StarIcon } from "./Icons";
 
 const iconMap = {
   book: BookIcon,
+  code: CodeIcon,
   network: NetworkIcon,
   compass: CompassIcon,
-  globe: GlobeIcon,
-  trophy: TrophyIcon,
+  rocket: RocketIcon,
+  star: StarIcon,
 };
 
 export function Pillars() {
@@ -18,11 +19,12 @@ export function Pillars() {
             What we stand for
           </span>
           <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Five pillars driving everything we build
+            Six pillars driving everything we build
           </h2>
           <p className="mt-4 text-base leading-relaxed text-muted">
-            BIOS exists to make open source a place where Black technologists
-            are connected, supported, seen, and celebrated.
+            We don&apos;t just want more Black people using open source. We
+            want more Black people building it, contributing to it,
+            maintaining it, and leading it.
           </p>
         </div>
 

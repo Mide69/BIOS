@@ -2,7 +2,8 @@ export const site = {
   name: "BIOS",
   fullName: "Black In Open Source",
   description:
-    "BIOS (Black In Open Source) is a global community connecting, supporting, and amplifying Black developers, engineers, architects, contributors, maintainers, and technology leaders in open source.",
+    "BIOS (Black In Open Source) is a community for Black developers, engineers, designers, DevOps professionals, cloud practitioners, technical writers, maintainers, and technology enthusiasts building, contributing, and leading in the open-source ecosystem.",
+  tagline: "Building. Contributing. Leading.",
   url: "https://blackinopensource.org",
   foundedDate: "2024-01-15",
   founder: "Olamide Kosile",

@@ -43,10 +43,15 @@ export default function AboutPage() {
               <p>
                 Open source has transformed the technology industry, but
                 representation, visibility, mentorship, and opportunities for
-                Black professionals in the ecosystem still need to grow.
+                Black professionals in the ecosystem still need to grow. Our
+                goal is simple: create greater visibility, access,
+                collaboration, and opportunity for Black people in open
+                source.
               </p>
               <p>
-                This is more than a networking group. It&apos;s a community
+                BIOS is not about creating a separate technology ecosystem.
+                It&apos;s about ensuring Black people have a stronger voice
+                and presence within the ecosystem that already exists, one
                 where we learn from one another, collaborate on projects,
                 create opportunities, and help the next generation of Black
                 technologists thrive.

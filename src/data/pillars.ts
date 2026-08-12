@@ -1,32 +1,38 @@
 export const pillars = [
   {
     icon: "book" as const,
-    title: "Share Knowledge & Opportunities",
+    title: "Learn",
     description:
-      "Job leads, contribution opportunities, and technical know-how flow freely between members at every career stage.",
+      "Develop the technical knowledge and practical skills needed to participate confidently in open source.",
+  },
+  {
+    icon: "code" as const,
+    title: "Contribute",
+    description:
+      "Find projects and make meaningful contributions, whether you're a beginner or an experienced professional.",
   },
   {
     icon: "network" as const,
-    title: "Build Meaningful Networks",
+    title: "Connect",
     description:
-      "Connect with Black engineers, architects, maintainers, and leaders shaping open source across the world.",
+      "Build relationships between developers, maintainers, companies, communities, and technology professionals.",
   },
   {
     icon: "compass" as const,
-    title: "Support Learning & Mentorship",
+    title: "Mentor",
     description:
-      "Pair with mentors and mentees to grow contribution skills, navigate maintainership, and level up careers.",
+      "Pair experienced contributors with people taking their first steps into open source.",
   },
   {
-    icon: "globe" as const,
-    title: "Increase Representation",
+    icon: "rocket" as const,
+    title: "Build",
     description:
-      "Grow the visibility of Black contributors and maintainers across major open source communities and projects.",
+      "Collaborate on real projects together, rather than simply consuming tutorials alone.",
   },
   {
-    icon: "trophy" as const,
-    title: "Celebrate Contributions",
+    icon: "star" as const,
+    title: "Lead",
     description:
-      "Spotlight the wins, merges, releases, and milestones of our community, because the work deserves recognition.",
+      "Progress from participant to maintainer, project leader, community leader, and technology advocate.",
   },
 ];
