@@ -11,6 +11,7 @@ export const site = {
   facebook: "https://www.facebook.com/groups/1027019636324994/",
   github: "https://github.com/Mide69/BIOS",
   email: "hello@blackinopensource.org", // TODO: activate this mailbox (see free business email options we discussed)
+  googleAnalyticsId: "G-3STXQE21D5",
 };
 
 export const navLinks = [
