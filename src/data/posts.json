@@ -65,5 +65,122 @@
       "We're launching a recurring Community Spotlight series to highlight members who are shipping releases, maintaining widely-used projects, speaking at conferences, mentoring others, or simply showing up consistently for the community.",
       "Nominations are open, including self-nominations. Reach out through our LinkedIn group with a short note about who you'd like to nominate and why."
     ]
+  },
+  {
+    "slug": "community-project-cloud-to-iac",
+    "title": "Community Project Spotlight: cloud-to-Iac",
+    "excerpt": "A CLI tool built by our founder that scans a live AWS account and generates ready-to-use Terraform or CloudFormation code from your existing infrastructure.",
+    "category": "Community Project",
+    "date": "2026-08-01",
+    "author": "BIOS Founding Team",
+    "readTime": "3 min read",
+    "accent": "gold",
+    "content": [
+      "cloud-to-Iac is an open source tool built by BIOS founder Olamide Kosile that connects to a live AWS account, discovers the infrastructure already running there, and generates infrastructure-as-code from it, in either Terraform HCL or CloudFormation YAML.",
+      "It scans across 41 resource types spanning networking, compute, storage, databases, messaging, security, and DevOps services, so teams that inherited untracked or manually built AWS environments can get them into code without starting from scratch.",
+      "Notable features include support for multiple AWS credential methods (including cross-account role assumption), optional AI-assisted cleanup of the generated code, and snapshot-based regeneration so you don't need to re-scan AWS every time you want to output code again.",
+      "It runs via Docker, and the typical workflow is: scan your account, review the generated code, and then import the resources into Terraform state before applying.",
+      "This is exactly the kind of real-world, in-production open source contribution BIOS wants to spotlight, and we'd love to see community members try it out, file issues, or contribute.",
+      "Check it out and contribute: https://github.com/Mide69/cloud-to-Iac"
+    ]
+  },
+  {
+    "slug": "community-project-aws-cost-cli",
+    "title": "Community Project Spotlight: aws-cost-cli",
+    "excerpt": "A command-line tool built by our founder for analyzing AWS spending, with forecasting, anomaly detection, budget tracking, and Slack notifications.",
+    "category": "Community Project",
+    "date": "2026-08-01",
+    "author": "BIOS Founding Team",
+    "readTime": "3 min read",
+    "accent": "white",
+    "content": [
+      "aws-cost-cli is an open source command-line tool built by BIOS founder Olamide Kosile for analyzing AWS spending across services, regions, accounts, and tags, without needing to open the AWS Console.",
+      "It breaks down cost by service, region, linked account, or resource tag, supports side-by-side period comparisons, and can forecast monthly spend with confidence ranges based on historical usage.",
+      "Other features include anomaly detection for unusual spending spikes, local budget tracking with progress reporting, Slack notifications for cost reports, and a live watch mode for real-time monitoring, all output as clean terminal tables, JSON, or CSV.",
+      "It's available via PyPI, GitHub, or Docker (no Python required for the Docker route), is MIT licensed, and only needs read-only Cost Explorer IAM permissions to run.",
+      "It's a great example of the practical, cloud-focused tooling our community builds, and a genuinely useful contribution opportunity if you work with AWS.",
+      "Check it out and contribute: https://github.com/Mide69/aws-cost-cli"
+    ]
+  },
+  {
+    "slug": "open-source-spotlight-linux",
+    "title": "Open Source Spotlight: Linux",
+    "excerpt": "The kernel that quietly runs most of the internet, nearly every cloud server, and the majority of the world's supercomputers, started as one student's side project.",
+    "category": "Open Source Spotlight",
+    "date": "2026-07-05",
+    "author": "BIOS Founding Team",
+    "readTime": "3 min read",
+    "accent": "gold",
+    "content": [
+      "In 1991, a Finnish university student named Linus Torvalds released the first version of a free operating system kernel as a hobby project. Today, Linux powers the majority of public cloud infrastructure, virtually all of the world's top supercomputers, and the Android devices in most people's pockets.",
+      "Linux isn't one company's product, it's developed by thousands of contributors from companies like Red Hat, Google, IBM, and Intel, alongside independent developers, all collaborating in the open under the Linux Foundation.",
+      "For anyone in cloud or DevOps, Linux is foundational: every EC2 instance, Kubernetes node, and Docker container you've ever touched almost certainly runs on it.",
+      "Ways to get involved don't require kernel expertise: distro projects like Fedora and Debian, documentation efforts, and tooling built around Linux (systemd, package managers, shells) all welcome contributors at every level.",
+      "If you use Linux daily but have never thought of it as something you could contribute to, that's worth reconsidering."
+    ]
+  },
+  {
+    "slug": "open-source-spotlight-git",
+    "title": "Open Source Spotlight: Git",
+    "excerpt": "Every pull request, branch, and commit you've ever made runs on a tool Linus Torvalds built in about two weeks to solve his own problem.",
+    "category": "Open Source Spotlight",
+    "date": "2026-06-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "content": [
+      "Git was created by Linus Torvalds in 2005, the same person behind Linux, after a licensing dispute forced the Linux kernel project to stop using its previous version control tool. He built Git to be fast, distributed, and resilient, and it's now the default way nearly all software, open source or not, is versioned.",
+      "What makes Git distributed (as opposed to older centralized tools) is that every clone contains the full history of the project, not just a pointer to a central server. That's part of why platforms like GitHub, GitLab, and Bitbucket could exist at all.",
+      "If you're a BIOS member making your first pull request, you're using Git whether you think about it or not, branch, commit, push, PR is a Git workflow.",
+      "Git itself is open source too, and its mailing-list-based contribution process is a genuinely interesting (if old-school) way to see how a foundational tool is still actively maintained by volunteers and maintainers worldwide."
+    ]
+  },
+  {
+    "slug": "open-source-spotlight-react",
+    "title": "Open Source Spotlight: React",
+    "excerpt": "Built inside Facebook to fix their own newsfeed problems, then open sourced and quietly became the way most of the web builds interfaces.",
+    "category": "Open Source Spotlight",
+    "date": "2026-05-14",
+    "author": "BIOS Founding Team",
+    "readTime": "3 min read",
+    "accent": "gold",
+    "content": [
+      "React was built inside Facebook (now Meta) to solve internal problems with keeping their newsfeed UI fast and consistent as it grew more complex. It was open sourced in 2013, and its component-based, declarative approach to building UIs went on to reshape how most of the web is built.",
+      "React itself is maintained by Meta alongside a large open source community, and the ecosystem around it, Next.js (which this very BIOS website is built with), Remix, and countless component libraries, is almost entirely community-driven.",
+      "For BIOS members working in frontend or full-stack roles, React is one of the most in-demand skills in the industry, and one of the most approachable large-scale open source projects to start contributing to, from the core library to its documentation to the wider ecosystem of tools built on top of it.",
+      "Good first contributions don't have to touch React's core, contributing to a popular component library, writing tutorials, or fixing documentation in the React ecosystem all count as real open source experience."
+    ]
+  },
+  {
+    "slug": "open-source-spotlight-kubernetes",
+    "title": "Open Source Spotlight: Kubernetes",
+    "excerpt": "Google open sourced an internal tool for running containers at scale in 2014. It's now the industry-standard way to orchestrate cloud infrastructure.",
+    "category": "Open Source Spotlight",
+    "date": "2026-04-20",
+    "author": "BIOS Founding Team",
+    "readTime": "3 min read",
+    "accent": "white",
+    "content": [
+      "Kubernetes originated at Google, drawing on lessons from their internal cluster management systems, and was open sourced in 2014. It was later donated to the Cloud Native Computing Foundation (CNCF), which now governs it alongside a huge ecosystem of related projects.",
+      "Its job is to automate deploying, scaling, and managing containerized applications, deciding where containers run, restarting them when they fail, and scaling them up or down based on demand, across a cluster of machines.",
+      "For BIOS members in cloud, DevOps, or platform engineering roles, Kubernetes is close to unavoidable at this point, most large-scale cloud-native systems run on it or something built on top of it.",
+      "The CNCF ecosystem around Kubernetes (Helm, Prometheus, Envoy, and dozens of other projects) offers a huge surface area for contribution beyond the core project itself, documentation, tooling, and smaller CNCF projects are often more approachable starting points than the Kubernetes core codebase."
+    ]
+  },
+  {
+    "slug": "open-source-spotlight-nodejs",
+    "title": "Open Source Spotlight: Node.js",
+    "excerpt": "Ryan Dahl took JavaScript out of the browser in 2009. It's now one of the most widely used runtimes for building backend systems.",
+    "category": "Open Source Spotlight",
+    "date": "2026-03-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "content": [
+      "Node.js was created by Ryan Dahl in 2009, built on Chrome's V8 JavaScript engine, to let developers run JavaScript outside the browser, on servers. It's now maintained by the OpenJS Foundation and used by companies of every size to build APIs, backend services, and command-line tools like the ones in the community project spotlights we've featured.",
+      "Its non-blocking, event-driven design made it especially good at handling many simultaneous connections efficiently, which is part of why it took off for building web servers and real-time applications.",
+      "For BIOS members, Node.js is often the first backend runtime people learn, especially if you're already comfortable with JavaScript from frontend work, and its massive npm package ecosystem means there's almost always an existing project you can contribute to in an area you care about.",
+      "Contributing doesn't have to mean touching Node.js core, popular npm packages, many maintained by small teams or individuals, are often much more open to first-time contributors and a great place to start."
+    ]
   }
 ]
