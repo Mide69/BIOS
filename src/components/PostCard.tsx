@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Post } from "@/lib/posts";
 import { formatDate } from "@/lib/posts";
@@ -10,15 +11,27 @@ export function PostCard({ post }: { post: Post }) {
       href={`/news/${post.slug}`}
       className="group flex flex-col overflow-hidden rounded-2xl border border-border-soft bg-surface-raised transition hover:border-gold/50"
     >
-      <div
-        className={`flex h-40 items-center justify-center ${
-          post.accent === "gold"
-            ? "bg-gradient-to-br from-gold-dark/40 via-surface-raised to-surface-raised"
-            : "bg-gradient-to-br from-foreground/10 via-surface-raised to-surface-raised"
-        }`}
-      >
-        <LogoMark className="h-14 w-14 opacity-90" />
-      </div>
+      {post.image ? (
+        <div className="relative h-40 w-full bg-white">
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
+      ) : (
+        <div
+          className={`flex h-40 items-center justify-center ${
+            post.accent === "gold"
+              ? "bg-gradient-to-br from-gold-dark/40 via-surface-raised to-surface-raised"
+              : "bg-gradient-to-br from-foreground/10 via-surface-raised to-surface-raised"
+          }`}
+        >
+          <LogoMark className="h-14 w-14 opacity-90" />
+        </div>
+      )}
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-center gap-3 text-xs font-semibold uppercase tracking-wider text-gold">
           <span>{post.category}</span>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getAllPosts, getPostBySlug, formatDate } from "@/lib/posts";
@@ -26,6 +27,7 @@ export async function generateMetadata({
       description: post.excerpt,
       type: "article",
       publishedTime: post.date,
+      images: post.image ? [post.image] : undefined,
     },
   };
 }
@@ -67,6 +69,23 @@ export default async function PostPage({
           <p className="mt-5 text-sm text-muted">By {post.author}</p>
         </div>
       </div>
+
+      {post.image && (
+        <div className="border-b border-border-soft bg-white">
+          <div className="container-page">
+            <div className="relative mx-auto aspect-[1200/630] max-w-3xl">
+              <Image
+                src={post.image}
+                alt={post.title}
+                fill
+                sizes="(min-width: 1024px) 48rem, 100vw"
+                className="object-contain"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="container-page grid gap-12 py-16 lg:grid-cols-[1fr_18rem]">
         <div className="max-w-2xl space-y-6 text-base leading-relaxed text-foreground/90">

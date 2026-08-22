@@ -5,7 +5,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { JoinPopup } from "@/components/JoinPopup";
-import { site } from "@/lib/site";
+import { site, navLinks } from "@/lib/site";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -72,6 +72,20 @@ const organizationJsonLd = {
   sameAs: [site.linkedinGroup, site.facebook, site.github],
 };
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: `${site.name} - ${site.fullName}`,
+  url: site.url,
+};
+
+const siteNavigationJsonLd = navLinks.map((link) => ({
+  "@context": "https://schema.org",
+  "@type": "SiteNavigationElement",
+  name: link.label,
+  url: `${site.url}${link.href === "/" ? "" : link.href}`,
+}));
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -82,6 +96,14 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationJsonLd) }}
         />
         <Navbar />
         <main className="flex-1">{children}</main>

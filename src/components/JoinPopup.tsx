@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { LogoMark } from "./Logo";
+import { NewsletterForm } from "./NewsletterForm";
 import { CloseIcon, ArrowUpRightIcon } from "./Icons";
 import { site } from "@/lib/site";
 
@@ -77,6 +78,21 @@ export function JoinPopup() {
           Join the LinkedIn Group
           <ArrowUpRightIcon className="h-4 w-4" />
         </a>
+
+        <div className="mt-6 flex items-center gap-3">
+          <span className="h-px flex-1 bg-border-soft" />
+          <span className="text-xs font-medium uppercase tracking-wider text-muted">
+            Or subscribe
+          </span>
+          <span className="h-px flex-1 bg-border-soft" />
+        </div>
+
+        <p className="mt-4 text-xs leading-relaxed text-muted">
+          Get program launches and community news in your inbox instead.
+        </p>
+        <div className="mt-3">
+          <NewsletterForm variant="stacked" />
+        </div>
 
         <button
           type="button"

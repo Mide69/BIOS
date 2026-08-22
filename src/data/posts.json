@@ -1,5 +1,78 @@
 [
   {
+    "slug": "rust-1-98-0-released",
+    "title": "Rust 1.98.0 Released",
+    "excerpt": "The Rust team shipped 1.98.0 with new 'algebraic' floating-point methods that let the compiler apply real-number optimizations to f32/f64 math, plus a stronger stability guarantee for ManuallyDrop.",
+    "category": "Open Source News",
+    "date": "2026-08-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "The Rust team announced the release of Rust 1.98.0 on August 20, 2026.",
+      "The headline addition is a set of 'algebraic' methods on the f32 and f64 floating-point types for addition, subtraction, multiplication, division, and remainder. These let developers opt into optimizations based on the algebraic properties of real numbers (like reordering operations for speed) in the specific cases where that tradeoff against strict IEEE 754 floating-point behavior is acceptable.",
+      "The release also updates the documentation for ManuallyDrop with a stable guarantee about certain behavior continuing to be defined (not undefined behavior) going forward, useful for anyone writing unsafe, low-level Rust code that leans on it.",
+      "Rust ships a new stable release roughly every six weeks, and each one is free, open source, and built in the open on GitHub, small documentation fixes and testing on release candidates are genuinely useful first contributions if you want to get involved.",
+      "Full release notes: https://blog.rust-lang.org/2026/08/20/Rust-1.98.0/"
+    ]
+  },
+  {
+    "slug": "postgresql-18-6-released",
+    "title": "PostgreSQL 18.6 Released",
+    "excerpt": "A security and bug-fix release patching 28 CVEs and over 110 bugs, including index corruption edge cases and query planner mistakes that could return incorrect results.",
+    "category": "Open Source News",
+    "date": "2026-08-13",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "The PostgreSQL Global Development Group released PostgreSQL 18.6 on August 13, 2026, alongside matching updates for the 17, 16, 15, and 14 branches.",
+      "This is a security and bug-fix release: it patches 28 security vulnerabilities and more than 110 other bugs. Notable fixes include correcting parallel GIN index builds that were leaving bogus reltuples values, repairing btree_gist issues with NaN handling and bit-column sorting, and fixing an integer overflow in ltree comparisons that could corrupt B-tree indexes.",
+      "It also fixes query planner bugs that could produce outright incorrect results in some cases, along with partition-pruning issues for DEFAULT partitions and performance fixes for hash joins and index operations, the kind of deep, correctness-critical work that keeps a database millions of companies run on trustworthy.",
+      "If you run PostgreSQL anywhere in production, this is worth upgrading to promptly given the security content.",
+      "Full release notes: https://www.postgresql.org/about/news/postgresql-186-1711-1615-1519-1424-and-19-beta-3-released-3365/"
+    ]
+  },
+  {
+    "slug": "python-3-14-7-released",
+    "title": "Python 3.14.7 Released",
+    "excerpt": "The seventh maintenance release of Python 3.14 lands with roughly 499 bugfixes, build improvements, and documentation changes from 86 contributors.",
+    "category": "Open Source News",
+    "date": "2026-08-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "The Python core team released Python 3.14.7 on August 5, 2026, the seventh maintenance release in the 3.14 series.",
+      "It's a stability release rather than a feature release: roughly 499 bugfixes, build improvements, and documentation changes went in since 3.14.6, contributed by 86 people. That contributor count is worth sitting with, Python's maintenance releases are sustained by a large, rotating group of volunteers, not just the core team.",
+      "3.14 itself (released in October 2025) introduced template string literals, deferred evaluation of annotations by default, and support for subinterpreters in the standard library, and 3.14.7 is part of the ongoing work keeping that release stable and secure as adoption grows.",
+      "Documentation fixes and small bug reports are genuinely welcomed contributions on CPython, and a great low-friction way into one of the most widely used programming languages in the world.",
+      "Full release notes: https://www.python.org/downloads/release/python-3147/"
+    ]
+  },
+  {
+    "slug": "kubernetes-v1-36-released",
+    "title": "Kubernetes v1.36 \"Haru\" Released",
+    "excerpt": "70 enhancements landed in this release, including User Namespaces reaching general availability, a major step forward for container security isolation.",
+    "category": "Open Source News",
+    "date": "2026-04-22",
+    "author": "BIOS Founding Team",
+    "readTime": "3 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "The Kubernetes v1.36 release, codenamed \"Haru,\" shipped on April 22, 2026, with 70 total enhancements: 18 graduating to Stable, 25 entering Beta, and 25 landing in Alpha.",
+      "The headline feature is User Namespaces reaching general availability, giving pods stronger, production-ready isolation by mapping container users to unprivileged users on the host, a meaningful security improvement for any cluster running untrusted or multi-tenant workloads.",
+      "Fine-grained kubelet API authorization also graduated to GA, giving cluster operators more granular control over exactly which actions are permitted against the kubelet API, alongside server-side sharded list and watch for better API server scalability on large clusters.",
+      "Declarative validation (CEL-based validation rules for CRDs) and Volume Group Snapshots both reached GA too, reducing how often teams need custom webhooks just to validate their own APIs.",
+      "For BIOS members working in cloud or platform engineering, release notes like these are a genuinely good habit, and SIG-level contribution (docs, testing, small enhancements) remains one of the most approachable ways into the project.",
+      "Full release notes: https://kubernetes.io/blog/2026/04/22/kubernetes-v1-36-release/"
+    ]
+  },
+  {
     "slug": "welcome-to-bios",
     "title": "Welcome to BIOS: Why We're Building This Community",
     "excerpt": "Open source has transformed the technology industry, but representation, visibility, mentorship, and opportunity for Black professionals still need to grow. Here's why BIOS exists.",
@@ -71,10 +144,11 @@
     "title": "Community Project Spotlight: cloud-to-Iac",
     "excerpt": "A CLI tool built by our founder that scans a live AWS account and generates ready-to-use Terraform or CloudFormation code from your existing infrastructure.",
     "category": "Community Project",
-    "date": "2026-08-01",
+    "date": "2025-11-12",
     "author": "BIOS Founding Team",
     "readTime": "3 min read",
     "accent": "gold",
+    "image": "/news/cloud-to-iac.png",
     "content": [
       "cloud-to-Iac is an open source tool built by BIOS founder Olamide Kosile that connects to a live AWS account, discovers the infrastructure already running there, and generates infrastructure-as-code from it, in either Terraform HCL or CloudFormation YAML.",
       "It scans across 41 resource types spanning networking, compute, storage, databases, messaging, security, and DevOps services, so teams that inherited untracked or manually built AWS environments can get them into code without starting from scratch.",
@@ -89,10 +163,11 @@
     "title": "Community Project Spotlight: aws-cost-cli",
     "excerpt": "A command-line tool built by our founder for analyzing AWS spending, with forecasting, anomaly detection, budget tracking, and Slack notifications.",
     "category": "Community Project",
-    "date": "2026-08-01",
+    "date": "2025-12-20",
     "author": "BIOS Founding Team",
     "readTime": "3 min read",
     "accent": "white",
+    "image": "/news/aws-cost-cli.png",
     "content": [
       "aws-cost-cli is an open source command-line tool built by BIOS founder Olamide Kosile for analyzing AWS spending across services, regions, accounts, and tags, without needing to open the AWS Console.",
       "It breaks down cost by service, region, linked account, or resource tag, supports side-by-side period comparisons, and can forecast monthly spend with confidence ranges based on historical usage.",
@@ -111,6 +186,7 @@
     "author": "BIOS Founding Team",
     "readTime": "3 min read",
     "accent": "gold",
+    "image": "/news/linux.png",
     "content": [
       "In 1991, a Finnish university student named Linus Torvalds released the first version of a free operating system kernel as a hobby project. Today, Linux powers the majority of public cloud infrastructure, virtually all of the world's top supercomputers, and the Android devices in most people's pockets.",
       "Linux isn't one company's product, it's developed by thousands of contributors from companies like Red Hat, Google, IBM, and Intel, alongside independent developers, all collaborating in the open under the Linux Foundation.",
@@ -128,6 +204,7 @@
     "author": "BIOS Founding Team",
     "readTime": "2 min read",
     "accent": "white",
+    "image": "/news/git.png",
     "content": [
       "Git was created by Linus Torvalds in 2005, the same person behind Linux, after a licensing dispute forced the Linux kernel project to stop using its previous version control tool. He built Git to be fast, distributed, and resilient, and it's now the default way nearly all software, open source or not, is versioned.",
       "What makes Git distributed (as opposed to older centralized tools) is that every clone contains the full history of the project, not just a pointer to a central server. That's part of why platforms like GitHub, GitLab, and Bitbucket could exist at all.",
@@ -144,6 +221,7 @@
     "author": "BIOS Founding Team",
     "readTime": "3 min read",
     "accent": "gold",
+    "image": "/news/react.png",
     "content": [
       "React was built inside Facebook (now Meta) to solve internal problems with keeping their newsfeed UI fast and consistent as it grew more complex. It was open sourced in 2013, and its component-based, declarative approach to building UIs went on to reshape how most of the web is built.",
       "React itself is maintained by Meta alongside a large open source community, and the ecosystem around it, Next.js (which this very BIOS website is built with), Remix, and countless component libraries, is almost entirely community-driven.",
@@ -160,6 +238,7 @@
     "author": "BIOS Founding Team",
     "readTime": "3 min read",
     "accent": "white",
+    "image": "/news/kubernetes.png",
     "content": [
       "Kubernetes originated at Google, drawing on lessons from their internal cluster management systems, and was open sourced in 2014. It was later donated to the Cloud Native Computing Foundation (CNCF), which now governs it alongside a huge ecosystem of related projects.",
       "Its job is to automate deploying, scaling, and managing containerized applications, deciding where containers run, restarting them when they fail, and scaling them up or down based on demand, across a cluster of machines.",
@@ -176,11 +255,3046 @@
     "author": "BIOS Founding Team",
     "readTime": "2 min read",
     "accent": "gold",
+    "image": "/news/nodejs.png",
     "content": [
       "Node.js was created by Ryan Dahl in 2009, built on Chrome's V8 JavaScript engine, to let developers run JavaScript outside the browser, on servers. It's now maintained by the OpenJS Foundation and used by companies of every size to build APIs, backend services, and command-line tools like the ones in the community project spotlights we've featured.",
       "Its non-blocking, event-driven design made it especially good at handling many simultaneous connections efficiently, which is part of why it took off for building web servers and real-time applications.",
       "For BIOS members, Node.js is often the first backend runtime people learn, especially if you're already comfortable with JavaScript from frontend work, and its massive npm package ecosystem means there's almost always an existing project you can contribute to in an area you care about.",
       "Contributing doesn't have to mean touching Node.js core, popular npm packages, many maintained by small teams or individuals, are often much more open to first-time contributors and a great place to start."
+    ]
+  },
+  {
+    "slug": "linux-7-1-9-6-18-45-and-6-12-104-stable-releases",
+    "title": "Linux 7.1.9, 6.18.45, and 6.12.104 Stable Releases",
+    "excerpt": "Greg Kroah-Hartman pushed simultaneous stable updates across the 7.1, 6.18, and 6.12 kernel branches, focused on networking stability, Thunderbolt peripheral-validation fixes, and closing a BPF reference-counting race.",
+    "category": "Open Source News",
+    "date": "2026-08-19",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/linux.png",
+    "content": [
+      "Greg Kroah-Hartman pushed simultaneous stable updates across the 7.1, 6.18, and 6.12 kernel branches, focused on networking stability, Thunderbolt peripheral-validation fixes, and closing a BPF reference-counting race.",
+      "As routine maintenance releases, they carry no new features, only backported fixes tested against the linux-stable tree, exactly the kind of quiet, unglamorous work that keeps the kernel millions of servers run on trustworthy.",
+      "Full details: https://www.linuxcompatible.org/story/linux-kernel-612104-61845-and-719-drop-with-thunderbolt-and-bpf-fixes"
+    ]
+  },
+  {
+    "slug": "linux-kernel-7-2-released",
+    "title": "Linux Kernel 7.2 Released",
+    "excerpt": "Linus Torvalds shipped the 7.2 mainline release, headlined by cache-aware CFS scheduling, the Intel-developed USB4STREAM protocol, and initial Apple M3 chip support.",
+    "category": "Open Source News",
+    "date": "2026-08-16",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/linux.png",
+    "content": [
+      "Linus Torvalds shipped the 7.2 mainline release, headlined by cache-aware CFS scheduling, the Intel-developed USB4STREAM protocol, and initial Apple M3 chip support.",
+      "It also adds AMDGPU HDMI 2.1 FRL support, KVM support for AMD's guest-mode execution trap and Intel MBEC, TDX support, a fairer GPU scheduler, and large folios by default for Btrfs.",
+      "Full details: https://www.phoronix.com/news/Linux-7.2-Released"
+    ]
+  },
+  {
+    "slug": "linux-kernel-7-1-released",
+    "title": "Linux Kernel 7.1 Released",
+    "excerpt": "Torvalds released 7.1 as a standard feature release, pulling in nearly 13,000 changesets from over 2,000 developers. Its headline feature is a from-scratch rewrite of the in-kernel NTFS driver after years of developme...",
+    "category": "Open Source News",
+    "date": "2026-06-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/linux.png",
+    "content": [
+      "Torvalds released 7.1 as a standard feature release, pulling in nearly 13,000 changesets from over 2,000 developers. Its headline feature is a from-scratch rewrite of the in-kernel NTFS driver after years of development.",
+      "The release also enables Intel FRED by default, speeds up Intel Arc and older AMD Radeon graphics, and removes i486 support along with roughly 140,000 lines of legacy code.",
+      "Full details: https://kernelnewbies.org/Linux_7.1"
+    ]
+  },
+  {
+    "slug": "git-for-windows-v2-55-0-windows-5",
+    "title": "Git for Windows v2.55.0.windows.5",
+    "excerpt": "This Windows-distribution release switched the installer to a 64-bit executable, upgraded the underlying MSYS2 runtime to one based on Cygwin v3.6.10 with OpenSSH v10.5.P1, and fixed a long-standing bug where Git Bash...",
+    "category": "Open Source News",
+    "date": "2026-08-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/git.png",
+    "content": [
+      "This Windows-distribution release switched the installer to a 64-bit executable, upgraded the underlying MSYS2 runtime to one based on Cygwin v3.6.10 with OpenSSH v10.5.P1, and fixed a long-standing bug where Git Bash's screen cleared after git.exe invoked vim for commit-message editing.",
+      "It also dropped support for Windows 8.1, following MSYS2's own platform deprecation.",
+      "Full details: https://github.com/git-for-windows/git/releases/tag/v2.55.0.windows.5"
+    ]
+  },
+  {
+    "slug": "git-2-55-0-released",
+    "title": "Git 2.55.0 Released",
+    "excerpt": "Git 2.55.0 landed with contributions from 100 people, 33 of them first-time contributors. It enabled Rust code by default in the build (opt out via NO_RUST=1), added a fsmonitor daemon for Linux, and extended the expe...",
+    "category": "Open Source News",
+    "date": "2026-06-29",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/git.png",
+    "content": [
+      "Git 2.55.0 landed with contributions from 100 people, 33 of them first-time contributors. It enabled Rust code by default in the build (opt out via NO_RUST=1), added a fsmonitor daemon for Linux, and extended the experimental git history command.",
+      "The release continues Git's push toward incremental multi-pack-index repacking improvements.",
+      "Full details: https://lwn.net/Articles/1080188/"
+    ]
+  },
+  {
+    "slug": "git-2-54-0-released",
+    "title": "Git 2.54.0 Released",
+    "excerpt": "Git 2.54.0 landed contributions from 137 people, 66 of them first-time contributors, and introduced a new git history-rewriting capability along with a mobile-friendly gitweb web interface.",
+    "category": "Open Source News",
+    "date": "2026-04-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/git.png",
+    "content": [
+      "Git 2.54.0 landed contributions from 137 people, 66 of them first-time contributors, and introduced a new git history-rewriting capability along with a mobile-friendly gitweb web interface.",
+      "It served as the immediate predecessor to the 2.55 development cycle.",
+      "Full details: https://lwn.net/Articles/1068703/"
+    ]
+  },
+  {
+    "slug": "react-19-2-8-19-1-9-and-19-0-8-released",
+    "title": "React 19.2.8, 19.1.9, and 19.0.8 Released",
+    "excerpt": "The React team simultaneously patched three active minor lines, 19.2, 19.1, and 19.0, each release focused on the same fix: performance improvements when decoding React Server Components payloads.",
+    "category": "Open Source News",
+    "date": "2026-07-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/react.png",
+    "content": [
+      "The React team simultaneously patched three active minor lines, 19.2, 19.1, and 19.0, each release focused on the same fix: performance improvements when decoding React Server Components payloads.",
+      "Shipping identical fixes across three lines reflects React's practice of backporting critical performance and correctness fixes to older supported minor versions.",
+      "Full details: https://github.com/facebook/react/releases/tag/v19.2.8"
+    ]
+  },
+  {
+    "slug": "react-19-2-7-released",
+    "title": "React 19.2.7 Released",
+    "excerpt": "A patch release on the 19.2 line that fixed missing FormData entries in Server Actions, a correctness bug affecting form submissions handled through React's Actions API.",
+    "category": "Open Source News",
+    "date": "2026-06-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/react.png",
+    "content": [
+      "A patch release on the 19.2 line that fixed missing FormData entries in Server Actions, a correctness bug affecting form submissions handled through React's Actions API.",
+      "Full details: https://github.com/facebook/react/releases/tag/v19.2.7"
+    ]
+  },
+  {
+    "slug": "the-react-foundation-launches",
+    "title": "The React Foundation Launches",
+    "excerpt": "React, React Native, and JSX moved from Meta's direct ownership to the new React Foundation, an independent body hosted by the Linux Foundation. Eight Platinum founding members, including Amazon, Callstack, Expo, Huaw...",
+    "category": "Open Source News",
+    "date": "2026-02-24",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/react.png",
+    "content": [
+      "React, React Native, and JSX moved from Meta's direct ownership to the new React Foundation, an independent body hosted by the Linux Foundation. Eight Platinum founding members, including Amazon, Callstack, Expo, Huawei, Meta, Microsoft, Software Mansion, and Vercel, back the foundation, with Seth Webster as executive director.",
+      "React's technical governance remains independent of the foundation board, still set by React's own contributors and maintainers, a meaningful step for one of the most widely used UI libraries moving toward neutral, community-driven stewardship.",
+      "Full details: https://react.dev/blog/2026/02/24/the-react-foundation"
+    ]
+  },
+  {
+    "slug": "node-js-26-7-0-released",
+    "title": "Node.js 26.7.0 Released",
+    "excerpt": "The latest Current release added support for loading private keys via crypto STORE loaders, Perfetto tracing integration for performance profiling, a Symbol.dispose implementation in Module Hooks, and a new --test-cov...",
+    "category": "Open Source News",
+    "date": "2026-08-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nodejs.png",
+    "content": [
+      "The latest Current release added support for loading private keys via crypto STORE loaders, Perfetto tracing integration for performance profiling, a Symbol.dispose implementation in Module Hooks, and a new --test-coverage-include-all test runner flag.",
+      "It also fixed several crypto, FFI, SQLite, and streams bugs, and bumped npm to 11.19.0.",
+      "Full details: https://nodejs.org/en/blog/release/v26.7.0"
+    ]
+  },
+  {
+    "slug": "node-js-24-19-0-krypton-lts-released",
+    "title": "Node.js 24.19.0 'Krypton' (LTS) Released",
+    "excerpt": "This LTS release for the 24.x line backported updates spanning file handling, crypto and networking, and streams improvements, keeping the Krypton LTS line current with fixes from the 26.x Current branch.",
+    "category": "Open Source News",
+    "date": "2026-08-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nodejs.png",
+    "content": [
+      "This LTS release for the 24.x line backported updates spanning file handling, crypto and networking, and streams improvements, keeping the Krypton LTS line current with fixes from the 26.x Current branch.",
+      "Full details: https://github.com/nodejs/node/releases/tag/v24.19.0"
+    ]
+  },
+  {
+    "slug": "node-js-july-2026-security-releases",
+    "title": "Node.js July 2026 Security Releases",
+    "excerpt": "A coordinated security release across the 26.x, 24.x, and 22.x lines fixed 11 CVEs, including 3 HIGH-severity issues: an HTTP/2 flow-control bypass, an HTTP/2 re-entrant-send heap-use-after-free, and a Permission Mode...",
+    "category": "Open Source News",
+    "date": "2026-07-29",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nodejs.png",
+    "content": [
+      "A coordinated security release across the 26.x, 24.x, and 22.x lines fixed 11 CVEs, including 3 HIGH-severity issues: an HTTP/2 flow-control bypass, an HTTP/2 re-entrant-send heap-use-after-free, and a Permission Model path-matching flaw that over-granted filesystem access.",
+      "It also patched several medium and low-severity issues in HTTPS Agent mTLS handling, node:sqlite, node:zlib, and DNS resolution, alongside undici and llhttp dependency bumps. If you run Node.js anywhere in production, releases like this are worth applying promptly.",
+      "Full details: https://nodejs.org/en/blog/vulnerability/july-2026-security-releases"
+    ]
+  },
+  {
+    "slug": "gateway-api-v1-6-tcproute-and-udproute-graduate-to-standard",
+    "title": "Gateway API v1.6: TCPRoute and UDPRoute Graduate to Standard",
+    "excerpt": "The Kubernetes SIG-Network blog announced Gateway API v1.6.0, in which TCPRoute and UDPRoute graduated from experimental to the Standard release channel, making Layer 4 routing a stable, production-ready part of the G...",
+    "category": "Open Source News",
+    "date": "2026-08-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "The Kubernetes SIG-Network blog announced Gateway API v1.6.0, in which TCPRoute and UDPRoute graduated from experimental to the Standard release channel, making Layer 4 routing a stable, production-ready part of the Gateway API spec.",
+      "The post, co-authored by Google and Red Hat maintainers, walks through what the graduation means for implementers and cluster operators using Gateway API alongside core Kubernetes.",
+      "Full details: https://kubernetes.io/blog/2026/08/03/gateway-api-v1-6-release/"
+    ]
+  },
+  {
+    "slug": "kubernetes-v1-37-sneak-peek",
+    "title": "Kubernetes v1.37 Sneak Peek",
+    "excerpt": "The official Kubernetes blog previewed the upcoming v1.37 release, detailing the deprecation of kubectl run --filename/-f, removal of the ability for static pods to reference Secrets or ConfigMaps (closing a security ...",
+    "category": "Open Source News",
+    "date": "2026-07-31",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "The official Kubernetes blog previewed the upcoming v1.37 release, detailing the deprecation of kubectl run --filename/-f, removal of the ability for static pods to reference Secrets or ConfigMaps (closing a security gap), and a phased deprecation of kube-proxy's IPVS mode.",
+      "It also reiterated the ongoing phase-out of cgroup v1 support, which kubelet already refuses to initialize on by default since v1.35.",
+      "Full details: https://kubernetes.io/blog/2026/07/31/kubernetes-v1-37-sneak-peek/"
+    ]
+  },
+  {
+    "slug": "announcing-the-psf-board-candidates-for-2026",
+    "title": "Announcing the PSF Board Candidates for 2026",
+    "excerpt": "The Python Software Foundation published its slate of candidates running for open seats on the PSF Board of Directors in the 2026 election cycle, following a nominations window that opened July 28, 2026, with member v...",
+    "category": "Open Source News",
+    "date": "2026-08-13",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "The Python Software Foundation published its slate of candidates running for open seats on the PSF Board of Directors in the 2026 election cycle, following a nominations window that opened July 28, 2026, with member voting scheduled for September 1-15, 2026.",
+      "This election also marks the first-ever vote for the newly created Packaging Council, alongside the regular Board race.",
+      "Full details: https://pyfound.blogspot.com/2026/08/announcing-psf-board-candidates-for-2026.html"
+    ]
+  },
+  {
+    "slug": "how-aws-powers-pypi-and-the-psf",
+    "title": "How AWS Powers PyPI and the PSF",
+    "excerpt": "The Python Software Foundation published a post detailing the infrastructure partnership through which AWS supports the Python Package Index (PyPI) and broader PSF operations, covering the hosting, bandwidth, and reli...",
+    "category": "Open Source News",
+    "date": "2026-08-19",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "The Python Software Foundation published a post detailing the infrastructure partnership through which AWS supports the Python Package Index (PyPI) and broader PSF operations, covering the hosting, bandwidth, and reliability commitments that keep PyPI available to the global Python community at scale.",
+      "The piece is part of PSF's ongoing transparency effort around the infrastructure and sponsorships that underpin core Python tooling.",
+      "Full details: https://pyfound.blogspot.com/2026/08/how-aws-powers-pypi-and-psf.html"
+    ]
+  },
+  {
+    "slug": "postgresql-19-beta-2-released",
+    "title": "PostgreSQL 19 Beta 2 Released",
+    "excerpt": "PostgreSQL 19 Beta 2 shipped with bug fixes and stability improvements over Beta 1, addressing issues in vacuumdb --analyze-in-stages for partitioned tables, the new FOR PORTION OF temporal-table syntax, and SQL/PGQ p...",
+    "category": "Open Source News",
+    "date": "2026-07-16",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "PostgreSQL 19 Beta 2 shipped with bug fixes and stability improvements over Beta 1, addressing issues in vacuumdb --analyze-in-stages for partitioned tables, the new FOR PORTION OF temporal-table syntax, and SQL/PGQ property graph query features.",
+      "It's not recommended for production use, but the community is urging testers to exercise it against real workloads ahead of general availability, expected around September or October 2026.",
+      "Full details: https://www.postgresql.org/about/news/postgresql-19-beta-2-released-3350/"
+    ]
+  },
+  {
+    "slug": "libredb-studio-open-source-self-hosted-sql-ide-for-postgresql",
+    "title": "LibreDB Studio: Open Source, Self-Hosted SQL IDE for PostgreSQL",
+    "excerpt": "The PostgreSQL community news feed announced LibreDB Studio, a new open source, self-hosted, browser-based SQL IDE built for PostgreSQL, giving developers and DBAs a web-accessible query and administration interface t...",
+    "category": "Open Source News",
+    "date": "2026-08-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "The PostgreSQL community news feed announced LibreDB Studio, a new open source, self-hosted, browser-based SQL IDE built for PostgreSQL, giving developers and DBAs a web-accessible query and administration interface they can run on their own infrastructure rather than a hosted SaaS tool.",
+      "It's exactly the kind of community-built tooling BIOS wants to spotlight, real infrastructure, released under an open license, solving a problem the maintainers had themselves.",
+      "Full details: https://www.postgresql.org/about/newsarchive/"
+    ]
+  },
+  {
+    "slug": "rust-1-97-1-released",
+    "title": "Rust 1.97.1 Released",
+    "excerpt": "Rust 1.97.1 is a point release that fixes a miscompilation caused by an LLVM optimization bug present since at least Rust 1.87. The fix combines an upstream LLVM correction with a revert of the problematic IR change t...",
+    "category": "Open Source News",
+    "date": "2026-07-16",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "Rust 1.97.1 is a point release that fixes a miscompilation caused by an LLVM optimization bug present since at least Rust 1.87. The fix combines an upstream LLVM correction with a revert of the problematic IR change that had shipped in 1.97.0.",
+      "The Rust team recommends updating via rustup and encourages testing beta and nightly channels to catch similar regressions earlier.",
+      "Full details: https://blog.rust-lang.org/2026/07/16/Rust-1.97.1/"
+    ]
+  },
+  {
+    "slug": "rust-1-97-0-released",
+    "title": "Rust 1.97.0 Released",
+    "excerpt": "Rust 1.97.0 made symbol-mangling scheme v0 the default, added Cargo configuration for warning management so developers can silence, warn on, or deny specific warnings without invalidating build caches, and made linker...",
+    "category": "Open Source News",
+    "date": "2026-07-09",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "Rust 1.97.0 made symbol-mangling scheme v0 the default, added Cargo configuration for warning management so developers can silence, warn on, or deny specific warnings without invalidating build caches, and made linker output visible by default so real problems are no longer masked.",
+      "The release also stabilized several new bit-manipulation APIs for integers and NonZero types, plus made char::is_control usable in const contexts.",
+      "Full details: https://blog.rust-lang.org/2026/07/09/Rust-1.97.0/"
+    ]
+  },
+  {
+    "slug": "running-ai-agents-in-github-actions-with-docker-sandboxes",
+    "title": "Running AI Agents in GitHub Actions with Docker Sandboxes",
+    "excerpt": "Docker published a walkthrough showing how GitHub Agentic Workflows now supports Docker Sandboxes as an agent runtime directly in CI, isolating agents inside a microVM with network policy and secrets injection.",
+    "category": "Open Source News",
+    "date": "2026-08-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/docker.png",
+    "content": [
+      "Docker published a walkthrough showing how GitHub Agentic Workflows now supports Docker Sandboxes as an agent runtime directly in CI, isolating agents inside a microVM with network policy and secrets injection.",
+      "The example runs an agent on a GitHub-hosted runner that enters a Docker Sandbox, runs a Java Testcontainers integration suite against PostgreSQL, finds and fixes a seeded bug, and opens a draft pull request automatically, with zero custom configuration required for GitHub Actions users.",
+      "Full details: https://www.docker.com/blog/running-ai-agents-in-github-actions-with-docker-sandboxes/"
+    ]
+  },
+  {
+    "slug": "docker-verified-publisher-applications-are-now-self-serve",
+    "title": "Docker Verified Publisher Applications Are Now Self-Serve",
+    "excerpt": "Docker moved its Verified Publisher program from a sales-contact-only process to a self-serve application flow directly inside Docker Hub, with two plan tiers to choose from. Verified publishers get a trust badge and ...",
+    "category": "Open Source News",
+    "date": "2026-08-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/docker.png",
+    "content": [
+      "Docker moved its Verified Publisher program from a sales-contact-only process to a self-serve application flow directly inside Docker Hub, with two plan tiers to choose from. Verified publishers get a trust badge and priority search ranking.",
+      "Docker framed the change around Hub's broadening scope beyond container images to MCP servers, models, sandboxes, and agents, offering one review and one badge regardless of content type.",
+      "Full details: https://www.docker.com/blog/docker-verified-publisher-applications-are-now-self-serve/"
+    ]
+  },
+  {
+    "slug": "docker-vmm-public-beta-a-complete-overhaul-built-for-performance",
+    "title": "Docker VMM Public Beta: A Complete Overhaul, Built for Performance",
+    "excerpt": "Docker released the public beta of Docker VMM, a fully rebuilt, first-party hypervisor replacing the third-party virtual machine monitor that had powered Docker Desktop's Linux VM since inception, available with no wa...",
+    "category": "Open Source News",
+    "date": "2026-08-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/docker.png",
+    "content": [
+      "Docker released the public beta of Docker VMM, a fully rebuilt, first-party hypervisor replacing the third-party virtual machine monitor that had powered Docker Desktop's Linux VM since inception, available with no waitlist on Docker Desktop v4.86+.",
+      "It delivers faster container startup, significantly faster container-to-host file I/O, smarter memory reclamation, and improved Windows stability. The same unified virtualization engine also powers Docker Sandboxes.",
+      "Full details: https://www.docker.com/blog/docker-vmm-public-beta/"
+    ]
+  },
+  {
+    "slug": "announcing-typescript-7-0",
+    "title": "Announcing TypeScript 7.0",
+    "excerpt": "TypeScript 7.0 is the first stable release built on the new native Go-ported compiler, delivering full-build speedups of roughly 8x to 12x on major codebases compared to the JavaScript-based compiler.",
+    "category": "Open Source News",
+    "date": "2026-07-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/typescript.png",
+    "content": [
+      "TypeScript 7.0 is the first stable release built on the new native Go-ported compiler, delivering full-build speedups of roughly 8x to 12x on major codebases compared to the JavaScript-based compiler.",
+      "It adds parallelized type-checking via new --checkers and --builders flags and a rebuilt --watch mode. Notably, 7.0 ships without a programmatic API (planned for 7.1), so tools like webpack and typescript-eslint must stay on TypeScript 6.0 for now.",
+      "Full details: https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/"
+    ]
+  },
+  {
+    "slug": "typescript-7-0-release-candidate",
+    "title": "TypeScript 7.0 Release Candidate",
+    "excerpt": "Microsoft published the release candidate for TypeScript 7.0, putting the native Go-based compiler and language service into the mainline RC for the first time, roughly three weeks ahead of the stable 7.0 release.",
+    "category": "Open Source News",
+    "date": "2026-06-18",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/typescript.png",
+    "content": [
+      "Microsoft published the release candidate for TypeScript 7.0, putting the native Go-based compiler and language service into the mainline RC for the first time, roughly three weeks ahead of the stable 7.0 release.",
+      "It let teams test the ported toolchain, the biggest architectural change in TypeScript's history, before it landed as stable.",
+      "Full details: https://visualstudiomagazine.com/articles/2026/06/22/typescript-7-0-rc-moves-microsofts-go-rewrite-into-the-mainline-compiler.aspx"
+    ]
+  },
+  {
+    "slug": "announcing-typescript-6-0",
+    "title": "Announcing TypeScript 6.0",
+    "excerpt": "TypeScript 6.0 shipped as a deliberate 'bridge' release preparing developers for the native Go-based TypeScript 7.0, changing key defaults (strict: true, module: esnext, target: es2025) while deprecating legacy option...",
+    "category": "Open Source News",
+    "date": "2026-03-23",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/typescript.png",
+    "content": [
+      "TypeScript 6.0 shipped as a deliberate 'bridge' release preparing developers for the native Go-based TypeScript 7.0, changing key defaults (strict: true, module: esnext, target: es2025) while deprecating legacy options such as ES5 targeting.",
+      "New features included subpath imports starting with #/, improved inference for context-sensitive functions, and updated standard-library types for emerging proposals like Temporal and RegExp.escape.",
+      "Full details: https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/"
+    ]
+  },
+  {
+    "slug": "vs-code-1-134",
+    "title": "VS Code 1.134",
+    "excerpt": "This release focuses on managing multi-conversation AI agent workflows: side-by-side chats let developers arrange related and subagent chats in groups for comparison, a new prompt timeline lets users navigate long age...",
+    "category": "Open Source News",
+    "date": "2026-08-19",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vscode.png",
+    "content": [
+      "This release focuses on managing multi-conversation AI agent workflows: side-by-side chats let developers arrange related and subagent chats in groups for comparison, a new prompt timeline lets users navigate long agent sessions, and 'Find in chat' adds full-text search across a conversation.",
+      "It also lets the integrated browser become the default editor for local HTML files, enabling instant in-editor previews.",
+      "Full details: https://code.visualstudio.com/updates/v1_134"
+    ]
+  },
+  {
+    "slug": "vs-code-1-133",
+    "title": "VS Code 1.133",
+    "excerpt": "Adds flexible model switching inside chat sessions, letting developers pick between different AI models from a unified picker without reconfiguring mid-conversation. It also introduces chat sticky scroll for easier tr...",
+    "category": "Open Source News",
+    "date": "2026-08-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vscode.png",
+    "content": [
+      "Adds flexible model switching inside chat sessions, letting developers pick between different AI models from a unified picker without reconfiguring mid-conversation. It also introduces chat sticky scroll for easier tracking of long conversations.",
+      "Local HTML previews in the integrated browser now auto-reload when files change on disk.",
+      "Full details: https://code.visualstudio.com/updates/v1_133"
+    ]
+  },
+  {
+    "slug": "vs-code-1-132",
+    "title": "VS Code 1.132",
+    "excerpt": "Introduces agent feedback on web elements in the integrated browser, allowing developers to comment directly on specific parts of a rendered page. It also adds multilingual dictation via an on-device model that auto-d...",
+    "category": "Open Source News",
+    "date": "2026-08-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vscode.png",
+    "content": [
+      "Introduces agent feedback on web elements in the integrated browser, allowing developers to comment directly on specific parts of a rendered page. It also adds multilingual dictation via an on-device model that auto-detects spoken language.",
+      "A new /btw chat command lets developers ask side questions without interrupting the current agent turn.",
+      "Full details: https://code.visualstudio.com/updates/v1_132"
+    ]
+  },
+  {
+    "slug": "terraform-1-15-9",
+    "title": "Terraform 1.15.9",
+    "excerpt": "A patch release fixing child module validation so invalid list, import, backend, and cloud blocks now correctly raise errors or warnings instead of being silently accepted.",
+    "category": "Open Source News",
+    "date": "2026-08-19",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/terraform.png",
+    "content": [
+      "A patch release fixing child module validation so invalid list, import, backend, and cloud blocks now correctly raise errors or warnings instead of being silently accepted.",
+      "It also bumps the go-slug dependency to fix a Unicode-normalization bug that could let files bypass .terraformignore exclusions during uploads to Terraform Enterprise or HCP Terraform.",
+      "Full details: https://github.com/hashicorp/terraform/releases/tag/v1.15.9"
+    ]
+  },
+  {
+    "slug": "terraform-azurerm-provider-5-0-ga",
+    "title": "Terraform AzureRM Provider 5.0 GA",
+    "excerpt": "The AzureRM provider's major 5.0 release stops auto-registering roughly 60 Azure Resource Providers by default, giving teams control over registration strategy, and adds opt-in preflight validation against Azure polic...",
+    "category": "Open Source News",
+    "date": "2026-07-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/terraform.png",
+    "content": [
+      "The AzureRM provider's major 5.0 release stops auto-registering roughly 60 Azure Resource Providers by default, giving teams control over registration strategy, and adds opt-in preflight validation against Azure policies and quotas during planning.",
+      "It also disables Azure metadata-service validation of locations and provider names by default, and removes long-deprecated resources and legacy App Service configuration.",
+      "Full details: https://www.hashicorp.com/en/blog/terraform-azurerm-provider-50-now-generally-available"
+    ]
+  },
+  {
+    "slug": "hcp-terraform-workspaces-and-stacks-restore-and-more",
+    "title": "HCP Terraform: Workspaces and Stacks Restore, and More",
+    "excerpt": "HashiCorp shipped five HCP Terraform and Terraform Enterprise updates aimed at platform teams: GA restore for deleted workspaces and Stacks with a 30-day recovery window, GA monorepo support so multiple Stacks can liv...",
+    "category": "Open Source News",
+    "date": "2026-07-23",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/terraform.png",
+    "content": [
+      "HashiCorp shipped five HCP Terraform and Terraform Enterprise updates aimed at platform teams: GA restore for deleted workspaces and Stacks with a 30-day recovery window, GA monorepo support so multiple Stacks can live in one repo, and a public-beta guided CLI migration path from workspaces to Stacks.",
+      "It also adds GA project-scoped registry tagging and GA granular, project or workspace-level policy override permissions.",
+      "Full details: https://www.hashicorp.com/en/blog/terraform-introduces-workspaces-and-stacks-restore-and-more"
+    ]
+  },
+  {
+    "slug": "ansible-community-package-14-3-1",
+    "title": "Ansible Community Package 14.3.1",
+    "excerpt": "A patch release of the curated Ansible community package that fixes a packaging defect rather than adding features: the infinidat.infinibox collection is bumped to fix a symlink loop that had caused duplicate copies o...",
+    "category": "Open Source News",
+    "date": "2026-08-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/ansible.png",
+    "content": [
+      "A patch release of the curated Ansible community package that fixes a packaging defect rather than adding features: the infinidat.infinibox collection is bumped to fix a symlink loop that had caused duplicate copies of the collection to ship inside 14.3.0.",
+      "Full details: https://forum.ansible.com/t/release-announcement-ansible-community-package-14-3-1/46178"
+    ]
+  },
+  {
+    "slug": "ansible-core-2-21-3",
+    "title": "ansible-core 2.21.3",
+    "excerpt": "A maintenance release with six bug fixes, including a fix for ansible-galaxy re-downloading collections unnecessarily, a fix to the collection loader so packages containing compiled extensions load Python modules corr...",
+    "category": "Open Source News",
+    "date": "2026-08-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/ansible.png",
+    "content": [
+      "A maintenance release with six bug fixes, including a fix for ansible-galaxy re-downloading collections unnecessarily, a fix to the collection loader so packages containing compiled extensions load Python modules correctly, and better handling of multiple installed pwsh executables.",
+      "It also ensures PGP armor data has trailing newlines so RPM key parsing does not fail.",
+      "Full details: https://forum.ansible.com/t/new-release-ansible-core-v2-21-3/46155"
+    ]
+  },
+  {
+    "slug": "ansible-community-package-14-2-0",
+    "title": "Ansible Community Package 14.2.0",
+    "excerpt": "A minor release of the community package built on ansible-core 2.21.2, bundling an updated, curated set of collections that provide the modules, plugins, and roles most Ansible users depend on day to day.",
+    "category": "Open Source News",
+    "date": "2026-07-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/ansible.png",
+    "content": [
+      "A minor release of the community package built on ansible-core 2.21.2, bundling an updated, curated set of collections that provide the modules, plugins, and roles most Ansible users depend on day to day.",
+      "Full details: https://forum.ansible.com/t/release-announcement-ansible-community-package-14-2-0/46049"
+    ]
+  },
+  {
+    "slug": "redis-security-release-cve-2026-62356-and-eight-related-fixes",
+    "title": "Redis Security Release: CVE-2026-62356 and Eight Related Fixes",
+    "excerpt": "Redis shipped coordinated security patches across every supported branch, addressing nine issues rated up to Critical. Highlights include a miscalculated buffer size in CMSketch RDB loading causing heap out-of-bounds ...",
+    "category": "Open Source News",
+    "date": "2026-08-17",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/redis.png",
+    "content": [
+      "Redis shipped coordinated security patches across every supported branch, addressing nine issues rated up to Critical. Highlights include a miscalculated buffer size in CMSketch RDB loading causing heap out-of-bounds write, and a TLS client-authentication bypass via a NUL byte embedded in a certificate's Common Name.",
+      "It also fixes multiple use-after-free bugs in TLS pending-data handling and blocked-client eviction. If you run Redis in production, this is worth upgrading to promptly.",
+      "Full details: https://github.com/redis/redis/releases/tag/8.10.1"
+    ]
+  },
+  {
+    "slug": "redis-8-8-general-availability",
+    "title": "Redis 8.8 General Availability",
+    "excerpt": "Redis 8.8 introduces 'array,' a new general-purpose, index-addressable data structure that outperforms lists and hashes for random access and can serve as an atomic ring buffer via the new ARRING command.",
+    "category": "Open Source News",
+    "date": "2026-06-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/redis.png",
+    "content": [
+      "Redis 8.8 introduces 'array,' a new general-purpose, index-addressable data structure that outperforms lists and hashes for random access and can serve as an atomic ring buffer via the new ARRING command.",
+      "It also adds a window-counter rate limiter, stream message NACKing so consumers can explicitly reject and requeue messages, and subkey-level pub/sub notifications for hash field events.",
+      "Full details: https://redis.io/blog/announcing-redis-8-8/"
+    ]
+  },
+  {
+    "slug": "redis-8-6-general-availability",
+    "title": "Redis 8.6 General Availability",
+    "excerpt": "Redis 8.6 delivers up to 5x higher throughput than Redis 7.2 and meaningful latency and memory reductions across sorted sets, strings, hashes, and lists.",
+    "category": "Open Source News",
+    "date": "2026-02-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/redis.png",
+    "content": [
+      "Redis 8.6 delivers up to 5x higher throughput than Redis 7.2 and meaningful latency and memory reductions across sorted sets, strings, hashes, and lists.",
+      "New capabilities include idempotent stream production to prevent duplicate messages on retry, two new 'least recently modified' eviction policies, and a HOTKEYS command for detecting CPU or network-hungry keys per cluster slot.",
+      "Full details: https://redis.io/blog/announcing-redis-86-performance-improvements-streams/"
+    ]
+  },
+  {
+    "slug": "upcoming-next-js-security-release-advance-notice",
+    "title": "Upcoming Next.js Security Release: Advance Notice",
+    "excerpt": "As part of Next.js's preannounced security-release program, the team gave advance notice of a scheduled security release, patching one critical-severity vulnerability, with the full advisory to follow covering impact,...",
+    "category": "Open Source News",
+    "date": "2026-08-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "As part of Next.js's preannounced security-release program, the team gave advance notice of a scheduled security release, patching one critical-severity vulnerability, with the full advisory to follow covering impact, affected versions, and upgrade instructions.",
+      "It's the same disciplined, transparent process this very BIOS website benefits from, being built on Next.js ourselves.",
+      "Full details: https://nextjs.org/blog/upcoming-nextjs-security-release-august-2026"
+    ]
+  },
+  {
+    "slug": "next-js-16-3",
+    "title": "Next.js 16.3",
+    "excerpt": "Next.js's biggest release since 16.0, cutting dev-server memory use by up to 90% via Turbopack disk caching, enabling up to 5.5x faster repeat builds through build-time disk caching, and improving server-side renderin...",
+    "category": "Open Source News",
+    "date": "2026-08-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Next.js's biggest release since 16.0, cutting dev-server memory use by up to 90% via Turbopack disk caching, enabling up to 5.5x faster repeat builds through build-time disk caching, and improving server-side rendering throughput by up to 22%.",
+      "It also debuts 'Instant Navigations' (partial prefetching, improved ISR, a Navigation Inspector) plus support for TypeScript 7 type checking.",
+      "Full details: https://nextjs.org/blog/next-16-3"
+    ]
+  },
+  {
+    "slug": "next-js-july-2026-security-release",
+    "title": "Next.js July 2026 Security Release",
+    "excerpt": "Patched eight CVEs across the two supported LTS lines, the two highest-severity being a Denial-of-Service in the App Router via Server Actions, and a middleware/proxy bypass affecting Turbopack builds with a single co...",
+    "category": "Open Source News",
+    "date": "2026-07-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Patched eight CVEs across the two supported LTS lines, the two highest-severity being a Denial-of-Service in the App Router via Server Actions, and a middleware/proxy bypass affecting Turbopack builds with a single configured locale, which could let requests skip authentication checks entirely.",
+      "Other fixes addressed SSRF via attacker-controlled rewrite and redirect hostnames, and cache-confusion bugs that could leak one user's fetch response body to another.",
+      "Full details: https://nextjs.org/blog/july-2026-security-release"
+    ]
+  },
+  {
+    "slug": "go-1-27-0-released",
+    "title": "Go 1.27.0 Released",
+    "excerpt": "Go 1.27 is the latest major release, adding generic methods (a single method now works across multiple instantiated types), nested field-selector struct literals, and expanded function type inference in composite lite...",
+    "category": "Open Source News",
+    "date": "2026-08-19",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/go.png",
+    "content": [
+      "Go 1.27 is the latest major release, adding generic methods (a single method now works across multiple instantiated types), nested field-selector struct literals, and expanded function type inference in composite literals, conversions, and channel sends.",
+      "It also drops support for macOS versions before Ventura, upgrades Unicode support from 15 to 17, and improves small-object allocation performance by up to 30%.",
+      "Full details: https://go.dev/blog/go1.27"
+    ]
+  },
+  {
+    "slug": "go-1-26-6-and-go-1-25-13-ten-security-fixes",
+    "title": "Go 1.26.6 and Go 1.25.13: Ten Security Fixes",
+    "excerpt": "These point releases bundled ten security fixes across the standard library, including hardening of module verification against a GOPROXY attack that could forge sumdb tiles to bypass GOSUMDB checks, and stricter recu...",
+    "category": "Open Source News",
+    "date": "2026-08-13",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/go.png",
+    "content": [
+      "These point releases bundled ten security fixes across the standard library, including hardening of module verification against a GOPROXY attack that could forge sumdb tiles to bypass GOSUMDB checks, and stricter recursion limits in ASN.1 unmarshaling to prevent stack exhaustion.",
+      "It also changed TLS handshake behavior to stop malicious clients from forcing excessive key-derivation work, with additional fixes to html/template, net/url, and idna.",
+      "Full details: https://groups.google.com/g/golang-announce/c/94pEornpRlI"
+    ]
+  },
+  {
+    "slug": "go-1-26-5-and-go-1-25-12-released",
+    "title": "Go 1.26.5 and Go 1.25.12 Released",
+    "excerpt": "Routine monthly maintenance releases for the two supported Go branches, bundling accumulated bug fixes ahead of the following month's security patch cycle.",
+    "category": "Open Source News",
+    "date": "2026-07-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/go.png",
+    "content": [
+      "Routine monthly maintenance releases for the two supported Go branches, bundling accumulated bug fixes ahead of the following month's security patch cycle.",
+      "Full details: https://go.dev/doc/devel/release"
+    ]
+  },
+  {
+    "slug": "django-adopts-an-annual-release-cycle",
+    "title": "Django Adopts an Annual Release Cycle",
+    "excerpt": "Django's Steering Council accepted a restructuring of the release model so that, starting January 2028, Django ships one feature release per year, each carrying the equal, LTS-level three years of support.",
+    "category": "Open Source News",
+    "date": "2026-08-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/django.png",
+    "content": [
+      "Django's Steering Council accepted a restructuring of the release model so that, starting January 2028, Django ships one feature release per year, each carrying the equal, LTS-level three years of support.",
+      "The 'LTS' label is being retired since all releases now carry equal support, and each version will support the three most recent Python releases at launch, aligning Django's cadence with Python's own annual October release.",
+      "Full details: https://www.djangoproject.com/weblog/2026/aug/10/annual-release-cycle/"
+    ]
+  },
+  {
+    "slug": "django-security-releases-6-0-8-and-5-2-17",
+    "title": "Django Security Releases: 6.0.8 and 5.2.17",
+    "excerpt": "Security releases addressing multiple disclosed CVEs, including a denial-of-service issue where GEOSGeometry could be attacked with deeply nested GEOMETRYCOLLECTION objects.",
+    "category": "Open Source News",
+    "date": "2026-08-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/django.png",
+    "content": [
+      "Security releases addressing multiple disclosed CVEs, including a denial-of-service issue where GEOSGeometry could be attacked with deeply nested GEOMETRYCOLLECTION objects.",
+      "Django now enforces a maximum nesting depth of 198 for both WKT and WKB representations to close the issue.",
+      "Full details: https://www.djangoproject.com/weblog/2026/aug/04/security-releases/"
+    ]
+  },
+  {
+    "slug": "django-security-releases-6-0-7-and-5-2-16",
+    "title": "Django Security Releases: 6.0.7 and 5.2.16",
+    "excerpt": "Fixed an issue where UpdateCacheMiddleware and the cache_page decorator failed to skip caching responses that set a cookie when the incoming request already carried an unrelated cookie, which could cause sensitive coo...",
+    "category": "Open Source News",
+    "date": "2026-07-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/django.png",
+    "content": [
+      "Fixed an issue where UpdateCacheMiddleware and the cache_page decorator failed to skip caching responses that set a cookie when the incoming request already carried an unrelated cookie, which could cause sensitive cookies to be stored in Django's shared cache.",
+      "Full details: https://www.djangoproject.com/weblog/2026/jul/07/security-releases/"
+    ]
+  },
+  {
+    "slug": "vue-3-6-0-rc-5-published",
+    "title": "Vue 3.6.0-rc.5 Published",
+    "excerpt": "The latest release candidate for Vue 3.6, continuing to stabilize Vapor Mode, a new compiler strategy that removes Virtual DOM overhead for smaller bundles and faster runtime, ahead of stable release.",
+    "category": "Open Source News",
+    "date": "2026-08-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vuejs.png",
+    "content": [
+      "The latest release candidate for Vue 3.6, continuing to stabilize Vapor Mode, a new compiler strategy that removes Virtual DOM overhead for smaller bundles and faster runtime, ahead of stable release.",
+      "Full details: https://github.com/vuejs/core/releases/tag/v3.6.0-rc.5"
+    ]
+  },
+  {
+    "slug": "vue-3-6-0-rc-4-published",
+    "title": "Vue 3.6.0-rc.4 Published",
+    "excerpt": "Further release-candidate refinements to Vapor Mode and the reactivity-system rewrite built on alien-signals, which significantly improves reactivity performance and memory usage, while classic VDOM mode remains fully...",
+    "category": "Open Source News",
+    "date": "2026-08-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vuejs.png",
+    "content": [
+      "Further release-candidate refinements to Vapor Mode and the reactivity-system rewrite built on alien-signals, which significantly improves reactivity performance and memory usage, while classic VDOM mode remains fully supported and unchanged.",
+      "Full details: https://github.com/vuejs/core/releases/tag/v3.6.0-rc.4"
+    ]
+  },
+  {
+    "slug": "vue-3-5-41-released",
+    "title": "Vue 3.5.41 Released",
+    "excerpt": "The latest stable patch on the 3.5.x line, delivering bug fixes across compiler-core, compiler-sfc, runtime-core, server-renderer, teleport, reactivity, and runtime-dom, including improved hydration checks and SSR err...",
+    "category": "Open Source News",
+    "date": "2026-08-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vuejs.png",
+    "content": [
+      "The latest stable patch on the 3.5.x line, delivering bug fixes across compiler-core, compiler-sfc, runtime-core, server-renderer, teleport, reactivity, and runtime-dom, including improved hydration checks and SSR error handling.",
+      "Full details: https://github.com/vuejs/core/releases/tag/v3.5.41"
+    ]
+  },
+  {
+    "slug": "elastic-stack-9-5-2-released",
+    "title": "Elastic Stack 9.5.2 Released",
+    "excerpt": "A patch release recommended over the prior 9.5.1, bundling bug fixes across Elasticsearch and the wider Elastic Stack.",
+    "category": "Open Source News",
+    "date": "2026-08-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "A patch release recommended over the prior 9.5.1, bundling bug fixes across Elasticsearch and the wider Elastic Stack.",
+      "Full details: https://www.elastic.co/blog/elastic-stack-9-5-2-released"
+    ]
+  },
+  {
+    "slug": "elastic-stack-9-5-0-columnar-mode-and-vectordb-index",
+    "title": "Elastic Stack 9.5.0: Columnar Mode and VectorDB Index",
+    "excerpt": "A major feature release adding Columnar Mode to Elasticsearch core, with specialized log-data profiles, and a VectorDB index mode with auto-calibration for simplified vector search tuning, plus multimodal semantic ima...",
+    "category": "Open Source News",
+    "date": "2026-08-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "A major feature release adding Columnar Mode to Elasticsearch core, with specialized log-data profiles, and a VectorDB index mode with auto-calibration for simplified vector search tuning, plus multimodal semantic image search.",
+      "It also brought Agent Builder observability and monitoring in technical preview with OpenTelemetry tracing, GA of native PromQL support, and GA Kubernetes monitoring integration.",
+      "Full details: https://www.elastic.co/blog/whats-new-elastic-9-5-0"
+    ]
+  },
+  {
+    "slug": "elastic-stack-9-4-4-released",
+    "title": "Elastic Stack 9.4.4 Released",
+    "excerpt": "A patch release recommended over the prior 9.4.3, bundling accumulated bug fixes across the stack.",
+    "category": "Open Source News",
+    "date": "2026-07-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "A patch release recommended over the prior 9.4.3, bundling accumulated bug fixes across the stack.",
+      "Full details: https://www.elastic.co/blog/elastic-stack-9-4-4-released"
+    ]
+  },
+  {
+    "slug": "graphqlconf-2026-wrap-up-the-language-of-ai",
+    "title": "GraphQLConf 2026 Wrap-up: The Language of AI",
+    "excerpt": "A recap of GraphQLConf 2026, where GraphQL Foundation Executive Director Lee Byron gave opening and closing remarks and Apollo GraphQL's CEO reported on GraphQL's growing role as infrastructure for AI-driven applicati...",
+    "category": "Open Source News",
+    "date": "2026-07-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/graphql.png",
+    "content": [
+      "A recap of GraphQLConf 2026, where GraphQL Foundation Executive Director Lee Byron gave opening and closing remarks and Apollo GraphQL's CEO reported on GraphQL's growing role as infrastructure for AI-driven applications.",
+      "The GraphQL Locals community initiative and the Ambassadors and Community Working Group both reported continued growth.",
+      "Full details: https://graphql.org/blog/2026-07-14-graphqlconf-2026-wrapup/"
+    ]
+  },
+  {
+    "slug": "introducing-graphql-js-v17",
+    "title": "Introducing GraphQL.js v17",
+    "excerpt": "A major release of the reference JavaScript GraphQL implementation, fixing default-value modeling via a new valueToLiteral() helper so correct defaults surface through introspection, and clarifying custom-scalar APIs ...",
+    "category": "Open Source News",
+    "date": "2026-06-15",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/graphql.png",
+    "content": [
+      "A major release of the reference JavaScript GraphQL implementation, fixing default-value modeling via a new valueToLiteral() helper so correct defaults surface through introspection, and clarifying custom-scalar APIs with renamed methods.",
+      "It also graduated 'directives on directive definitions' out of experimental status and added experimental fragment arguments and incremental-delivery support.",
+      "Full details: https://graphql.org/blog/2026-06-15-introducing-graphql-js-v17/"
+    ]
+  },
+  {
+    "slug": "graphqlconf-2026-date-and-venue-change",
+    "title": "GraphQLConf 2026 Date and Venue Change",
+    "excerpt": "An announcement moving GraphQLConf 2026 from its originally planned May dates at Meta's Menlo Park campus to a new venue and slightly later dates at the DoubleTree by Hilton in Fremont, California, plus an added Worki...",
+    "category": "Open Source News",
+    "date": "2026-03-17",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/graphql.png",
+    "content": [
+      "An announcement moving GraphQLConf 2026 from its originally planned May dates at Meta's Menlo Park campus to a new venue and slightly later dates at the DoubleTree by Hilton in Fremont, California, plus an added Working Group Day.",
+      "Full details: https://graphql.org/blog/2026-03-17-graphqlconf-date-change/"
+    ]
+  },
+  {
+    "slug": "linux-kernel-6-11-released",
+    "title": "Linux Kernel 6.11 Released",
+    "excerpt": "Linus Torvalds released kernel 6.11 after a standard seven-RC cycle. Highlights include a new driver subsystem for native Qualcomm Bluetooth/WLAN chip support, initial block atomic write support for NVMe and SCSI driv...",
+    "category": "Open Source News",
+    "date": "2024-09-15",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/linux.png",
+    "content": [
+      "Linus Torvalds released kernel 6.11 after a standard seven-RC cycle. Highlights include a new driver subsystem for native Qualcomm Bluetooth/WLAN chip support, initial block atomic write support for NVMe and SCSI drives, and baseline support for AMD's upcoming RDNA4 GPU architecture.",
+      "It was a short-lived release, superseded within a few months by 6.12.",
+      "Full details: https://www.phoronix.com/news/Linux-6.11"
+    ]
+  },
+  {
+    "slug": "linux-kernel-6-12-released-and-confirmed-as-lts",
+    "title": "Linux Kernel 6.12 Released and Confirmed as LTS",
+    "excerpt": "Kernel 6.12 shipped with full integration of the PREEMPT_RT real-time patchset after nearly two decades of development, the new sched_ext scheduler class, and DRM panic messages rendered as QR codes for easier debuggi...",
+    "category": "Open Source News",
+    "date": "2024-11-17",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/linux.png",
+    "content": [
+      "Kernel 6.12 shipped with full integration of the PREEMPT_RT real-time patchset after nearly two decades of development, the new sched_ext scheduler class, and DRM panic messages rendered as QR codes for easier debugging.",
+      "It was subsequently confirmed by Greg Kroah-Hartman as the next Long Term Support branch, with maintenance guaranteed into at least December 2026.",
+      "Full details: https://www.theregister.com/2024/12/11/linux_612_lts/"
+    ]
+  },
+  {
+    "slug": "linux-kernel-6-13-released",
+    "title": "Linux Kernel 6.13 Released",
+    "excerpt": "Kernel 6.13 landed with over 14,000 changes from 2,086 developers. It introduced a lazy preemption model, protected VM support under Arm's Confidential Compute Architecture, and userspace shadow stack support for AArc...",
+    "category": "Open Source News",
+    "date": "2025-01-19",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/linux.png",
+    "content": [
+      "Kernel 6.13 landed with over 14,000 changes from 2,086 developers. It introduced a lazy preemption model, protected VM support under Arm's Confidential Compute Architecture, and userspace shadow stack support for AArch64.",
+      "Extensive new hardware enablement covered AMD Ryzen X3D, EPYC 9005 'Turin,' and Intel Xe3 graphics.",
+      "Full details: https://kernelnewbies.org/Linux_6.13"
+    ]
+  },
+  {
+    "slug": "linux-kernel-6-15-released",
+    "title": "Linux Kernel 6.15 Released",
+    "excerpt": "This release delivered the first Rust-written Direct Rendering Manager driver and laid the foundation for NOVA, NVIDIA's next-generation open-source Rust graphics driver.",
+    "category": "Open Source News",
+    "date": "2025-05-25",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/linux.png",
+    "content": [
+      "This release delivered the first Rust-written Direct Rendering Manager driver and laid the foundation for NOVA, NVIDIA's next-generation open-source Rust graphics driver.",
+      "Other additions included io_uring zero-copy receive networking support, a fwctl subsystem for standardized firmware management, and Rust support extended to hrtimer and ARMv7.",
+      "Full details: https://www.phoronix.com/news/Linux-6.15-Released"
+    ]
+  },
+  {
+    "slug": "linux-kernel-6-17-released",
+    "title": "Linux Kernel 6.17 Released",
+    "excerpt": "Kernel 6.17 introduced 'Attack Vector Controls,' a new way to select CPU bug mitigations based on chosen threat models rather than blanket settings.",
+    "category": "Open Source News",
+    "date": "2025-09-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/linux.png",
+    "content": [
+      "Kernel 6.17 introduced 'Attack Vector Controls,' a new way to select CPU bug mitigations based on chosen threat models rather than blanket settings.",
+      "It also declared Intel Panther Lake Xe3 graphics stable, added mainline Raspberry Pi RP1 support, and removed uniprocessor scheduler support, meaning every build now targets multicore systems by default.",
+      "Full details: https://www.phoronix.com/news/Linux-6.17-Released"
+    ]
+  },
+  {
+    "slug": "linux-kernel-6-18-released-designated-2025-s-lts",
+    "title": "Linux Kernel 6.18 Released, Designated 2025's LTS",
+    "excerpt": "The final kernel of 2025 shipped with support for the Rust Binder driver, a new dm-pcache device-mapper target enabling persistent memory as a cache layer, and removal of the Bcachefs filesystem from the tree.",
+    "category": "Open Source News",
+    "date": "2025-11-30",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/linux.png",
+    "content": [
+      "The final kernel of 2025 shipped with support for the Rust Binder driver, a new dm-pcache device-mapper target enabling persistent memory as a cache layer, and removal of the Bcachefs filesystem from the tree.",
+      "It was designated the year's Long Term Support release, guaranteed maintenance until December 2027.",
+      "Full details: https://9to5linux.com/its-official-linux-kernel-6-18-will-be-lts-supported-until-december-2027"
+    ]
+  },
+  {
+    "slug": "linux-kernel-7-0-released",
+    "title": "Linux Kernel 7.0 Released",
+    "excerpt": "Marking a major version jump, Linux 7.0 promoted Rust support to fully stable status, concluding the 'Rust experiment' debated at the 2025 Linux Kernel Maintainers Summit, with Rust drivers now treated as first-class ...",
+    "category": "Open Source News",
+    "date": "2026-04-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/linux.png",
+    "content": [
+      "Marking a major version jump, Linux 7.0 promoted Rust support to fully stable status, concluding the 'Rust experiment' debated at the 2025 Linux Kernel Maintainers Summit, with Rust drivers now treated as first-class citizens.",
+      "The release also brought roughly 20% memory-management speedups for workloads like Redis, mainline support for the SpacemiT K3 RISC-V desktop chip, and post-quantum ML-DSA module signing.",
+      "Full details: https://www.theregister.com/2026/04/13/linux_kernel_7_releaseed/"
+    ]
+  },
+  {
+    "slug": "git-2-47-0-released",
+    "title": "Git 2.47.0 Released",
+    "excerpt": "Git 2.47 shipped with contributions from over 83 people, 28 of them first-time contributors. It introduced experimental incremental multi-pack indexes for faster large-repo updates and improvements to the reftable ref...",
+    "category": "Open Source News",
+    "date": "2024-10-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/git.png",
+    "content": [
+      "Git 2.47 shipped with contributions from over 83 people, 28 of them first-time contributors. It introduced experimental incremental multi-pack indexes for faster large-repo updates and improvements to the reftable reference backend.",
+      "The release also brought faster common-base branch lookups via for-each-ref and a new mergetool configuration for Visual Studio Code.",
+      "Full details: https://github.blog/open-source/git/highlights-from-git-2-47/"
+    ]
+  },
+  {
+    "slug": "git-2-48-0-released",
+    "title": "Git 2.48.0 Released",
+    "excerpt": "This release added initial support for the Meson build system alongside existing CMake and Make support, plus C23 language compatibility updates.",
+    "category": "Open Source News",
+    "date": "2025-01-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/git.png",
+    "content": [
+      "This release added initial support for the Meson build system alongside existing CMake and Make support, plus C23 language compatibility updates.",
+      "It also improved git fsck to warn about 'curiously formatted' ref contents, added --remerge-diff support to range-diff, and fixed partial-clone bugs including an infinite loop condition.",
+      "Full details: https://github.blog/open-source/git/highlights-from-git-2-48/"
+    ]
+  },
+  {
+    "slug": "git-2-49-0-released",
+    "title": "Git 2.49.0 Released",
+    "excerpt": "Git 2.49 focused on packing performance improvements and introduced groundwork for a Rust-based foreign language interface, part of the project's longer-term modernization effort.",
+    "category": "Open Source News",
+    "date": "2025-03-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/git.png",
+    "content": [
+      "Git 2.49 focused on packing performance improvements and introduced groundwork for a Rust-based foreign language interface, part of the project's longer-term modernization effort.",
+      "The release consisted of contributions refining internal tooling and continued the trend of converting integration tests to faster unit tests.",
+      "Full details: https://www.phoronix.com/news/Git-2.49-Released"
+    ]
+  },
+  {
+    "slug": "git-2-50-0-released-timed-to-git-s-20th-anniversary",
+    "title": "Git 2.50.0 Released, Timed to Git's 20th Anniversary",
+    "excerpt": "Released to coincide with Git's 20th anniversary, this version included 621 changes from 98 developers. Key improvements included splitting large 'cruft pack' archives into smaller pieces to reduce repack disk load.",
+    "category": "Open Source News",
+    "date": "2025-06-16",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/git.png",
+    "content": [
+      "Released to coincide with Git's 20th anniversary, this version included 621 changes from 98 developers. Key improvements included splitting large 'cruft pack' archives into smaller pieces to reduce repack disk load.",
+      "It also added experimental incremental multi-pack-index support for large repositories and completed removal of the old recursive merge engine in favor of the modern ORT engine.",
+      "Full details: https://about.gitlab.com/blog/what-s-new-in-git-2-50-0/"
+    ]
+  },
+  {
+    "slug": "git-2-51-0-released",
+    "title": "Git 2.51.0 Released",
+    "excerpt": "Git 2.51 delivered major performance gains, including up to 22x faster git fetch and 18x faster git push through batched updates on large repositories.",
+    "category": "Open Source News",
+    "date": "2025-08-18",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/git.png",
+    "content": [
+      "Git 2.51 delivered major performance gains, including up to 22x faster git fetch and 18x faster git push through batched updates on large repositories.",
+      "It also stabilized git switch and git restore out of their experimental phase and advanced work toward SHA-256 becoming the default hash function in the planned Git 3.0.",
+      "Full details: https://www.helpnetsecurity.com/2025/08/19/git-2-51-sha-256/"
+    ]
+  },
+  {
+    "slug": "git-2-52-0-released",
+    "title": "Git 2.52.0 Released",
+    "excerpt": "This release continued preparations toward Git 3.0, expected around the end of 2026, with cruft-free multi-pack indexes, a new internal stash representation, and enhanced git cat-file output.",
+    "category": "Open Source News",
+    "date": "2025-11-17",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/git.png",
+    "content": [
+      "This release continued preparations toward Git 3.0, expected around the end of 2026, with cruft-free multi-pack indexes, a new internal stash representation, and enhanced git cat-file output.",
+      "It also expanded support for changed-path Bloom filters to improve history-query performance in large repositories.",
+      "Full details: https://www.phoronix.com/news/Git-2.52-Released"
+    ]
+  },
+  {
+    "slug": "git-2-53-0-released",
+    "title": "Git 2.53.0 Released",
+    "excerpt": "Git 2.53 brought further performance enhancements across common operations, refined error messaging, and multiple sub-command improvements.",
+    "category": "Open Source News",
+    "date": "2026-02-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/git.png",
+    "content": [
+      "Git 2.53 brought further performance enhancements across common operations, refined error messaging, and multiple sub-command improvements.",
+      "It marked another step toward mandatory Rust tooling support ahead of Git 3.0, with Rust now default-enabled in the build, though still optionally disableable for this release.",
+      "Full details: https://www.phoronix.com/news/Git-2.53-Released"
+    ]
+  },
+  {
+    "slug": "react-compiler-beta-released",
+    "title": "React Compiler Beta Released",
+    "excerpt": "The React team published React Compiler Beta for broader community testing, extending backward compatibility to React 17 and 18 via an optional react-compiler-runtime package.",
+    "category": "Open Source News",
+    "date": "2024-10-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/react.png",
+    "content": [
+      "The React team published React Compiler Beta for broader community testing, extending backward compatibility to React 17 and 18 via an optional react-compiler-runtime package.",
+      "The React Compiler Working Group was also opened from invite-only to public membership, and the announcement cited measurable performance gains from internal Meta deployments across Facebook and Threads.",
+      "Full details: https://react.dev/blog/2024/10/21/react-compiler-beta-release"
+    ]
+  },
+  {
+    "slug": "react-19-stable-release",
+    "title": "React 19 Stable Release",
+    "excerpt": "React 19.0 shipped as stable roughly two years after React 18, introducing Actions and related hooks, the use API for reading promises and context during render, and ref as a regular prop.",
+    "category": "Open Source News",
+    "date": "2024-12-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/react.png",
+    "content": [
+      "React 19.0 shipped as stable roughly two years after React 18, introducing Actions and related hooks, the use API for reading promises and context during render, and ref as a regular prop.",
+      "The release also brought native document metadata support, with Server Components moving from the Canary channel into the stable 'Latest' release line.",
+      "Full details: https://react.dev/blog/2024/12/05/react-19"
+    ]
+  },
+  {
+    "slug": "sunsetting-create-react-app",
+    "title": "Sunsetting Create React App",
+    "excerpt": "The React team formally deprecated Create React App for new applications, citing incompatibilities that surfaced after React 19's release.",
+    "category": "Open Source News",
+    "date": "2025-02-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/react.png",
+    "content": [
+      "The React team formally deprecated Create React App for new applications, citing incompatibilities that surfaced after React 19's release.",
+      "Existing CRA apps continue to work in maintenance mode, but the team directed developers toward frameworks like Next.js or build tools such as Vite for new projects.",
+      "Full details: https://react.dev/blog/2025/02/14/sunsetting-create-react-app"
+    ]
+  },
+  {
+    "slug": "react-19-1-released",
+    "title": "React 19.1 Released",
+    "excerpt": "React 19.1 introduced the Owner Stack debugging feature, which captures the full component ownership chain involved in rendering a given component to speed up diagnosing rendering issues.",
+    "category": "Open Source News",
+    "date": "2025-03-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/react.png",
+    "content": [
+      "React 19.1 introduced the Owner Stack debugging feature, which captures the full component ownership chain involved in rendering a given component to speed up diagnosing rendering issues.",
+      "The release also refined Suspense behavior and Server Components handling as incremental improvements to the React 19 line.",
+      "Full details: https://react.dev/versions"
+    ]
+  },
+  {
+    "slug": "react-19-2-released",
+    "title": "React 19.2 Released",
+    "excerpt": "React 19.2 shipped new primitives including the Activity component for managing hidden and visible UI trees, the useEffectEvent hook, and cacheSignal for cache invalidation tied to abort signals.",
+    "category": "Open Source News",
+    "date": "2025-10-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/react.png",
+    "content": [
+      "React 19.2 shipped new primitives including the Activity component for managing hidden and visible UI trees, the useEffectEvent hook, and cacheSignal for cache invalidation tied to abort signals.",
+      "On the React DOM side it introduced Partial Pre-rendering, and added Performance Tracks for profiling render work in browser devtools.",
+      "Full details: https://react.dev/blog/2025/10/01/react-19-2"
+    ]
+  },
+  {
+    "slug": "react-compiler-1-0-released",
+    "title": "React Compiler 1.0 Released",
+    "excerpt": "React Compiler reached general availability after being battle-tested in production at Meta across React and React Native apps, shipping with an incremental adoption guide and launch partnerships with Expo, Vite, and ...",
+    "category": "Open Source News",
+    "date": "2025-10-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/react.png",
+    "content": [
+      "React Compiler reached general availability after being battle-tested in production at Meta across React and React Native apps, shipping with an incremental adoption guide and launch partnerships with Expo, Vite, and Next.js.",
+      "Compiler-aware lint rules were also folded into eslint-plugin-react-hooks's recommended presets.",
+      "Full details: https://react.dev/blog/2025/10/07/react-compiler-1"
+    ]
+  },
+  {
+    "slug": "critical-security-vulnerability-disclosed-in-react-server-components",
+    "title": "Critical Security Vulnerability Disclosed in React Server Components",
+    "excerpt": "The React team disclosed CVE-2025-55182, a critical (CVSS 10.0) unauthenticated remote code execution vulnerability affecting react-server-dom-webpack, react-server-dom-parcel, and react-server-dom-turbopack across Re...",
+    "category": "Open Source News",
+    "date": "2025-12-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/react.png",
+    "content": [
+      "The React team disclosed CVE-2025-55182, a critical (CVSS 10.0) unauthenticated remote code execution vulnerability affecting react-server-dom-webpack, react-server-dom-parcel, and react-server-dom-turbopack across React 19.0 through 19.2.0, caused by a payload-deserialization flaw at React Server Function endpoints.",
+      "Developers were urged to upgrade immediately to patched versions, and downstream frameworks like Next.js and React Router shipped corresponding patches.",
+      "Full details: https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components"
+    ]
+  },
+  {
+    "slug": "kubernetes-v1-31-elli-released",
+    "title": "Kubernetes v1.31 \"Elli\" Released",
+    "excerpt": "Kubernetes 1.31 shipped 45 enhancements (11 stable, 22 beta, 12 alpha), including AppArmor support reaching general availability for container syscall restriction profiles.",
+    "category": "Open Source News",
+    "date": "2024-08-13",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "Kubernetes 1.31 shipped 45 enhancements (11 stable, 22 beta, 12 alpha), including AppArmor support reaching general availability for container syscall restriction profiles.",
+      "The release also advanced Kubernetes' move toward being cloud-neutral by externalizing cloud-provider-specific code into separate repositories, with contributions from 113 companies and 528 individuals.",
+      "Full details: https://kubernetes.io/blog/2024/08/13/kubernetes-v1-31-release/"
+    ]
+  },
+  {
+    "slug": "kubernetes-v1-32-penelope-released",
+    "title": "Kubernetes v1.32 \"Penelope\" Released",
+    "excerpt": "Arriving as the final minor release of Kubernetes' first decade, v1.32 delivered 44 enhancements (13 stable, 12 beta, 19 alpha), including support for Windows Server LTSC 2024 and refined Horizontal Pod Autoscaling co...",
+    "category": "Open Source News",
+    "date": "2024-12-11",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "Arriving as the final minor release of Kubernetes' first decade, v1.32 delivered 44 enhancements (13 stable, 12 beta, 19 alpha), including support for Windows Server LTSC 2024 and refined Horizontal Pod Autoscaling controls.",
+      "Stricter security defaults and improved observability were also emphasized, with contributions from 125 companies and 559 individuals.",
+      "Full details: https://kubernetes.io/blog/2024/12/11/kubernetes-v1-32-release/"
+    ]
+  },
+  {
+    "slug": "ingressnightmare-critical-rce-vulnerabilities-disclosed-in-ingress-nginx",
+    "title": "\"IngressNightmare\" Critical RCE Vulnerabilities Disclosed in Ingress-NGINX",
+    "excerpt": "Wiz Research disclosed a set of critical vulnerabilities, including the headline CVE-2025-1974 (CVSS 9.8), in the widely used Kubernetes Ingress-NGINX Controller.",
+    "category": "Open Source News",
+    "date": "2025-03-24",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "Wiz Research disclosed a set of critical vulnerabilities, including the headline CVE-2025-1974 (CVSS 9.8), in the widely used Kubernetes Ingress-NGINX Controller.",
+      "Collectively dubbed 'IngressNightmare,' the flaws allowed unauthenticated remote code execution in the ingress controller pod, potentially leading to full cluster compromise, prompting urgent patching guidance across the ecosystem.",
+      "Full details: https://projectdiscovery.io/blog/ingressnightmare-unauth-rce-in-ingress-nginx"
+    ]
+  },
+  {
+    "slug": "kubernetes-v1-33-octarine-released",
+    "title": "Kubernetes v1.33 \"Octarine\" Released",
+    "excerpt": "Kubernetes 1.33 introduced 47 enhancements, notably enabling Linux user namespaces for pods by default as a significant security isolation improvement, now generally available.",
+    "category": "Open Source News",
+    "date": "2025-04-23",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "Kubernetes 1.33 introduced 47 enhancements, notably enabling Linux user namespaces for pods by default as a significant security isolation improvement, now generally available.",
+      "Dynamic Resource Allocation, used for flexible GPU and custom hardware scheduling, advanced to beta, with the 15-week cycle involving 121 companies and 570 contributors.",
+      "Full details: https://kubernetes.io/blog/2025/04/23/kubernetes-v1-33-release/"
+    ]
+  },
+  {
+    "slug": "kubernetes-v1-34-of-wind-will-released",
+    "title": "Kubernetes v1.34 \"Of Wind & Will\" Released",
+    "excerpt": "Version 1.34 delivered 58 enhancements (23 stable, 22 beta, 13 alpha) with a focus on improved scheduler visibility, deeper lifecycle observability, and enhanced resource management including further Dynamic Resource ...",
+    "category": "Open Source News",
+    "date": "2025-08-27",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "Version 1.34 delivered 58 enhancements (23 stable, 22 beta, 13 alpha) with a focus on improved scheduler visibility, deeper lifecycle observability, and enhanced resource management including further Dynamic Resource Allocation refinements.",
+      "The 15-week cycle drew contributions from 106 companies and 491 individuals, with no feature removals or deprecations in this release.",
+      "Full details: https://kubernetes.io/blog/2025/08/27/kubernetes-v1-34-release/"
+    ]
+  },
+  {
+    "slug": "helm-4-released-marking-helm-s-10th-anniversary",
+    "title": "Helm 4 Released, Marking Helm's 10th Anniversary",
+    "excerpt": "The CNCF announced Helm 4, the first major update to the Kubernetes package manager in six years, released to coincide with Helm's 10th anniversary.",
+    "category": "Open Source News",
+    "date": "2025-11-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "The CNCF announced Helm 4, the first major update to the Kubernetes package manager in six years, released to coincide with Helm's 10th anniversary.",
+      "The update introduced an improved SDK with modern Go logging and embeddable commands, a new WebAssembly-based plugin system, and improvements to chart signing, testing automation, and distribution, while preserving backward compatibility.",
+      "Full details: https://www.cncf.io/announcements/2025/11/12/helm-marks-10-years-with-release-of-version-4/"
+    ]
+  },
+  {
+    "slug": "kubernetes-v1-35-timbernetes-released",
+    "title": "Kubernetes v1.35 \"Timbernetes\" Released",
+    "excerpt": "Kubernetes 1.35, themed 'The World Tree Release,' shipped 60 enhancements (17 stable, 19 beta, 22 alpha) from 419 developers across 85+ organizations.",
+    "category": "Open Source News",
+    "date": "2025-12-17",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "Kubernetes 1.35, themed 'The World Tree Release,' shipped 60 enhancements (17 stable, 19 beta, 22 alpha) from 419 developers across 85+ organizations.",
+      "Notable graduations to general availability included in-place update of pod resources, structured authentication configuration, and 'PreferSameNode' traffic distribution for more efficient local kube-proxy routing.",
+      "Full details: https://kubernetes.io/blog/2025/12/17/kubernetes-v1-35-release/"
+    ]
+  },
+  {
+    "slug": "node-js-23-0-0-current-released",
+    "title": "Node.js 23.0.0 (Current) Released",
+    "excerpt": "Node.js 23 enabled require(esm) by default, letting CommonJS code load native ES modules without an experimental flag, and stabilized the node --run command for faster script execution.",
+    "category": "Open Source News",
+    "date": "2024-10-16",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js 23 enabled require(esm) by default, letting CommonJS code load native ES modules without an experimental flag, and stabilized the node --run command for faster script execution.",
+      "The release also dropped support for 32-bit Windows, and Node.js 22 was promoted to LTS the same month.",
+      "Full details: https://github.com/nodejs/node/releases/tag/v23.0.0"
+    ]
+  },
+  {
+    "slug": "node-js-22-enters-lts-as-jod",
+    "title": "Node.js 22 Enters LTS as \"Jod\"",
+    "excerpt": "Node.js 22.x officially transitioned into Long Term Support under the codename 'Jod,' entering Active LTS until October 2025 and Maintenance until end-of-life in April 2027.",
+    "category": "Open Source News",
+    "date": "2024-10-29",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js 22.x officially transitioned into Long Term Support under the codename 'Jod,' entering Active LTS until October 2025 and Maintenance until end-of-life in April 2027.",
+      "Official binaries continued shipping with OpenSSL 3.0.x via the quictls fork, aligned with Node 22's support lifetime.",
+      "Full details: https://nodejs.org/en/blog/release/v22.11.0"
+    ]
+  },
+  {
+    "slug": "node-js-24-0-0-current-released",
+    "title": "Node.js 24.0.0 (Current) Released",
+    "excerpt": "Node.js 24 upgraded the V8 engine to version 13.6 and bundled npm 11, adding features like Float16Array and RegExp.escape().",
+    "category": "Open Source News",
+    "date": "2025-05-06",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js 24 upgraded the V8 engine to version 13.6 and bundled npm 11, adding features like Float16Array and RegExp.escape().",
+      "It removed MSVC support in favor of ClangCL for compiling on Windows, made AsyncLocalStorage use AsyncContextFrame by default, and exposed URLPattern globally.",
+      "Full details: https://nodejs.org/en/blog/release/v24.0.0"
+    ]
+  },
+  {
+    "slug": "node-js-july-2025-security-releases",
+    "title": "Node.js July 2025 Security Releases",
+    "excerpt": "Node.js shipped coordinated security patches across the 24.x, 22.x, and 20.x release lines to address multiple disclosed vulnerabilities.",
+    "category": "Open Source News",
+    "date": "2025-07-15",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js shipped coordinated security patches across the 24.x, 22.x, and 20.x release lines to address multiple disclosed vulnerabilities.",
+      "As with other scheduled security releases, the update bundled dependency updates and urged users on all affected lines to upgrade promptly.",
+      "Full details: https://nodejs.org/en/blog/vulnerability/july-2025-security-releases"
+    ]
+  },
+  {
+    "slug": "node-js-25-0-0-current-released",
+    "title": "Node.js 25.0.0 (Current) Released",
+    "excerpt": "Node.js 25 upgraded V8 to version 14.1, bringing major JSON.stringify performance improvements and built-in Uint8Array base64/hex conversion methods.",
+    "category": "Open Source News",
+    "date": "2025-10-15",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js 25 upgraded V8 to version 14.1, bringing major JSON.stringify performance improvements and built-in Uint8Array base64/hex conversion methods.",
+      "The release doubled down on secure-by-default design with an enhanced permission model, Web Storage enabled by default, and removal of long-deprecated APIs like SlowBuffer.",
+      "Full details: https://nodejs.org/en/blog/release/v25.0.0"
+    ]
+  },
+  {
+    "slug": "node-js-24-enters-lts-as-krypton",
+    "title": "Node.js 24 Enters LTS as \"Krypton\"",
+    "excerpt": "Node.js 24.11.0 marked the 24.x line's promotion to Long Term Support under the codename 'Krypton,' with maintenance guaranteed through April 2028.",
+    "category": "Open Source News",
+    "date": "2025-10-31",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js 24.11.0 marked the 24.x line's promotion to Long Term Support under the codename 'Krypton,' with maintenance guaranteed through April 2028.",
+      "The LTS release includes Express 5 as the default, a permission model no longer marked experimental, and a built-in test runner supporting proper describe blocks.",
+      "Full details: https://nodejs.org/en/blog/release/v24.11.0"
+    ]
+  },
+  {
+    "slug": "node-js-january-2026-security-releases",
+    "title": "Node.js January 2026 Security Releases",
+    "excerpt": "Node.js published a security release across the 25.x, 24.x, 22.x, and 20.x lines addressing eight vulnerabilities, including three high-severity issues: a timeout-based race condition exposing uninitialized memory, a ...",
+    "category": "Open Source News",
+    "date": "2026-01-13",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js published a security release across the 25.x, 24.x, 22.x, and 20.x lines addressing eight vulnerabilities, including three high-severity issues: a timeout-based race condition exposing uninitialized memory, a filesystem permission-model bypass via crafted symlinks, and an HTTP/2 server crash from malformed HEADERS frames.",
+      "The release also bundled dependency upgrades to c-ares and undici.",
+      "Full details: https://nodejs.org/en/blog/vulnerability/december-2025-security-releases"
+    ]
+  },
+  {
+    "slug": "vs-code-1-93",
+    "title": "VS Code 1.93",
+    "excerpt": "Introduced a generally-available Profiles editor for creating, editing, importing and exporting profiles from one unified view, plus improved GitHub Copilot test generation that appends to existing test files or creat...",
+    "category": "Open Source News",
+    "date": "2024-09-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vscode.png",
+    "content": [
+      "Introduced a generally-available Profiles editor for creating, editing, importing and exporting profiles from one unified view, plus improved GitHub Copilot test generation that appends to existing test files or creates new ones.",
+      "The release also added a new YAML grammar for better syntax highlighting.",
+      "Full details: https://code.visualstudio.com/updates/v1_93"
+    ]
+  },
+  {
+    "slug": "announcing-a-free-github-copilot-for-vs-code",
+    "title": "Announcing a Free GitHub Copilot for VS Code",
+    "excerpt": "Microsoft and GitHub launched Copilot Free, giving any GitHub account holder 2,000 code completions and 50 chat messages per month with no trial or credit card required, choosing between Claude 3.5 Sonnet or GPT-4o.",
+    "category": "Open Source News",
+    "date": "2024-12-18",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vscode.png",
+    "content": [
+      "Microsoft and GitHub launched Copilot Free, giving any GitHub account holder 2,000 code completions and 50 chat messages per month with no trial or credit card required, choosing between Claude 3.5 Sonnet or GPT-4o.",
+      "This significantly lowered the barrier to AI-assisted coding inside VS Code.",
+      "Full details: https://code.visualstudio.com/blogs/2024/12/18/free-github-copilot"
+    ]
+  },
+  {
+    "slug": "agent-mode-available-to-all-users-and-supports-mcp",
+    "title": "Agent Mode: Available to All Users and Supports MCP",
+    "excerpt": "Copilot's autonomous agent mode, which plans and executes multi-step coding tasks including editing files, running terminal commands, and self-correcting on errors, moved out of preview to all VS Code users.",
+    "category": "Open Source News",
+    "date": "2025-04-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vscode.png",
+    "content": [
+      "Copilot's autonomous agent mode, which plans and executes multi-step coding tasks including editing files, running terminal commands, and self-correcting on errors, moved out of preview to all VS Code users.",
+      "The release included early Model Context Protocol (MCP) tool support.",
+      "Full details: https://code.visualstudio.com/blogs/2025/04/07/agentMode"
+    ]
+  },
+  {
+    "slug": "visual-studio-and-vs-code-reach-50-million-monthly-active-developers",
+    "title": "Visual Studio and VS Code Reach 50 Million Monthly Active Developers",
+    "excerpt": "Coinciding with VS Code's 10th anniversary year, Microsoft announced that Visual Studio and VS Code combined had reached 50 million monthly active developers, underscoring VS Code's position as the most widely used co...",
+    "category": "Open Source News",
+    "date": "2025-05-15",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vscode.png",
+    "content": [
+      "Coinciding with VS Code's 10th anniversary year, Microsoft announced that Visual Studio and VS Code combined had reached 50 million monthly active developers, underscoring VS Code's position as the most widely used code editor.",
+      "Full details: https://developer.microsoft.com/blog/celebrating-50-million-developers-the-journey-of-visual-studio-and-visual-studio-code/"
+    ]
+  },
+  {
+    "slug": "vs-code-1-102-mcp-support-reaches-general-availability",
+    "title": "VS Code 1.102: MCP Support Reaches General Availability",
+    "excerpt": "Model Context Protocol support, which lets Copilot agent mode connect to external tool servers, graduated from preview to general availability, standardizing how the editor discovers and calls third-party and enterpri...",
+    "category": "Open Source News",
+    "date": "2025-07-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vscode.png",
+    "content": [
+      "Model Context Protocol support, which lets Copilot agent mode connect to external tool servers, graduated from preview to general availability, standardizing how the editor discovers and calls third-party and enterprise tools.",
+      "Full details: https://code.visualstudio.com/updates/v1_102"
+    ]
+  },
+  {
+    "slug": "vs-code-1-106-agent-hq",
+    "title": "VS Code 1.106: Agent HQ",
+    "excerpt": "Shipped Agent HQ, a unified view for kicking off, monitoring, and reviewing agent sessions across local and remote/cloud agents including Copilot and OpenAI Codex, alongside new security and trust controls for delegat...",
+    "category": "Open Source News",
+    "date": "2025-11-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vscode.png",
+    "content": [
+      "Shipped Agent HQ, a unified view for kicking off, monitoring, and reviewing agent sessions across local and remote/cloud agents including Copilot and OpenAI Codex, alongside new security and trust controls for delegating tasks to AI.",
+      "This was also the last release supporting macOS Big Sur.",
+      "Full details: https://code.visualstudio.com/updates/v1_106"
+    ]
+  },
+  {
+    "slug": "vs-code-1-107-expanded-multi-agent-orchestration",
+    "title": "VS Code 1.107: Expanded Multi-Agent Orchestration",
+    "excerpt": "Extended multi-agent orchestration across local, background, and cloud environments, added model management and enterprise security features, and adopted the latest revision of the MCP specification with URL-mode elic...",
+    "category": "Open Source News",
+    "date": "2025-12-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vscode.png",
+    "content": [
+      "Extended multi-agent orchestration across local, background, and cloud environments, added model management and enterprise security features, and adopted the latest revision of the MCP specification with URL-mode elicitation and task support for long-running tool calls.",
+      "Full details: https://code.visualstudio.com/updates/v1_107"
+    ]
+  },
+  {
+    "slug": "hashiconf-2024-terraform-stacks-public-beta",
+    "title": "HashiConf 2024: Terraform Stacks Public Beta",
+    "excerpt": "HashiCorp unveiled Terraform Stacks in public beta, a new construct for coordinating and deploying interdependent Terraform configurations, alongside Vault updates, at HashiConf 2024.",
+    "category": "Open Source News",
+    "date": "2024-10-15",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/terraform.png",
+    "content": [
+      "HashiCorp unveiled Terraform Stacks in public beta, a new construct for coordinating and deploying interdependent Terraform configurations, alongside Vault updates, at HashiConf 2024.",
+      "Full details: https://siliconangle.com/2024/10/15/hashicorp-debuts-new-terraform-stacks-vault-updates-hashiconf-2024/"
+    ]
+  },
+  {
+    "slug": "terraform-1-10-ga-ephemeral-values",
+    "title": "Terraform 1.10 GA: Ephemeral Values",
+    "excerpt": "Terraform 1.10 introduced ephemeral resources and ephemeral input variables and outputs, letting practitioners handle secrets and other transient data without persisting them to state or plan files.",
+    "category": "Open Source News",
+    "date": "2024-11-27",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/terraform.png",
+    "content": [
+      "Terraform 1.10 introduced ephemeral resources and ephemeral input variables and outputs, letting practitioners handle secrets and other transient data without persisting them to state or plan files.",
+      "Full details: https://www.hashicorp.com/en/blog/terraform-1-10-improves-handling-secrets-in-state-with-ephemeral-values"
+    ]
+  },
+  {
+    "slug": "ibm-completes-6-4-billion-acquisition-of-hashicorp",
+    "title": "IBM Completes $6.4 Billion Acquisition of HashiCorp",
+    "excerpt": "IBM closed its acquisition of HashiCorp after clearing UK CMA and US FTC review, bringing Terraform, Vault, Consul, and other HashiCorp tools under IBM's hybrid-cloud and AI portfolio, a major governance shift for the...",
+    "category": "Open Source News",
+    "date": "2025-02-27",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/terraform.png",
+    "content": [
+      "IBM closed its acquisition of HashiCorp after clearing UK CMA and US FTC review, bringing Terraform, Vault, Consul, and other HashiCorp tools under IBM's hybrid-cloud and AI portfolio, a major governance shift for the project's steward.",
+      "Full details: https://techcrunch.com/2025/02/27/ibm-closes-6-4b-hashicorp-acquisition/"
+    ]
+  },
+  {
+    "slug": "terraform-1-12-ga-resource-identity-framework",
+    "title": "Terraform 1.12 GA: Resource Identity Framework",
+    "excerpt": "Added a resource identity framework for improved resource discovery and import, an import block enhancement using identity attributes, and a new backend for storing state in OCI Object Storage.",
+    "category": "Open Source News",
+    "date": "2025-05-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/terraform.png",
+    "content": [
+      "Added a resource identity framework for improved resource discovery and import, an import block enhancement using identity attributes, and a new backend for storing state in OCI Object Storage.",
+      "Full details: https://discuss.hashicorp.com/t/terraform-v1-12-0-released/74958"
+    ]
+  },
+  {
+    "slug": "terraform-1-13-ga",
+    "title": "Terraform 1.13 GA",
+    "excerpt": "Continued the post-acquisition release cadence under IBM stewardship with further CLI and provider-protocol refinements.",
+    "category": "Open Source News",
+    "date": "2025-08-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/terraform.png",
+    "content": [
+      "Continued the post-acquisition release cadence under IBM stewardship with further CLI and provider-protocol refinements.",
+      "Full details: https://discuss.hashicorp.com/t/terraform-v1-13-0-released/76289"
+    ]
+  },
+  {
+    "slug": "terraform-stacks-reaches-general-availability",
+    "title": "Terraform Stacks Reaches General Availability",
+    "excerpt": "At HashiConf 2025, Stacks moved from beta to GA for HCP Terraform plans, with all Stacks commands folded into the main Terraform CLI and backward-compatibility guarantees for production use.",
+    "category": "Open Source News",
+    "date": "2025-09-25",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/terraform.png",
+    "content": [
+      "At HashiConf 2025, Stacks moved from beta to GA for HCP Terraform plans, with all Stacks commands folded into the main Terraform CLI and backward-compatibility guarantees for production use.",
+      "Full details: https://developer.hashicorp.com/terraform/language/stacks/update-GA"
+    ]
+  },
+  {
+    "slug": "terraform-1-15-0-ga",
+    "title": "Terraform 1.15.0 GA",
+    "excerpt": "Added native Windows ARM64 builds and the ability to mark variables and outputs as deprecated, continuing steady core-CLI evolution ahead of the later 1.15.9 patch release.",
+    "category": "Open Source News",
+    "date": "2026-04-29",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/terraform.png",
+    "content": [
+      "Added native Windows ARM64 builds and the ability to mark variables and outputs as deprecated, continuing steady core-CLI evolution ahead of the later 1.15.9 patch release.",
+      "Full details: https://github.com/hashicorp/terraform/releases/tag/v1.15.0"
+    ]
+  },
+  {
+    "slug": "ansible-core-2-17-3",
+    "title": "ansible-core 2.17.3",
+    "excerpt": "A maintenance release in the 2.17 stable series, delivering bug fixes to the core engine used by all Ansible collections.",
+    "category": "Open Source News",
+    "date": "2024-08-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/ansible.png",
+    "content": [
+      "A maintenance release in the 2.17 stable series, delivering bug fixes to the core engine used by all Ansible collections.",
+      "Full details: https://docs.ansible.com/projects/ansible/latest/roadmap/ROADMAP_2_17.html"
+    ]
+  },
+  {
+    "slug": "red-hat-ansible-automation-platform-2-5-ga",
+    "title": "Red Hat Ansible Automation Platform 2.5 GA",
+    "excerpt": "Introduced a unified web UI spanning controller, private automation hub, and Event-Driven Ansible, plus Automation Analytics with an ROI calculator and Ansible Lightspeed, powered by IBM watsonx Code Assistant, for AI...",
+    "category": "Open Source News",
+    "date": "2024-09-30",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/ansible.png",
+    "content": [
+      "Introduced a unified web UI spanning controller, private automation hub, and Event-Driven Ansible, plus Automation Analytics with an ROI calculator and Ansible Lightspeed, powered by IBM watsonx Code Assistant, for AI-generated playbooks.",
+      "Full details: https://developers.redhat.com/blog/2024/10/01/whats-new-red-hat-ansible-automation-platform-25"
+    ]
+  },
+  {
+    "slug": "ansible-core-2-18-0-ga",
+    "title": "ansible-core 2.18.0 GA",
+    "excerpt": "The twice-yearly major ansible-core release, following the project's May/November cadence, bringing core engine improvements and setting the dependency baseline for the Ansible 11 community package.",
+    "category": "Open Source News",
+    "date": "2024-11-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/ansible.png",
+    "content": [
+      "The twice-yearly major ansible-core release, following the project's May/November cadence, bringing core engine improvements and setting the dependency baseline for the Ansible 11 community package.",
+      "Full details: https://forum.ansible.com/t/new-release-ansible-core-v2-18-0/10695"
+    ]
+  },
+  {
+    "slug": "ansible-community-package-11-0-0",
+    "title": "Ansible Community Package 11.0.0",
+    "excerpt": "First stable release of the Ansible 11 curated collection bundle, built on ansible-core 2.18.0, packaging modules, plugins, and roles maintained by the community.",
+    "category": "Open Source News",
+    "date": "2024-11-19",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/ansible.png",
+    "content": [
+      "First stable release of the Ansible 11 curated collection bundle, built on ansible-core 2.18.0, packaging modules, plugins, and roles maintained by the community.",
+      "Full details: https://forum.ansible.com/t/release-announcement-ansible-community-package-11-0-0/11005"
+    ]
+  },
+  {
+    "slug": "ansible-core-2-19-0-ga",
+    "title": "ansible-core 2.19.0 GA",
+    "excerpt": "Delivered the next major ansible-core release with continued engine and templating improvements, becoming the dependency baseline for the Ansible 12 package.",
+    "category": "Open Source News",
+    "date": "2025-07-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/ansible.png",
+    "content": [
+      "Delivered the next major ansible-core release with continued engine and templating improvements, becoming the dependency baseline for the Ansible 12 package.",
+      "Full details: https://forum.ansible.com/t/new-release-ansible-core-v2-19-0/43969"
+    ]
+  },
+  {
+    "slug": "ansible-community-package-12-0-0",
+    "title": "Ansible Community Package 12.0.0",
+    "excerpt": "First stable release of the Ansible 12 bundle, depending on ansible-core 2.19.1, continuing the project's regular collections-bundling cadence.",
+    "category": "Open Source News",
+    "date": "2025-09-09",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/ansible.png",
+    "content": [
+      "First stable release of the Ansible 12 bundle, depending on ansible-core 2.19.1, continuing the project's regular collections-bundling cadence.",
+      "Full details: https://forum.ansible.com/t/release-announcement-ansible-community-package-12-0-0/44450"
+    ]
+  },
+  {
+    "slug": "red-hat-ansible-automation-platform-2-6-ga",
+    "title": "Red Hat Ansible Automation Platform 2.6 GA",
+    "excerpt": "The next major AAP release, expanding platform capabilities for enterprise automation and AI-assisted operations building on the 2.5 unified UI foundation.",
+    "category": "Open Source News",
+    "date": "2025-10-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/ansible.png",
+    "content": [
+      "The next major AAP release, expanding platform capabilities for enterprise automation and AI-assisted operations building on the 2.5 unified UI foundation.",
+      "Full details: https://developers.redhat.com/articles/2025/10/08/whats-new-ansible-automation-platform-2-6"
+    ]
+  },
+  {
+    "slug": "salvatore-sanfilippo-antirez-returns-to-redis",
+    "title": "Salvatore Sanfilippo (\"antirez\") Returns to Redis",
+    "excerpt": "Redis's original creator, who had stepped back from the project in 2020, rejoined the company as a 'Redis evangelist,' soon designing the new Vector Set data structure, a symbolically important reconciliation after th...",
+    "category": "Open Source News",
+    "date": "2024-12-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/redis.png",
+    "content": [
+      "Redis's original creator, who had stepped back from the project in 2020, rejoined the company as a 'Redis evangelist,' soon designing the new Vector Set data structure, a symbolically important reconciliation after the prior year's licensing controversy.",
+      "Full details: https://redis.io/blog/welcome-back-to-redis-antirez/"
+    ]
+  },
+  {
+    "slug": "security-advisory-cve-2025-21605",
+    "title": "Security Advisory: CVE-2025-21605",
+    "excerpt": "Disclosed a high-severity denial-of-service vulnerability from unbounded output-buffer growth, abusable by unauthenticated clients when a Redis instance is exposed without a password, with fixes shipped across all sup...",
+    "category": "Open Source News",
+    "date": "2025-04-23",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/redis.png",
+    "content": [
+      "Disclosed a high-severity denial-of-service vulnerability from unbounded output-buffer growth, abusable by unauthenticated clients when a Redis instance is exposed without a password, with fixes shipped across all supported release lines.",
+      "Full details: https://redis.io/blog/security-advisory-cve-2025-21605/"
+    ]
+  },
+  {
+    "slug": "redis-returns-to-open-source-under-agplv3",
+    "title": "Redis Returns to Open Source Under AGPLv3",
+    "excerpt": "Redis reversed its March 2024 move to the source-available SSPL and RSAL licenses, announcing Redis 8 would ship under the OSI-approved AGPLv3, in direct response to community backlash and cloud-vendor-backed forks li...",
+    "category": "Open Source News",
+    "date": "2025-05-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/redis.png",
+    "content": [
+      "Redis reversed its March 2024 move to the source-available SSPL and RSAL licenses, announcing Redis 8 would ship under the OSI-approved AGPLv3, in direct response to community backlash and cloud-vendor-backed forks like Valkey gaining traction.",
+      "Full details: https://www.theregister.com/2025/05/01/redis_returns_to_open_source/"
+    ]
+  },
+  {
+    "slug": "redis-8-0-general-availability",
+    "title": "Redis 8.0 General Availability",
+    "excerpt": "The first AGPL-licensed Redis 8 release delivered over 30 performance improvements, including up to 87% faster commands and 2x throughput, plus eight new data structures including vector sets, JSON, time series, and s...",
+    "category": "Open Source News",
+    "date": "2025-05-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/redis.png",
+    "content": [
+      "The first AGPL-licensed Redis 8 release delivered over 30 performance improvements, including up to 87% faster commands and 2x throughput, plus eight new data structures including vector sets, JSON, time series, and several probabilistic structures.",
+      "Full details: https://redis.io/blog/redis-8-ga/"
+    ]
+  },
+  {
+    "slug": "redis-8-2-general-availability",
+    "title": "Redis 8.2 General Availability",
+    "excerpt": "Continued the Redis 8 line with further performance and memory-footprint improvements plus new and extended commands.",
+    "category": "Open Source News",
+    "date": "2025-08-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/redis.png",
+    "content": [
+      "Continued the Redis 8 line with further performance and memory-footprint improvements plus new and extended commands.",
+      "Full details: https://redis.io/docs/latest/operate/oss_and_stack/stack-with-enterprise/release-notes/redisce/redisos-8.2-release-notes/"
+    ]
+  },
+  {
+    "slug": "cve-2025-49844-redishell-critical-rce-disclosed",
+    "title": "CVE-2025-49844 \"RediShell\" Critical RCE Disclosed",
+    "excerpt": "Wiz Research disclosed a maximum-severity authenticated remote-code-execution flaw in Redis's Lua scripting engine, a 13-year-old use-after-free bug triggerable via a crafted Lua script, prompting urgent patch guidanc...",
+    "category": "Open Source News",
+    "date": "2025-10-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/redis.png",
+    "content": [
+      "Wiz Research disclosed a maximum-severity authenticated remote-code-execution flaw in Redis's Lua scripting engine, a 13-year-old use-after-free bug triggerable via a crafted Lua script, prompting urgent patch guidance and ACL-based mitigations.",
+      "Full details: https://redis.io/blog/security-advisory-cve-2025-49844/"
+    ]
+  },
+  {
+    "slug": "redis-8-4-general-availability",
+    "title": "Redis 8.4 General Availability",
+    "excerpt": "The next quarterly Redis Open Source release, extending the post-AGPL 8.x line with additional feature and performance work.",
+    "category": "Open Source News",
+    "date": "2025-11-18",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/redis.png",
+    "content": [
+      "The next quarterly Redis Open Source release, extending the post-AGPL 8.x line with additional feature and performance work.",
+      "Full details: https://redis.io/docs/latest/operate/oss_and_stack/stack-with-enterprise/release-notes/redisce/redisos-8.4-release-notes/"
+    ]
+  },
+  {
+    "slug": "next-js-15-ga",
+    "title": "Next.js 15 GA",
+    "excerpt": "Shipped React 19 support, an experimental React Compiler, a stable Turbopack dev server, and an @next/codemod CLI for automated upgrades, unifying Server Actions, Partial Prerendering, and modernized caching.",
+    "category": "Open Source News",
+    "date": "2024-10-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Shipped React 19 support, an experimental React Compiler, a stable Turbopack dev server, and an @next/codemod CLI for automated upgrades, unifying Server Actions, Partial Prerendering, and modernized caching.",
+      "Full details: https://nextjs.org/blog/next-15"
+    ]
+  },
+  {
+    "slug": "next-js-15-1",
+    "title": "Next.js 15.1",
+    "excerpt": "Brought official React 19 support to both the Pages and App Routers, a new after() API for post-response code execution, experimental forbidden and unauthorized auth APIs, and improved error source maps.",
+    "category": "Open Source News",
+    "date": "2024-12-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Brought official React 19 support to both the Pages and App Routers, a new after() API for post-response code execution, experimental forbidden and unauthorized auth APIs, and improved error source maps.",
+      "Full details: https://nextjs.org/blog/next-15-1"
+    ]
+  },
+  {
+    "slug": "next-js-15-2",
+    "title": "Next.js 15.2",
+    "excerpt": "Debuted a redesigned error overlay with clearer stack traces via React Owner Stacks integration, improved debugging ergonomics, and experimental View Transitions support.",
+    "category": "Open Source News",
+    "date": "2025-02-26",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Debuted a redesigned error overlay with clearer stack traces via React Owner Stacks integration, improved debugging ergonomics, and experimental View Transitions support.",
+      "Full details: https://nextjs.org/blog/next-15-2"
+    ]
+  },
+  {
+    "slug": "next-js-15-5",
+    "title": "Next.js 15.5",
+    "excerpt": "Introduced beta Turbopack production builds, made Node.js middleware runtime stable, added TypeScript route-typing improvements, deprecated the next lint command, and flagged upcoming Next.js 16 breaking changes.",
+    "category": "Open Source News",
+    "date": "2025-08-18",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Introduced beta Turbopack production builds, made Node.js middleware runtime stable, added TypeScript route-typing improvements, deprecated the next lint command, and flagged upcoming Next.js 16 breaking changes.",
+      "Full details: https://nextjs.org/blog/next-15-5"
+    ]
+  },
+  {
+    "slug": "next-js-16-ga",
+    "title": "Next.js 16 GA",
+    "excerpt": "The largest performance-focused release since the App Router's debut: Turbopack became the default bundler for 2-5x faster builds, Cache Components with 'use cache' replaced Partial Prerendering, proxy.ts replaced mid...",
+    "category": "Open Source News",
+    "date": "2025-10-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "The largest performance-focused release since the App Router's debut: Turbopack became the default bundler for 2-5x faster builds, Cache Components with 'use cache' replaced Partial Prerendering, proxy.ts replaced middleware.ts, and a new DevTools MCP integration enabled AI-assisted debugging.",
+      "Full details: https://nextjs.org/blog/next-16"
+    ]
+  },
+  {
+    "slug": "next-js-16-1",
+    "title": "Next.js 16.1",
+    "excerpt": "Made Turbopack's filesystem caching stable, added an experimental bundle analyzer, and shipped next dev --inspect for debugger attachment, shifting focus to stability and performance over new concepts.",
+    "category": "Open Source News",
+    "date": "2025-12-18",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Made Turbopack's filesystem caching stable, added an experimental bundle analyzer, and shipped next dev --inspect for debugger attachment, shifting focus to stability and performance over new concepts.",
+      "Full details: https://nextjs.org/blog/next-16-1"
+    ]
+  },
+  {
+    "slug": "next-js-16-2",
+    "title": "Next.js 16.2",
+    "excerpt": "Delivered roughly 400% faster dev-server startup and up to 60% faster rendering, over 200 Turbopack fixes, 20x faster complex-image responses, and @vercel/next-browser for letting AI agents inspect a running app's com...",
+    "category": "Open Source News",
+    "date": "2026-03-18",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Delivered roughly 400% faster dev-server startup and up to 60% faster rendering, over 200 Turbopack fixes, 20x faster complex-image responses, and @vercel/next-browser for letting AI agents inspect a running app's component tree, network activity, and logs.",
+      "Full details: https://nextjs.org/blog/next-16-2"
+    ]
+  },
+  {
+    "slug": "python-3-13-0-released",
+    "title": "Python 3.13.0 Released",
+    "excerpt": "Python 3.13 shipped as the newest major release, headlined by an experimental free-threaded build that can disable the GIL, a new PyPy-based interactive interpreter with multi-line editing and colorized tracebacks, an...",
+    "category": "Open Source News",
+    "date": "2024-10-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "Python 3.13 shipped as the newest major release, headlined by an experimental free-threaded build that can disable the GIL, a new PyPy-based interactive interpreter with multi-line editing and colorized tracebacks, and an experimental JIT compiler.",
+      "It follows Python's standard annual release cadence and begins a five-year support lifecycle.",
+      "Full details: https://blog.python.org/2024/10/python-3130-final-released/"
+    ]
+  },
+  {
+    "slug": "python-3-8-reaches-end-of-life",
+    "title": "Python 3.8 Reaches End of Life",
+    "excerpt": "Python 3.8, first released in 2019, stopped receiving security patches and bug fixes after its final point release.",
+    "category": "Open Source News",
+    "date": "2024-10-31",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "Python 3.8, first released in 2019, stopped receiving security patches and bug fixes after its final point release.",
+      "Organizations still running 3.8 in production no longer get CVE remediation from core developers, pushing many teams toward 3.9+ upgrades.",
+      "Full details: https://www.python.org/downloads/release/python-3820/"
+    ]
+  },
+  {
+    "slug": "python-3-13-1-3-12-8-3-11-11-3-10-16-and-3-9-21-released",
+    "title": "Python 3.13.1, 3.12.8, 3.11.11, 3.10.16 and 3.9.21 Released",
+    "excerpt": "The core team shipped coordinated maintenance releases across five active branches simultaneously; 3.13.1 alone contained roughly 400 bugfixes and stability improvements since the October 3.13.0 launch.",
+    "category": "Open Source News",
+    "date": "2024-12-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "The core team shipped coordinated maintenance releases across five active branches simultaneously; 3.13.1 alone contained roughly 400 bugfixes and stability improvements since the October 3.13.0 launch.",
+      "This reflects Python's overlapping multi-branch support model.",
+      "Full details: https://blog.python.org/2024/12/python-3131-3128-31111-31016-and-3921/"
+    ]
+  },
+  {
+    "slug": "the-psf-s-2024-annual-impact-report-is-here",
+    "title": "The PSF's 2024 Annual Impact Report Is Here",
+    "excerpt": "The Python Software Foundation published its 2024 impact report, citing record fundraising, hiring of a dedicated PyPI support specialist, and grants funding community events across six continents.",
+    "category": "Open Source News",
+    "date": "2025-06-17",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "The Python Software Foundation published its 2024 impact report, citing record fundraising, hiring of a dedicated PyPI support specialist, and grants funding community events across six continents.",
+      "It offered a detailed look at PSF finances ahead of a rockier funding year.",
+      "Full details: https://pyfound.blogspot.com/2025/06/the-psfs-2024-annual-impact-report-is.html"
+    ]
+  },
+  {
+    "slug": "python-3-14-0-released",
+    "title": "Python 3.14.0 Released",
+    "excerpt": "Python 3.14 became generally available after a 17-month cycle, with free-threaded Python officially supported, deferred evaluation of annotations, template string literals, and a new compression.zstd standard library ...",
+    "category": "Open Source News",
+    "date": "2025-10-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "Python 3.14 became generally available after a 17-month cycle, with free-threaded Python officially supported, deferred evaluation of annotations, template string literals, and a new compression.zstd standard library module.",
+      "It carries a five-year support commitment through 2030.",
+      "Full details: https://www.python.org/downloads/release/python-3140/"
+    ]
+  },
+  {
+    "slug": "the-psf-withdraws-a-1-5-million-proposal-to-a-us-government-grant-program",
+    "title": "The PSF Withdraws a $1.5 Million Proposal to a US Government Grant Program",
+    "excerpt": "The PSF withdrew an NSF proposal meant to fund security work on Python and PyPI after declining to certify it would refrain from diversity, equity and inclusion activities.",
+    "category": "Open Source News",
+    "date": "2025-10-27",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "The PSF withdrew an NSF proposal meant to fund security work on Python and PyPI after declining to certify it would refrain from diversity, equity and inclusion activities.",
+      "The PSF said signing would conflict with its mission, a notable governance and funding standoff.",
+      "Full details: https://pyfound.blogspot.com/2025/10/NSF-funding-statement.html"
+    ]
+  },
+  {
+    "slug": "python-3-9-reaches-end-of-life",
+    "title": "Python 3.9 Reaches End of Life",
+    "excerpt": "Python 3.9 received its final security release, ending five years of support.",
+    "category": "Open Source News",
+    "date": "2025-10-31",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "Python 3.9 received its final security release, ending five years of support.",
+      "Teams outside vendor-extended LTS channels are left running an unpatched runtime unless they upgrade, significant given how widely 3.9 was deployed.",
+      "Full details: https://www.anaconda.com/blog/python-3-9-end-of-life"
+    ]
+  },
+  {
+    "slug": "postgresql-17-released",
+    "title": "PostgreSQL 17 Released",
+    "excerpt": "PostgreSQL 17 shipped with an overhauled vacuum memory management implementation, new SQL/JSON capabilities including JSON_TABLE(), and logical replication improvements such as failover control and slot preservation a...",
+    "category": "Open Source News",
+    "date": "2024-09-26",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "PostgreSQL 17 shipped with an overhauled vacuum memory management implementation, new SQL/JSON capabilities including JSON_TABLE(), and logical replication improvements such as failover control and slot preservation across pg_upgrade.",
+      "Over 450 contributors participated in the release.",
+      "Full details: https://www.postgresql.org/about/news/postgresql-17-released-2936/"
+    ]
+  },
+  {
+    "slug": "postgresql-17-1-and-coordinated-point-releases",
+    "title": "PostgreSQL 17.1 and Coordinated Point Releases",
+    "excerpt": "Coordinated point releases fixed a SET ROLE privilege issue and updated bundled tzdata.",
+    "category": "Open Source News",
+    "date": "2024-11-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "Coordinated point releases fixed a SET ROLE privilege issue and updated bundled tzdata.",
+      "A follow-up out-of-cycle release was needed a week later to fix two regressions the patch itself had introduced.",
+      "Full details: https://www.postgresql.org/about/news/postgresql-171-165-159-1414-1317-and-1221-released-2955/"
+    ]
+  },
+  {
+    "slug": "postgresql-security-release-fixes-libpq-sql-injection",
+    "title": "PostgreSQL Security Release Fixes libpq SQL Injection",
+    "excerpt": "This update fixed CVE-2025-1094, a SQL injection vulnerability in libpq's quoting functions including PQescapeLiteral and PQescapeIdentifier, plus more than 70 other bug fixes.",
+    "category": "Open Source News",
+    "date": "2025-02-13",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "This update fixed CVE-2025-1094, a SQL injection vulnerability in libpq's quoting functions including PQescapeLiteral and PQescapeIdentifier, plus more than 70 other bug fixes.",
+      "It was widely covered as a high-severity psql client issue.",
+      "Full details: https://www.postgresql.org/about/news/postgresql-173-167-1511-1416-and-1319-released-3015/"
+    ]
+  },
+  {
+    "slug": "postgresql-security-release-fixes-pg-dump-code-injection",
+    "title": "PostgreSQL Security Release Fixes pg_dump Code Injection",
+    "excerpt": "Fixed CVE-2025-8714 (CVSS 8.8), a pg_dump vulnerability letting a malicious superuser inject code executed at restore time, and CVE-2025-8713, an optimizer-statistics leak that could expose row-security-protected data.",
+    "category": "Open Source News",
+    "date": "2025-08-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "Fixed CVE-2025-8714 (CVSS 8.8), a pg_dump vulnerability letting a malicious superuser inject code executed at restore time, and CVE-2025-8713, an optimizer-statistics leak that could expose row-security-protected data.",
+      "Full details: https://www.postgresql.org/support/security/CVE-2025-8714/"
+    ]
+  },
+  {
+    "slug": "postgresql-18-released",
+    "title": "PostgreSQL 18 Released",
+    "excerpt": "PostgreSQL 18 introduced a new asynchronous I/O subsystem delivering up to 3x read performance gains, 'skip scan' support for multicolumn B-tree indexes, a uuidv7() function, and temporal constraints for primary, uniq...",
+    "category": "Open Source News",
+    "date": "2025-09-25",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "PostgreSQL 18 introduced a new asynchronous I/O subsystem delivering up to 3x read performance gains, 'skip scan' support for multicolumn B-tree indexes, a uuidv7() function, and temporal constraints for primary, unique, and foreign keys.",
+      "Virtual generated columns are now the default.",
+      "Full details: https://www.postgresql.org/about/news/postgresql-18-released-3142/"
+    ]
+  },
+  {
+    "slug": "postgresql-18-1-and-coordinated-releases",
+    "title": "PostgreSQL 18.1 and Coordinated Releases",
+    "excerpt": "Fixed two security vulnerabilities and over 50 bugs across all supported branches.",
+    "category": "Open Source News",
+    "date": "2025-11-13",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "Fixed two security vulnerabilities and over 50 bugs across all supported branches.",
+      "This release also marked PostgreSQL 13's final release, as it reached end-of-life.",
+      "Full details: https://www.postgresql.org/about/news/postgresql-181-177-1611-1515-1420-and-1323-released-3171/"
+    ]
+  },
+  {
+    "slug": "postgresql-security-release-fixes-intarray-and-pgcrypto-flaws",
+    "title": "PostgreSQL Security Release Fixes intarray and pgcrypto Flaws",
+    "excerpt": "Fixed five security vulnerabilities and over 65 bugs, including arbitrary code execution via the intarray extension's selectivity estimator and a heap buffer overflow in pgcrypto, both rated CVSS 8.8.",
+    "category": "Open Source News",
+    "date": "2026-02-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "Fixed five security vulnerabilities and over 65 bugs, including arbitrary code execution via the intarray extension's selectivity estimator and a heap buffer overflow in pgcrypto, both rated CVSS 8.8.",
+      "Full details: https://www.postgresql.org/about/news/postgresql-182-178-1612-1516-and-1421-released-3235/"
+    ]
+  },
+  {
+    "slug": "announcing-rust-1-80-0",
+    "title": "Announcing Rust 1.80.0",
+    "excerpt": "Rust 1.80.0 stabilized LazyCell and LazyLock for one-time initialization and expanded const evaluation, continuing Rust's six-week release cadence.",
+    "category": "Open Source News",
+    "date": "2024-07-25",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "Rust 1.80.0 stabilized LazyCell and LazyLock for one-time initialization and expanded const evaluation, continuing Rust's six-week release cadence.",
+      "Full details: https://blog.rust-lang.org/2024/07/25/Rust-1.80.0.html"
+    ]
+  },
+  {
+    "slug": "announcing-rust-1-81-0",
+    "title": "Announcing Rust 1.81.0",
+    "excerpt": "This release stabilized the Error trait in core, enabling its use in no_std libraries, added expect lint-level attributes with reasons, and improved sort algorithm performance.",
+    "category": "Open Source News",
+    "date": "2024-09-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "This release stabilized the Error trait in core, enabling its use in no_std libraries, added expect lint-level attributes with reasons, and improved sort algorithm performance.",
+      "Full details: https://blog.rust-lang.org/2024/09/05/Rust-1.81.0.html"
+    ]
+  },
+  {
+    "slug": "announcing-rust-1-82-0",
+    "title": "Announcing Rust 1.82.0",
+    "excerpt": "Rust 1.82.0 added a Cargo info subcommand for inspecting registry packages and stabilized const immediates for inline assembly, among other compiler and tooling refinements.",
+    "category": "Open Source News",
+    "date": "2024-10-17",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "Rust 1.82.0 added a Cargo info subcommand for inspecting registry packages and stabilized const immediates for inline assembly, among other compiler and tooling refinements.",
+      "Full details: https://blog.rust-lang.org/2024/10/17/Rust-1.82.0/"
+    ]
+  },
+  {
+    "slug": "announcing-rust-1-83-0",
+    "title": "Announcing Rust 1.83.0",
+    "excerpt": "This release expanded the ControlFlow API, added Entry::insert_entry, and introduced new io::ErrorKind variants along with APIs for deconstructing Wakers, rounding out end-of-year stability improvements.",
+    "category": "Open Source News",
+    "date": "2024-11-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "This release expanded the ControlFlow API, added Entry::insert_entry, and introduced new io::ErrorKind variants along with APIs for deconstructing Wakers, rounding out end-of-year stability improvements.",
+      "Full details: https://blog.rust-lang.org/2024/11/28/Rust-1.83.0.html"
+    ]
+  },
+  {
+    "slug": "announcing-rust-1-85-0-and-rust-2024",
+    "title": "Announcing Rust 1.85.0 and Rust 2024",
+    "excerpt": "This release stabilized the Rust 2024 Edition, introducing async closures, new style editions for independent formatting configuration, and an MSRV-aware Cargo resolver.",
+    "category": "Open Source News",
+    "date": "2025-02-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "This release stabilized the Rust 2024 Edition, introducing async closures, new style editions for independent formatting configuration, and an MSRV-aware Cargo resolver.",
+      "It marked one of the most significant edition transitions since 2021.",
+      "Full details: https://blog.rust-lang.org/2025/02/20/Rust-1.85.0/"
+    ]
+  },
+  {
+    "slug": "announcing-the-rust-foundation-maintainers-fund",
+    "title": "Announcing the Rust Foundation Maintainers Fund",
+    "excerpt": "The Rust Foundation announced a new fund to provide consistent, long-term financial support to core Rust maintainers, developed in collaboration with the Rust Project Leadership Council and Project Directors.",
+    "category": "Open Source News",
+    "date": "2025-11-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "The Rust Foundation announced a new fund to provide consistent, long-term financial support to core Rust maintainers, developed in collaboration with the Rust Project Leadership Council and Project Directors.",
+      "It addresses sustainability concerns for the people maintaining critical infrastructure.",
+      "Full details: https://rustfoundation.org/media/announcing-the-rust-foundation-maintainers-fund/"
+    ]
+  },
+  {
+    "slug": "announcing-rust-1-84-0",
+    "title": "Announcing Rust 1.84.0",
+    "excerpt": "Rust 1.84.0 stabilized the MSRV-aware Cargo dependency resolver, which prefers versions compatible with a project's declared minimum supported Rust version, and stabilized strict provenance APIs for pointers.",
+    "category": "Open Source News",
+    "date": "2025-01-09",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "Rust 1.84.0 stabilized the MSRV-aware Cargo dependency resolver, which prefers versions compatible with a project's declared minimum supported Rust version, and stabilized strict provenance APIs for pointers.",
+      "Full details: https://blog.rust-lang.org/2025/01/09/Rust-1.84.0/"
+    ]
+  },
+  {
+    "slug": "announcing-upgraded-docker-plans",
+    "title": "Announcing Upgraded Docker Plans",
+    "excerpt": "Docker restructured its Personal, Pro, Team, and Business subscription tiers to bundle its full product suite, Desktop, Hub, Scout, and Build Cloud, under existing plans, alongside price increases for Pro and Team tie...",
+    "category": "Open Source News",
+    "date": "2024-11-15",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/docker.png",
+    "content": [
+      "Docker restructured its Personal, Pro, Team, and Business subscription tiers to bundle its full product suite, Desktop, Hub, Scout, and Build Cloud, under existing plans, alongside price increases for Pro and Team tiers.",
+      "Full details: https://www.docker.com/blog/november-2024-updated-plans-announcement/"
+    ]
+  },
+  {
+    "slug": "docker-2024-highlights-innovations-in-ai-security",
+    "title": "Docker 2024 Highlights: Innovations in AI, Security",
+    "excerpt": "Docker's year-end recap covered the November plan restructuring, Docker Scout Health Scores providing A-F security grading for Hub images, and air-gapped container support added for offline build and test workflows.",
+    "category": "Open Source News",
+    "date": "2024-12-17",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/docker.png",
+    "content": [
+      "Docker's year-end recap covered the November plan restructuring, Docker Scout Health Scores providing A-F security grading for Hub images, and air-gapped container support added for offline build and test workflows.",
+      "Full details: https://www.docker.com/blog/docker-2024-highlights/"
+    ]
+  },
+  {
+    "slug": "docker-desktop-4-39-release",
+    "title": "Docker Desktop 4.39 Release",
+    "excerpt": "This release brought general availability of the Docker Desktop CLI, a Docker AI Agent with Model Context Protocol and Kubernetes support, and a --platform flag for more seamless multi-platform image management.",
+    "category": "Open Source News",
+    "date": "2025-03-06",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/docker.png",
+    "content": [
+      "This release brought general availability of the Docker Desktop CLI, a Docker AI Agent with Model Context Protocol and Kubernetes support, and a --platform flag for more seamless multi-platform image management.",
+      "Full details: https://www.docker.com/blog/docker-desktop-4-39/"
+    ]
+  },
+  {
+    "slug": "docker-desktop-4-40-release",
+    "title": "Docker Desktop 4.40 Release",
+    "excerpt": "Docker introduced Docker Model Runner in beta, initially for macOS on Apple Silicon, letting developers pull, run, and manage AI models directly from Docker Hub inside Docker Desktop without separate local-inference t...",
+    "category": "Open Source News",
+    "date": "2025-04-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/docker.png",
+    "content": [
+      "Docker introduced Docker Model Runner in beta, initially for macOS on Apple Silicon, letting developers pull, run, and manage AI models directly from Docker Hub inside Docker Desktop without separate local-inference tooling.",
+      "Full details: https://www.docker.com/blog/docker-desktop-4-40/"
+    ]
+  },
+  {
+    "slug": "docker-desktop-4-41-release",
+    "title": "Docker Desktop 4.41 Release",
+    "excerpt": "This release expanded Model Runner to Windows with NVIDIA GPU support, brought Docker Desktop to the Microsoft Store, and announced the deprecation of QEMU virtualization on macOS in favor of Apple's Virtualization Fr...",
+    "category": "Open Source News",
+    "date": "2025-05-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/docker.png",
+    "content": [
+      "This release expanded Model Runner to Windows with NVIDIA GPU support, brought Docker Desktop to the Microsoft Store, and announced the deprecation of QEMU virtualization on macOS in favor of Apple's Virtualization Framework.",
+      "Full details: https://www.docker.com/blog/docker-desktop-4-41/"
+    ]
+  },
+  {
+    "slug": "docker-desktop-releases-every-two-weeks",
+    "title": "Docker Desktop Releases Every Two Weeks",
+    "excerpt": "Starting with release 4.45.0, Docker moved Desktop from a roughly monthly cadence to releasing every two weeks, with a stated goal of reaching weekly releases by the end of 2025 to ship features and fixes faster.",
+    "category": "Open Source News",
+    "date": "2025-08-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/docker.png",
+    "content": [
+      "Starting with release 4.45.0, Docker moved Desktop from a roughly monthly cadence to releasing every two weeks, with a stated goal of reaching weekly releases by the end of 2025 to ship features and fixes faster.",
+      "Full details: https://www.docker.com/blog/docker-desktop-updates-every-two-weeks/"
+    ]
+  },
+  {
+    "slug": "docker-desktop-4-50-release",
+    "title": "Docker Desktop 4.50 Release",
+    "excerpt": "Docker Desktop 4.50 introduced 'dynamic MCPs,' extending the MCP gateway with tools like mcp-find, mcp-add, and code-mode so AI agents can discover, configure, and compose MCP tools autonomously rather than relying on...",
+    "category": "Open Source News",
+    "date": "2026-01-09",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/docker.png",
+    "content": [
+      "Docker Desktop 4.50 introduced 'dynamic MCPs,' extending the MCP gateway with tools like mcp-find, mcp-add, and code-mode so AI agents can discover, configure, and compose MCP tools autonomously rather than relying on hardcoded tool lists.",
+      "Full details: https://www.docker.com/blog/docker-desktop-4-50/"
+    ]
+  },
+  {
+    "slug": "announcing-typescript-5-6",
+    "title": "Announcing TypeScript 5.6",
+    "excerpt": "TypeScript 5.6 added stricter checks for always-truthy and always-falsy expression comparisons, disallowed unsafe iteration over objects with numeric-string keys by default, and improved support for side-effect import...",
+    "category": "Open Source News",
+    "date": "2024-09-09",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/typescript.png",
+    "content": [
+      "TypeScript 5.6 added stricter checks for always-truthy and always-falsy expression comparisons, disallowed unsafe iteration over objects with numeric-string keys by default, and improved support for side-effect import checks.",
+      "Full details: https://devblogs.microsoft.com/typescript/announcing-typescript-5-6/"
+    ]
+  },
+  {
+    "slug": "announcing-typescript-5-7",
+    "title": "Announcing TypeScript 5.7",
+    "excerpt": "TypeScript 5.7 added support for --target es2024, improved checks in never-initialized variables, and included tsc path-rewriting support for relative import and require paths in transpiled output.",
+    "category": "Open Source News",
+    "date": "2024-11-22",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/typescript.png",
+    "content": [
+      "TypeScript 5.7 added support for --target es2024, improved checks in never-initialized variables, and included tsc path-rewriting support for relative import and require paths in transpiled output.",
+      "Full details: https://devblogs.microsoft.com/typescript/announcing-typescript-5-7/"
+    ]
+  },
+  {
+    "slug": "announcing-typescript-5-8",
+    "title": "Announcing TypeScript 5.8",
+    "excerpt": "This release delivered smarter type inference for conditional return expressions, expanded support for require() of ECMAScript modules under --module nodenext, and more granular checks within function return expressio...",
+    "category": "Open Source News",
+    "date": "2025-02-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/typescript.png",
+    "content": [
+      "This release delivered smarter type inference for conditional return expressions, expanded support for require() of ECMAScript modules under --module nodenext, and more granular checks within function return expressions.",
+      "Full details: https://devblogs.microsoft.com/typescript/announcing-typescript-5-8/"
+    ]
+  },
+  {
+    "slug": "a-10x-faster-typescript-announcing-typescript-native-previews",
+    "title": "A 10x Faster TypeScript: Announcing TypeScript Native Previews",
+    "excerpt": "Lead architect Anders Hejlsberg announced an experimental native port of the TypeScript compiler and language service to Go, distributed as a preview npm package, reporting roughly 10x speedups on type-checking large ...",
+    "category": "Open Source News",
+    "date": "2025-03-11",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/typescript.png",
+    "content": [
+      "Lead architect Anders Hejlsberg announced an experimental native port of the TypeScript compiler and language service to Go, distributed as a preview npm package, reporting roughly 10x speedups on type-checking large codebases like VS Code.",
+      "Full details: https://devblogs.microsoft.com/typescript/typescript-native-port/"
+    ]
+  },
+  {
+    "slug": "announcing-typescript-5-9-rc",
+    "title": "Announcing TypeScript 5.9 RC",
+    "excerpt": "The release candidate previewed the features that shipped a week later in 5.9 GA, including import defer type-checking and a new --module node20 target, giving library authors and large codebases a stable target to va...",
+    "category": "Open Source News",
+    "date": "2025-07-25",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/typescript.png",
+    "content": [
+      "The release candidate previewed the features that shipped a week later in 5.9 GA, including import defer type-checking and a new --module node20 target, giving library authors and large codebases a stable target to validate against.",
+      "Full details: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9-rc/"
+    ]
+  },
+  {
+    "slug": "announcing-typescript-5-9",
+    "title": "Announcing TypeScript 5.9",
+    "excerpt": "TypeScript 5.9 shipped a minimal, updated tsc --init, type-checking support for the new import defer syntax, a --module node20 target, and expandable quick-info hovers in editors as a preview feature.",
+    "category": "Open Source News",
+    "date": "2025-08-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/typescript.png",
+    "content": [
+      "TypeScript 5.9 shipped a minimal, updated tsc --init, type-checking support for the new import defer syntax, a --module node20 target, and expandable quick-info hovers in editors as a preview feature.",
+      "Full details: https://devblogs.microsoft.com/typescript/announcing-typescript-5-9/"
+    ]
+  },
+  {
+    "slug": "progress-on-typescript-7-december-2025",
+    "title": "Progress on TypeScript 7: December 2025",
+    "excerpt": "The team reported the native preview extension now supports core editor features including completions, go-to-definition, find-all-references, and rename, with roughly 8-10x compiler speedups on projects like VS Code ...",
+    "category": "Open Source News",
+    "date": "2025-12-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/typescript.png",
+    "content": [
+      "The team reported the native preview extension now supports core editor features including completions, go-to-definition, find-all-references, and rename, with roughly 8-10x compiler speedups on projects like VS Code and Sentry.",
+      "The update declared TypeScript 6.0 the last JS-based release before the native 7.0 rewrite takes over.",
+      "Full details: https://devblogs.microsoft.com/typescript/progress-on-typescript-7-december-2025/"
+    ]
+  },
+  {
+    "slug": "go-1-23-released",
+    "title": "Go 1.23 Released",
+    "excerpt": "Go 1.23 introduced range-over-func iterators, letting for-range loops iterate over user-defined iterator functions. It also added opt-in Go telemetry for collecting toolchain usage and breakage statistics, plus experi...",
+    "category": "Open Source News",
+    "date": "2024-08-13",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/go.png",
+    "content": [
+      "Go 1.23 introduced range-over-func iterators, letting for-range loops iterate over user-defined iterator functions. It also added opt-in Go telemetry for collecting toolchain usage and breakage statistics, plus experimental OpenBSD/RISC-V support.",
+      "This was the last major release before the telemetry and generics tooling work that shaped Go 1.24.",
+      "Full details: https://go.dev/blog/go1.23"
+    ]
+  },
+  {
+    "slug": "go-1-24-released",
+    "title": "Go 1.24 Released",
+    "excerpt": "Go 1.24 added full support for generic type aliases and a new Swiss Tables-based map implementation that cut CPU overhead 2-3% on average. It shipped new post-quantum-ready crypto packages and laid groundwork for FIPS...",
+    "category": "Open Source News",
+    "date": "2025-02-11",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/go.png",
+    "content": [
+      "Go 1.24 added full support for generic type aliases and a new Swiss Tables-based map implementation that cut CPU overhead 2-3% on average. It shipped new post-quantum-ready crypto packages and laid groundwork for FIPS 140-3 compliance.",
+      "The go get -tool mechanism also arrived for tracking tool dependencies in a module.",
+      "Full details: https://go.dev/blog/go1.24"
+    ]
+  },
+  {
+    "slug": "go-security-fix-for-net-http-request-smuggling",
+    "title": "Go Security Fix for net/http Request Smuggling",
+    "excerpt": "These releases patched a vulnerability where net/http improperly accepted a bare LF as a chunked-encoding line terminator, enabling request smuggling when chained with non-compliant servers.",
+    "category": "Open Source News",
+    "date": "2025-04-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/go.png",
+    "content": [
+      "These releases patched a vulnerability where net/http improperly accepted a bare LF as a chunked-encoding line terminator, enabling request smuggling when chained with non-compliant servers.",
+      "Both point releases also carried assorted compiler, runtime, and go-command bug fixes.",
+      "Full details: https://groups.google.com/g/golang-announce/c/Y2uBTVKjBQk"
+    ]
+  },
+  {
+    "slug": "the-fips-140-3-go-cryptographic-module",
+    "title": "The FIPS 140-3 Go Cryptographic Module",
+    "excerpt": "The Go team and Geomys announced that the Go Cryptographic Module v1.0.0, underlying Go's standard crypto libraries since Go 1.24, achieved FIPS 140-3 validation.",
+    "category": "Open Source News",
+    "date": "2025-07-15",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/go.png",
+    "content": [
+      "The Go team and Geomys announced that the Go Cryptographic Module v1.0.0, underlying Go's standard crypto libraries since Go 1.24, achieved FIPS 140-3 validation.",
+      "This gives Go developers a native path to FIPS compliance without third-party crypto providers.",
+      "Full details: https://go.dev/blog/fips140"
+    ]
+  },
+  {
+    "slug": "go-1-25-released",
+    "title": "Go 1.25 Released",
+    "excerpt": "Go 1.25 added container-aware GOMAXPROCS that respects Linux cgroup CPU limits, an experimental garbage collector, and an experimental encoding/json/v2 package.",
+    "category": "Open Source News",
+    "date": "2025-08-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/go.png",
+    "content": [
+      "Go 1.25 added container-aware GOMAXPROCS that respects Linux cgroup CPU limits, an experimental garbage collector, and an experimental encoding/json/v2 package.",
+      "It also introduced runtime/trace.FlightRecorder for lightweight continuous execution tracing.",
+      "Full details: https://go.dev/blog/go1.25"
+    ]
+  },
+  {
+    "slug": "go-security-release-ten-fixes",
+    "title": "Go Security Release: Ten Fixes",
+    "excerpt": "This release bundled ten security fixes across archive/tar, crypto/tls, crypto/x509, encoding/pem, net/http, net/mail, and other packages.",
+    "category": "Open Source News",
+    "date": "2025-10-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/go.png",
+    "content": [
+      "This release bundled ten security fixes across archive/tar, crypto/tls, crypto/x509, encoding/pem, net/http, net/mail, and other packages.",
+      "Notable fixes addressed quadratic-complexity denial-of-service vectors in x509 certificate chain validation and PEM parsing of untrusted input.",
+      "Full details: https://groups.google.com/g/golang-announce/c/4Emdl2iQ_bI"
+    ]
+  },
+  {
+    "slug": "go-1-26-released",
+    "title": "Go 1.26 Released",
+    "excerpt": "Go 1.26 enabled the previously experimental Green Tea garbage collector by default and cut baseline cgo call overhead by roughly 30%.",
+    "category": "Open Source News",
+    "date": "2026-02-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/go.png",
+    "content": [
+      "Go 1.26 enabled the previously experimental Green Tea garbage collector by default and cut baseline cgo call overhead by roughly 30%.",
+      "It also shipped experimental simd/archsimd and runtime/secret packages, plus stack allocation improvements for slices.",
+      "Full details: https://go.dev/blog/go1.26"
+    ]
+  },
+  {
+    "slug": "django-5-1-released",
+    "title": "Django 5.1 Released",
+    "excerpt": "Django 5.1 added accessibility improvements to the admin interface, a new querystring template tag for modifying URL query parameters, and support for double-underscore lookups in ModelAdmin.list_display.",
+    "category": "Open Source News",
+    "date": "2024-08-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/django.png",
+    "content": [
+      "Django 5.1 added accessibility improvements to the admin interface, a new querystring template tag for modifying URL query parameters, and support for double-underscore lookups in ModelAdmin.list_display.",
+      "This release marked the end of mainstream support for Django 5.0.",
+      "Full details: https://www.djangoproject.com/weblog/2024/aug/07/django-51-released/"
+    ]
+  },
+  {
+    "slug": "django-security-releases-5-1-1-5-0-9-and-4-2-16",
+    "title": "Django Security Releases: 5.1.1, 5.0.9, and 4.2.16",
+    "excerpt": "These releases fixed a potential denial-of-service in urlize and urlizetrunc against specially crafted large inputs, and closed a user-enumeration vector in PasswordResetForm that let attackers infer registered emails...",
+    "category": "Open Source News",
+    "date": "2024-09-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/django.png",
+    "content": [
+      "These releases fixed a potential denial-of-service in urlize and urlizetrunc against specially crafted large inputs, and closed a user-enumeration vector in PasswordResetForm that let attackers infer registered emails via timing and outcomes.",
+      "Full details: https://www.djangoproject.com/weblog/2024/sep/03/security-releases/"
+    ]
+  },
+  {
+    "slug": "django-security-releases-5-1-5-5-0-11-and-4-2-18",
+    "title": "Django Security Releases: 5.1.5, 5.0.11, and 4.2.18",
+    "excerpt": "A security-policy-driven patch release addressing vulnerabilities disclosed to the Django security team, issued across the then-supported 5.1, 5.0, and 4.2 LTS branches simultaneously.",
+    "category": "Open Source News",
+    "date": "2025-01-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/django.png",
+    "content": [
+      "A security-policy-driven patch release addressing vulnerabilities disclosed to the Django security team, issued across the then-supported 5.1, 5.0, and 4.2 LTS branches simultaneously.",
+      "Full details: https://www.djangoproject.com/weblog/2025/jan/14/security-releases/"
+    ]
+  },
+  {
+    "slug": "django-5-2-released",
+    "title": "Django 5.2 Released",
+    "excerpt": "Django 5.2 introduced composite primary key support, automatic model imports in the interactive shell, and simplified BoundField customization at the form, field, or project level.",
+    "category": "Open Source News",
+    "date": "2025-04-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/django.png",
+    "content": [
+      "Django 5.2 introduced composite primary key support, automatic model imports in the interactive shell, and simplified BoundField customization at the form, field, or project level.",
+      "It became Django's next LTS release.",
+      "Full details: https://www.djangoproject.com/weblog/2025/apr/02/django-52-released/"
+    ]
+  },
+  {
+    "slug": "django-security-releases-fix-log-injection-vulnerability",
+    "title": "Django Security Releases Fix Log Injection Vulnerability",
+    "excerpt": "This release fixed CVE-2025-48432, a log-injection vulnerability where internal HTTP response logging wrote request.path unescaped, letting attackers inject control characters to forge or manipulate log entries.",
+    "category": "Open Source News",
+    "date": "2025-06-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/django.png",
+    "content": [
+      "This release fixed CVE-2025-48432, a log-injection vulnerability where internal HTTP response logging wrote request.path unescaped, letting attackers inject control characters to forge or manipulate log entries.",
+      "Full details: https://www.djangoproject.com/weblog/2025/jun/04/security-releases/"
+    ]
+  },
+  {
+    "slug": "django-security-releases-fix-sql-injection-in-queryset-aggregation",
+    "title": "Django Security Releases Fix SQL Injection in QuerySet Aggregation",
+    "excerpt": "These releases patched a high-severity SQL injection in QuerySet.annotate(), alias(), aggregate(), and extra() column aliases exploitable via crafted keyword-argument dictionary expansion on MySQL and MariaDB, plus a ...",
+    "category": "Open Source News",
+    "date": "2025-10-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/django.png",
+    "content": [
+      "These releases patched a high-severity SQL injection in QuerySet.annotate(), alias(), aggregate(), and extra() column aliases exploitable via crafted keyword-argument dictionary expansion on MySQL and MariaDB, plus a path-traversal issue in project template extraction.",
+      "Full details: https://www.djangoproject.com/weblog/2025/oct/01/security-releases/"
+    ]
+  },
+  {
+    "slug": "django-6-0-released",
+    "title": "Django 6.0 Released",
+    "excerpt": "Marking Django's 20th anniversary, 6.0 shipped Template Partials for reusable named template fragments, a built-in Background Tasks framework for work outside the request-response cycle, and native Content Security Po...",
+    "category": "Open Source News",
+    "date": "2025-12-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/django.png",
+    "content": [
+      "Marking Django's 20th anniversary, 6.0 shipped Template Partials for reusable named template fragments, a built-in Background Tasks framework for work outside the request-response cycle, and native Content Security Policy configuration support.",
+      "Full details: https://www.djangoproject.com/weblog/2025/dec/03/django-60-released/"
+    ]
+  },
+  {
+    "slug": "vue-3-5-tengen-toppa-gurren-lagann-released",
+    "title": "Vue 3.5 \"Tengen Toppa Gurren Lagann\" Released",
+    "excerpt": "Vue 3.5 delivered a major reactivity-system refactor cutting memory usage by 56% and speeding up large reactive array operations up to 10x, with zero breaking changes.",
+    "category": "Open Source News",
+    "date": "2024-09-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vuejs.png",
+    "content": [
+      "Vue 3.5 delivered a major reactivity-system refactor cutting memory usage by 56% and speeding up large reactive array operations up to 10x, with zero breaking changes.",
+      "It stabilized reactive props destructuring and added SSR improvements including lazy hydration and a useId() API.",
+      "Full details: https://blog.vuejs.org/posts/vue-3-5"
+    ]
+  },
+  {
+    "slug": "voidzero-evan-you-s-tooling-startup-raises-4-6m-seed-round",
+    "title": "VoidZero, Evan You's Tooling Startup, Raises $4.6M Seed Round",
+    "excerpt": "Accel led a seed investment in VoidZero, the company Vue creator Evan You founded to build a unified, Rust-based next-generation JavaScript toolchain including Rolldown, Oxc, and Vite.",
+    "category": "Open Source News",
+    "date": "2024-10-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vuejs.png",
+    "content": [
+      "Accel led a seed investment in VoidZero, the company Vue creator Evan You founded to build a unified, Rust-based next-generation JavaScript toolchain including Rolldown, Oxc, and Vite.",
+      "The round underscored Vue tooling's growing influence beyond the framework itself.",
+      "Full details: https://www.accel.com/news/our-seed-investment-in-voidzero-evan-yous-bold-vision-for-javascript-tooling"
+    ]
+  },
+  {
+    "slug": "vue-devtools-v7-goes-stable",
+    "title": "Vue Devtools v7 Goes Stable",
+    "excerpt": "The Vue team flipped the switch on Vue Devtools v7's stable Chrome Web Store channel, a rewritten devtools supporting Vue 3 only, with separate legacy listings retained for Vue 2 users.",
+    "category": "Open Source News",
+    "date": "2024-10-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vuejs.png",
+    "content": [
+      "The Vue team flipped the switch on Vue Devtools v7's stable Chrome Web Store channel, a rewritten devtools supporting Vue 3 only, with separate legacy listings retained for Vue 2 users.",
+      "Full details: https://x.com/vuejs/status/1850796839295176969"
+    ]
+  },
+  {
+    "slug": "state-of-vue-keynote-at-vue-js-nation-2025",
+    "title": "State of Vue Keynote at Vue.js Nation 2025",
+    "excerpt": "At this free online conference, Evan You delivered a 'State of Vue' keynote previewing Vue 3.6 and Vapor Mode, Vue's compiler strategy for shipping virtual-DOM-free output for better runtime performance and smaller bu...",
+    "category": "Open Source News",
+    "date": "2025-01-29",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vuejs.png",
+    "content": [
+      "At this free online conference, Evan You delivered a 'State of Vue' keynote previewing Vue 3.6 and Vapor Mode, Vue's compiler strategy for shipping virtual-DOM-free output for better runtime performance and smaller bundles.",
+      "Full details: https://madewithvuejs.com/vuejs-nation"
+    ]
+  },
+  {
+    "slug": "state-of-vue-js-report-2025-unveiled-at-vue-js-amsterdam",
+    "title": "State of Vue.js Report 2025 Unveiled at Vue.js Amsterdam",
+    "excerpt": "At Vue.js Amsterdam, Evan You gave the annual 'State of Vuenion' talk, and the official State of Vue.js Report 2025, co-created with the Vue and Nuxt core teams from over 1,400 survey respondents, was unveiled, highli...",
+    "category": "Open Source News",
+    "date": "2025-03-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vuejs.png",
+    "content": [
+      "At Vue.js Amsterdam, Evan You gave the annual 'State of Vuenion' talk, and the official State of Vue.js Report 2025, co-created with the Vue and Nuxt core teams from over 1,400 survey respondents, was unveiled, highlighting upgrade pain points and anticipation for Vapor Mode.",
+      "Full details: https://stateofvue.framer.website/"
+    ]
+  },
+  {
+    "slug": "vue-3-6-0-alpha-1-released",
+    "title": "Vue 3.6.0-alpha.1 Released",
+    "excerpt": "The first public alpha of Vue 3.6 shipped, giving developers early access to Vapor Mode and the reactivity-system work building toward feature completeness later in the year.",
+    "category": "Open Source News",
+    "date": "2025-07-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vuejs.png",
+    "content": [
+      "The first public alpha of Vue 3.6 shipped, giving developers early access to Vapor Mode and the reactivity-system work building toward feature completeness later in the year.",
+      "Full details: https://github.com/vuejs/core/releases/tag/v3.6.0-alpha.1"
+    ]
+  },
+  {
+    "slug": "vue-3-6-0-beta-1-published-vapor-mode-feature-complete",
+    "title": "Vue 3.6.0-beta.1 Published, Vapor Mode Feature-Complete",
+    "excerpt": "Vue 3.6 entered beta with Vapor Mode reaching feature parity with all stable Virtual DOM mode features except Suspense, alongside a major reactivity refactor for further performance and memory gains.",
+    "category": "Open Source News",
+    "date": "2025-12-23",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vuejs.png",
+    "content": [
+      "Vue 3.6 entered beta with Vapor Mode reaching feature parity with all stable Virtual DOM mode features except Suspense, alongside a major reactivity refactor for further performance and memory gains.",
+      "Full details: https://github.com/vuejs/core/releases/tag/v3.6.0-beta.1"
+    ]
+  },
+  {
+    "slug": "elasticsearch-is-open-source-again",
+    "title": "Elasticsearch Is Open Source. Again!",
+    "excerpt": "Elastic founder Shay Banon announced that Elasticsearch and Kibana would add AGPL v3 as a licensing option alongside SSPL and Elastic License 2.0, restoring an OSI-approved open-source option roughly three years after...",
+    "category": "Open Source News",
+    "date": "2024-08-29",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "Elastic founder Shay Banon announced that Elasticsearch and Kibana would add AGPL v3 as a licensing option alongside SSPL and Elastic License 2.0, restoring an OSI-approved open-source option roughly three years after Elastic moved away from Apache 2.0 in response to AWS's fork.",
+      "Full details: https://www.elastic.co/blog/elasticsearch-is-open-source-again"
+    ]
+  },
+  {
+    "slug": "elastic-8-16-bbq-llm-observability-protect-your-cloud-assets",
+    "title": "Elastic 8.16: BBQ, LLM Observability, Protect Your Cloud Assets",
+    "excerpt": "This release made Elastic the first vector database offering Better Binary Quantization for large-scale workloads, added LLM observability for Amazon Bedrock, and extended cloud-security integrations with Wiz, AWS Sec...",
+    "category": "Open Source News",
+    "date": "2024-11-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "This release made Elastic the first vector database offering Better Binary Quantization for large-scale workloads, added LLM observability for Amazon Bedrock, and extended cloud-security integrations with Wiz, AWS Security Hub, and Falco.",
+      "Full details: https://www.elastic.co/blog/whats-new-elastic-8-16-0"
+    ]
+  },
+  {
+    "slug": "elastic-9-0-bbq-ga-lucene-10-es-ql-lookup-join",
+    "title": "Elastic 9.0: BBQ GA, Lucene 10, ES|QL LOOKUP JOIN",
+    "excerpt": "Elasticsearch 9.0 GA moved the stack onto Lucene 10 for major performance gains, made Better Binary Quantization generally available, and introduced ES|QL LOOKUP JOIN for joining across indices.",
+    "category": "Open Source News",
+    "date": "2025-04-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "Elasticsearch 9.0 GA moved the stack onto Lucene 10 for major performance gains, made Better Binary Quantization generally available, and introduced ES|QL LOOKUP JOIN for joining across indices.",
+      "Full details: https://www.elastic.co/blog/whats-new-elastic-search-9-0-0"
+    ]
+  },
+  {
+    "slug": "elastic-9-1-bbq-by-default-es-ql-cross-cluster-search-ga",
+    "title": "Elastic 9.1: BBQ by Default, ES|QL Cross-Cluster Search GA",
+    "excerpt": "This release made Better Binary Quantization the default vector index format, brought ES|QL cross-cluster search and joins to general availability, and added Elastic Observability integration with Azure AI Foundry-hos...",
+    "category": "Open Source News",
+    "date": "2025-07-29",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "This release made Better Binary Quantization the default vector index format, brought ES|QL cross-cluster search and joins to general availability, and added Elastic Observability integration with Azure AI Foundry-hosted models.",
+      "Full details: https://www.elastic.co/blog/whats-new-elastic-9-1-0"
+    ]
+  },
+  {
+    "slug": "elastic-9-2-agent-builder-diskbbq-streams",
+    "title": "Elastic 9.2: Agent Builder, DiskBBQ, Streams",
+    "excerpt": "Elastic 9.2 introduced Agent Builder for simplifying AI agent development, DiskBBQ for a better recall, latency, and cost tradeoff on vector search, and Streams with Significant Events for AI-assisted log analysis.",
+    "category": "Open Source News",
+    "date": "2025-10-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "Elastic 9.2 introduced Agent Builder for simplifying AI agent development, DiskBBQ for a better recall, latency, and cost tradeoff on vector search, and Streams with Significant Events for AI-assisted log analysis.",
+      "Full details: https://www.elastic.co/blog/whats-new-elastic-9-2-0"
+    ]
+  },
+  {
+    "slug": "elastic-9-3-chat-with-your-data-build-custom-ai-agents",
+    "title": "Elastic 9.3: Chat with Your Data, Build Custom AI Agents",
+    "excerpt": "This release expanded Agent Builder into a natural-language interface for querying data, added native workflow automation to the platform, and extended agentic capabilities for AI-assisted operational tasks.",
+    "category": "Open Source News",
+    "date": "2026-01-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "This release expanded Agent Builder into a natural-language interface for querying data, added native workflow automation to the platform, and extended agentic capabilities for AI-assisted operational tasks.",
+      "Full details: https://www.elastic.co/blog/whats-new-elastic-9-3-0"
+    ]
+  },
+  {
+    "slug": "graphqlconf-2024",
+    "title": "GraphQLConf 2024",
+    "excerpt": "The GraphQL Foundation's flagship conference ran September 10-12 in San Francisco, bringing GraphQL contributors, Working Group members, and the Technical Steering Committee together in person, with keynotes on distri...",
+    "category": "Open Source News",
+    "date": "2024-09-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/graphql.png",
+    "content": [
+      "The GraphQL Foundation's flagship conference ran September 10-12 in San Francisco, bringing GraphQL contributors, Working Group members, and the Technical Steering Committee together in person, with keynotes on distributed GraphQL and GraphQL's intersection with AI.",
+      "Full details: https://graphql.org/conf/2024/"
+    ]
+  },
+  {
+    "slug": "announcing-graphqlconf-2025-amsterdam-awaits",
+    "title": "Announcing GraphQLConf 2025: Amsterdam Awaits",
+    "excerpt": "The GraphQL Foundation announced that GraphQLConf 2025 would move to Amsterdam's Pakhuis de Zwijger for September 8-10, 2025, opening early-bird ticketing and the sponsorship and speaker call-for-proposals.",
+    "category": "Open Source News",
+    "date": "2024-12-17",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/graphql.png",
+    "content": [
+      "The GraphQL Foundation announced that GraphQLConf 2025 would move to Amsterdam's Pakhuis de Zwijger for September 8-10, 2025, opening early-bird ticketing and the sponsorship and speaker call-for-proposals.",
+      "Full details: https://graphql.org/blog/announcing-graphqlconf-2025-amsterdam-awaits/"
+    ]
+  },
+  {
+    "slug": "announcing-graphql-js-org",
+    "title": "Announcing graphql-js.org",
+    "excerpt": "The GraphQL Foundation gave the reference GraphQL.js implementation its own dedicated documentation site, separating it from the general spec-focused graphql.org site to better serve the JavaScript reference implement...",
+    "category": "Open Source News",
+    "date": "2025-06-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/graphql.png",
+    "content": [
+      "The GraphQL Foundation gave the reference GraphQL.js implementation its own dedicated documentation site, separating it from the general spec-focused graphql.org site to better serve the JavaScript reference implementation's growing user base.",
+      "Full details: https://graphql.org/blog/2025-06-20-graphql-js-org/"
+    ]
+  },
+  {
+    "slug": "safer-multi-option-inputs-with-oneof",
+    "title": "Safer Multi-Option Inputs with @oneOf",
+    "excerpt": "OneOf Input Objects officially landed in the GraphQL specification, giving schema authors a standard way to express 'exactly one of several possible options' as input, a long-requested feature that closes a common typ...",
+    "category": "Open Source News",
+    "date": "2025-09-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/graphql.png",
+    "content": [
+      "OneOf Input Objects officially landed in the GraphQL specification, giving schema authors a standard way to express 'exactly one of several possible options' as input, a long-requested feature that closes a common type-safety gap in GraphQL API design.",
+      "Full details: https://graphql.org/blog/2025-09-04-multioption-inputs-with-oneof/"
+    ]
+  },
+  {
+    "slug": "announcing-the-september-2025-edition-of-the-graphql-specification",
+    "title": "Announcing the September 2025 Edition of the GraphQL Specification",
+    "excerpt": "This was the first full edition of the GraphQL specification since October 2021, formally incorporating features like Schema Coordinates, OneOf inputs, and executable-document descriptions developed and stabilized thr...",
+    "category": "Open Source News",
+    "date": "2025-09-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/graphql.png",
+    "content": [
+      "This was the first full edition of the GraphQL specification since October 2021, formally incorporating features like Schema Coordinates, OneOf inputs, and executable-document descriptions developed and stabilized through the Working Group process.",
+      "Full details: https://graphql.org/blog/2025-09-08-september-edition/"
+    ]
+  },
+  {
+    "slug": "what-launched-at-graphqlconf-2025",
+    "title": "What Launched at GraphQLConf 2025",
+    "excerpt": "Following the Amsterdam conference, the GraphQL Foundation recapped the wave of new tooling and infrastructure unveiled by vendors, independent maintainers, and enterprise-backed projects, including progress on Federa...",
+    "category": "Open Source News",
+    "date": "2025-10-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/graphql.png",
+    "content": [
+      "Following the Amsterdam conference, the GraphQL Foundation recapped the wave of new tooling and infrastructure unveiled by vendors, independent maintainers, and enterprise-backed projects, including progress on Federation and Composite Schemas.",
+      "Full details: https://graphql.org/blog/2025-10-20-graphql-conf-2025-article-1/"
+    ]
+  },
+  {
+    "slug": "that-s-a-wrap-celebrating-graphqlconf-2024",
+    "title": "That's a Wrap! Celebrating GraphQLConf 2024",
+    "excerpt": "The GraphQL Foundation's recap of GraphQLConf 2024 highlighted community growth and session takeaways, with recordings and slides made available for the wider community following the September event.",
+    "category": "Open Source News",
+    "date": "2024-10-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/graphql.png",
+    "content": [
+      "The GraphQL Foundation's recap of GraphQLConf 2024 highlighted community growth and session takeaways, with recordings and slides made available for the wider community following the September event.",
+      "Full details: https://graphql.org/blog/2024-10-08-graphql-conf-2024-wrap/"
     ]
   }
 ]

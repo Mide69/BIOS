@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/PageHeader";
-import { PostCard } from "@/components/PostCard";
-import { getAllPosts } from "@/lib/posts";
+import { NewsList } from "@/components/NewsList";
+import { getAllPosts, getAllCategories, getAllYears } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "News",
@@ -11,13 +11,15 @@ export const metadata: Metadata = {
 
 export default function NewsPage() {
   const posts = getAllPosts();
+  const categories = getAllCategories();
+  const years = getAllYears();
 
   return (
     <>
       <PageHeader
         eyebrow="News & Updates"
         title="From the community"
-        description="Announcements, guides, program updates, and spotlights from BIOS."
+        description="Announcements, guides, program updates, and spotlights from BIOS, latest first."
       />
 
       <section className="bg-background py-20">
@@ -25,11 +27,7 @@ export default function NewsPage() {
           {posts.length === 0 ? (
             <p className="text-muted">No posts yet. Check back soon.</p>
           ) : (
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {posts.map((post) => (
-                <PostCard key={post.slug} post={post} />
-              ))}
-            </div>
+            <NewsList posts={posts} categories={categories} years={years} />
           )}
         </div>
       </section>

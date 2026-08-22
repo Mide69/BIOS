@@ -9,6 +9,7 @@ export type Post = {
   author: string;
   readTime: string;
   accent: "gold" | "white";
+  image?: string;
   content: string[];
 };
 
@@ -26,6 +27,16 @@ export function getPostBySlug(slug: string): Post | undefined {
 
 export function getLatestPosts(count: number): Post[] {
   return getAllPosts().slice(0, count);
+}
+
+export function getAllCategories(): string[] {
+  return Array.from(new Set(posts.map((p) => p.category))).sort();
+}
+
+export function getAllYears(): number[] {
+  return Array.from(
+    new Set(posts.map((p) => new Date(p.date).getFullYear()))
+  ).sort((a, b) => b - a);
 }
 
 export function formatDate(dateStr: string): string {
