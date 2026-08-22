@@ -12,17 +12,17 @@ export function NewsPreview() {
         <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-widest text-gold">
-              Latest news
+              Resources
             </span>
             <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               From the community
             </h2>
           </div>
           <Link
-            href="/news"
+            href="/resources"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-gold"
           >
-            View all posts
+            View all resources
             <ArrowUpRightIcon className="h-3.5 w-3.5" />
           </Link>
         </div>

@@ -51,10 +51,10 @@ export default async function PostPage({
         <div className="bg-noise pointer-events-none absolute inset-0 opacity-30" />
         <div className="container-page relative py-20">
           <Link
-            href="/news"
+            href="/resources"
             className="text-sm font-semibold text-gold hover:text-gold-light"
           >
-            ← Back to News
+            ← Back to Resources
           </Link>
           <div className="mt-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-wider text-gold">
             <span>{post.category}</span>

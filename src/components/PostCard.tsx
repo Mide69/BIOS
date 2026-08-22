@@ -8,7 +8,7 @@ import { LogoMark } from "./Logo";
 export function PostCard({ post }: { post: Post }) {
   return (
     <Link
-      href={`/news/${post.slug}`}
+      href={`/resources/${post.slug}`}
       className="group flex flex-col overflow-hidden rounded-2xl border border-border-soft bg-surface-raised transition hover:border-gold/50"
     >
       {post.image ? (

@@ -4,12 +4,12 @@ import { NewsList } from "@/components/NewsList";
 import { getAllPosts, getAllCategories, getAllYears } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: "News",
+  title: "Resources",
   description:
     "The latest announcements, guides, and community spotlights from BIOS, Black In Open Source.",
 };
 
-export default function NewsPage() {
+export default function ResourcesPage() {
   const posts = getAllPosts();
   const categories = getAllCategories();
   const years = getAllYears();
@@ -17,7 +17,7 @@ export default function NewsPage() {
   return (
     <>
       <PageHeader
-        eyebrow="News & Updates"
+        eyebrow="Resources"
         title="From the community"
         description="Announcements, guides, program updates, and spotlights from BIOS, latest first."
       />
