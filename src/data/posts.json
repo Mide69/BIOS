@@ -3296,5 +3296,556 @@
       "The GraphQL Foundation's recap of GraphQLConf 2024 highlighted community growth and session takeaways, with recordings and slides made available for the wider community following the September event.",
       "Full details: https://graphql.org/blog/2024-10-08-graphql-conf-2024-wrap/"
     ]
+  },
+  {
+    "slug": "linux-7-3-rc1-released-closing-the-merge-window",
+    "title": "Linux 7.3-rc1 Released, Closing the Merge Window",
+    "excerpt": "The first release candidate for Linux 7.3 landed after a two-week merge window, weighing in around 10,000 commits and pushing the kernel to roughly 40.98 million lines. Linus Torvalds called it 'not the biggest rc1 we...",
+    "category": "Open Source News",
+    "date": "2026-08-30",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/linux.png",
+    "content": [
+      "The first release candidate for Linux 7.3 landed after a two-week merge window, weighing in around 10,000 commits and pushing the kernel to roughly 40.98 million lines. Linus Torvalds called it 'not the biggest rc1 we've ever had, but it's certainly up there.'",
+      "The release brings AMD Zen 6 groundwork, Btrfs performance work, and initial Apple Thunderbolt and KVM changes.",
+      "Full details: https://www.phoronix.com/news/Linux-7.3-rc1-Released"
+    ]
+  },
+  {
+    "slug": "linux-7-3-rc2-released",
+    "title": "Linux 7.3-rc2 Released",
+    "excerpt": "The second test build of the 7.3 cycle shipped with Cache Aware Scheduling misfit fixes for hybrid CPUs, NVIDIA Blackwell display fixes for Nouveau, RandStruct changes, and EDAC updates missed during the merge window.",
+    "category": "Open Source News",
+    "date": "2026-09-06",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/linux.png",
+    "content": [
+      "The second test build of the 7.3 cycle shipped with Cache Aware Scheduling misfit fixes for hybrid CPUs, NVIDIA Blackwell display fixes for Nouveau, RandStruct changes, and EDAC updates missed during the merge window.",
+      "Stable Linux 7.3 is expected in the second half of October 2026.",
+      "Full details: https://www.phoronix.com/news/Linux-7.3-rc2-Released"
+    ]
+  },
+  {
+    "slug": "stable-and-longterm-kernel-updates-7-2-4-6-18-50-6-12-109",
+    "title": "Stable and Longterm Kernel Updates: 7.2.4, 6.18.50, 6.12.109",
+    "excerpt": "Greg Kroah-Hartman pushed out new stable and longterm point releases across the 7.2, 6.18, and 6.12 lines, each bundling accumulated fixes across drivers, filesystems, and core subsystems.",
+    "category": "Open Source News",
+    "date": "2026-09-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/linux.png",
+    "content": [
+      "Greg Kroah-Hartman pushed out new stable and longterm point releases across the 7.2, 6.18, and 6.12 lines, each bundling accumulated fixes across drivers, filesystems, and core subsystems.",
+      "Older longterm lines 6.6.156, 6.1.187, 5.15.220, and 5.10.269 also received releases the same week.",
+      "Full details: https://www.kernel.org/"
+    ]
+  },
+  {
+    "slug": "kubernetes-v1-37-garhwal-released",
+    "title": "Kubernetes v1.37 \"Garhwal\" Released",
+    "excerpt": "The general-availability announcement for v1.37 capped a 15-week release cycle with 67 enhancements: 16 graduating to Stable, 23 to Beta, and 27 new Alpha features.",
+    "category": "Open Source News",
+    "date": "2026-08-26",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "The general-availability announcement for v1.37 capped a 15-week release cycle with 67 enhancements: 16 graduating to Stable, 23 to Beta, and 27 new Alpha features.",
+      "The release drew contributions from 212 companies and 1,754 individuals.",
+      "Full details: https://kubernetes.io/blog/2026/08/26/kubernetes-v1-37-release/"
+    ]
+  },
+  {
+    "slug": "storage-version-migration-enabled-by-default",
+    "title": "Storage Version Migration Enabled by Default",
+    "excerpt": "A v1.37 feature deep-dive explaining that the Storage Version Migration controller, which keeps stored objects on their current preferred storage version after CRD or API changes, is now on by default.",
+    "category": "Open Source News",
+    "date": "2026-08-31",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "A v1.37 feature deep-dive explaining that the Storage Version Migration controller, which keeps stored objects on their current preferred storage version after CRD or API changes, is now on by default.",
+      "This reduces manual migration burden for cluster operators after schema changes.",
+      "Full details: https://kubernetes.io/blog/2026/08/31/"
+    ]
+  },
+  {
+    "slug": "scale-workloads-to-zero-with-horizontalpodautoscaler",
+    "title": "Scale Workloads to Zero with HorizontalPodAutoscaler",
+    "excerpt": "Covers the v1.37 HPA enhancement letting workloads autoscale down to zero replicas, now Beta and enabled by default.",
+    "category": "Open Source News",
+    "date": "2026-09-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "Covers the v1.37 HPA enhancement letting workloads autoscale down to zero replicas, now Beta and enabled by default.",
+      "It's useful for cost-sensitive or bursty workloads that don't need to run continuously.",
+      "Full details: https://kubernetes.io/blog/2026/09/02/"
+    ]
+  },
+  {
+    "slug": "dynamic-resource-allocation-extended-resource-support-reaches-ga",
+    "title": "Dynamic Resource Allocation Extended Resource Support Reaches GA",
+    "excerpt": "Details the graduation of DRA's Extended Resource support to General Availability in v1.37, a significant milestone for how Kubernetes schedules specialized hardware like GPUs through the DRA framework.",
+    "category": "Open Source News",
+    "date": "2026-09-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "Details the graduation of DRA's Extended Resource support to General Availability in v1.37, a significant milestone for how Kubernetes schedules specialized hardware like GPUs through the DRA framework.",
+      "Full details: https://kubernetes.io/blog/2026/09/03/kubernetes-v1-37-dra-updates/"
+    ]
+  },
+  {
+    "slug": "kubeletinusernamespace-rootless-mode-graduates-to-beta",
+    "title": "KubeletInUserNamespace (Rootless Mode) Graduates to Beta",
+    "excerpt": "Explains the promotion of rootless kubelet support to Beta, allowing kubelet and its container runtime to run inside a user namespace for stronger host isolation.",
+    "category": "Open Source News",
+    "date": "2026-09-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "Explains the promotion of rootless kubelet support to Beta, allowing kubelet and its container runtime to run inside a user namespace for stronger host isolation.",
+      "This reduces the security blast radius of a compromised node.",
+      "Full details: https://kubernetes.io/blog/2026/09/04/"
+    ]
+  },
+  {
+    "slug": "node-js-interactive-2026-a-recap",
+    "title": "Node.js Interactive 2026: A Recap",
+    "excerpt": "An official recap post covering highlights, talks, and community discussion from the Node.js Interactive 2026 conference.",
+    "category": "Open Source News",
+    "date": "2026-08-14",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nodejs.png",
+    "content": [
+      "An official recap post covering highlights, talks, and community discussion from the Node.js Interactive 2026 conference.",
+      "Full details: https://nodejs.org/en/blog/events/nodejs-interactive-2026"
+    ]
+  },
+  {
+    "slug": "node-js-26-8-0-and-26-8-1-current-released",
+    "title": "Node.js 26.8.0 and 26.8.1 (Current) Released",
+    "excerpt": "Two Current-line releases shipped the same day: 26.8.0 brought the regular batch of semver-minor features and dependency updates, with 26.8.1 following shortly after as a follow-up patch release.",
+    "category": "Open Source News",
+    "date": "2026-08-26",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Two Current-line releases shipped the same day: 26.8.0 brought the regular batch of semver-minor features and dependency updates, with 26.8.1 following shortly after as a follow-up patch release.",
+      "Full details: https://nodejs.org/en/blog/release/v26.8.0"
+    ]
+  },
+  {
+    "slug": "node-js-24-20-0-lts-released",
+    "title": "Node.js 24.20.0 (LTS) Released",
+    "excerpt": "A new LTS release on the 24.x line, bundling accumulated fixes and minor features for production users on the Long-Term Support track.",
+    "category": "Open Source News",
+    "date": "2026-08-26",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nodejs.png",
+    "content": [
+      "A new LTS release on the 24.x line, bundling accumulated fixes and minor features for production users on the Long-Term Support track.",
+      "Full details: https://nodejs.org/en/blog/release/v24.20.0"
+    ]
+  },
+  {
+    "slug": "go-1-26-8-released",
+    "title": "Go 1.26.8 Released",
+    "excerpt": "This is a routine maintenance point release for the Go 1.26 series, carrying fixes to cgo, the compiler, the runtime, and the debug/elf and os standard library packages.",
+    "category": "Open Source News",
+    "date": "2026-09-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/go.png",
+    "content": [
+      "This is a routine maintenance point release for the Go 1.26 series, carrying fixes to cgo, the compiler, the runtime, and the debug/elf and os standard library packages.",
+      "No new language features or API changes are included, it's a stability and bugfix update only.",
+      "Full details: https://go.dev/doc/devel/release"
+    ]
+  },
+  {
+    "slug": "go-1-27-1-released",
+    "title": "Go 1.27.1 Released",
+    "excerpt": "The first point release for the Go 1.27 series fixes issues in cgo, the compiler, the runtime, the go fix command, and the database/sql, debug/elf, encoding/json, net/http, os, simd, and simd/archsimd packages.",
+    "category": "Open Source News",
+    "date": "2026-09-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/go.png",
+    "content": [
+      "The first point release for the Go 1.27 series fixes issues in cgo, the compiler, the runtime, the go fix command, and the database/sql, debug/elf, encoding/json, net/http, os, simd, and simd/archsimd packages.",
+      "Full details: https://go.dev/doc/devel/release"
+    ]
+  },
+  {
+    "slug": "django-developers-survey-2026-results-published",
+    "title": "Django Developers Survey 2026 Results Published",
+    "excerpt": "The Django Software Foundation, in collaboration with JetBrains and PyCharm, published results of its fifth annual Django Developers Survey, conducted May through July 2026.",
+    "category": "Open Source News",
+    "date": "2026-08-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/django.png",
+    "content": [
+      "The Django Software Foundation, in collaboration with JetBrains and PyCharm, published results of its fifth annual Django Developers Survey, conducted May through July 2026.",
+      "The announcement points to a full report with infographics and a companion analysis piece on community trends.",
+      "Full details: https://www.djangoproject.com/weblog/2026/aug/28/django-developers-survey-2026-results/"
+    ]
+  },
+  {
+    "slug": "django-6-1-1-bugfix-release-issued",
+    "title": "Django 6.1.1 Bugfix Release Issued",
+    "excerpt": "Django 6.1.1 addresses a crash combining distinct(*fields) with order_by()/values() on duplicate lookup paths, and several regressions introduced in 6.1, including incorrect double-dot lookup deprecation handling in t...",
+    "category": "Open Source News",
+    "date": "2026-09-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/django.png",
+    "content": [
+      "Django 6.1.1 addresses a crash combining distinct(*fields) with order_by()/values() on duplicate lookup paths, and several regressions introduced in 6.1, including incorrect double-dot lookup deprecation handling in template literals and broken ModelAdmin.list_display traversal across multiple relations.",
+      "No security issues are involved, it's a stability patch.",
+      "Full details: https://www.djangoproject.com/weblog/2026/sep/02/bugfix-releases/"
+    ]
+  },
+  {
+    "slug": "vue-3-5-42-released",
+    "title": "Vue 3.5.42 Released",
+    "excerpt": "A patch release on the stable 3.5 line focused on bug fixes in hydration, runtime-core, and v-model behavior, including handling async component unmount before lazy hydration and preserving .trim results when combined...",
+    "category": "Open Source News",
+    "date": "2026-08-27",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vuejs.png",
+    "content": [
+      "A patch release on the stable 3.5 line focused on bug fixes in hydration, runtime-core, and v-model behavior, including handling async component unmount before lazy hydration and preserving .trim results when combined with the .number v-model modifier.",
+      "Full details: https://github.com/vuejs/core/releases"
+    ]
+  },
+  {
+    "slug": "vue-3-6-0-rc-6-published",
+    "title": "Vue 3.6.0-rc.6 Published",
+    "excerpt": "A release candidate in the ongoing Vue 3.6 cycle, which centers on stabilizing Vapor Mode, Vue's new virtual-DOM-free compilation strategy, and a reactivity-system rewrite based on alien-signals.",
+    "category": "Open Source News",
+    "date": "2026-08-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vuejs.png",
+    "content": [
+      "A release candidate in the ongoing Vue 3.6 cycle, which centers on stabilizing Vapor Mode, Vue's new virtual-DOM-free compilation strategy, and a reactivity-system rewrite based on alien-signals.",
+      "This rc continued fixing hydration and DOM-consistency issues as the 3.6 line approaches stable.",
+      "Full details: https://github.com/vuejs/core/releases/tag/v3.6.0-rc.6"
+    ]
+  },
+  {
+    "slug": "vue-3-6-0-rc-7-published",
+    "title": "Vue 3.6.0-rc.7 Published",
+    "excerpt": "The latest release candidate as of early September, continuing Vapor Mode runtime stabilization ahead of a stable 3.6 release.",
+    "category": "Open Source News",
+    "date": "2026-09-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vuejs.png",
+    "content": [
+      "The latest release candidate as of early September, continuing Vapor Mode runtime stabilization ahead of a stable 3.6 release.",
+      "Vue 3.6 overall promises smaller bundles via more aggressive tree-shaking of unused paths and improved reactivity performance and memory usage.",
+      "Full details: https://github.com/vuejs/core/releases/tag/v3.6.0-rc.7"
+    ]
+  },
+  {
+    "slug": "elastic-stack-9-5-3-released",
+    "title": "Elastic Stack 9.5.3 Released",
+    "excerpt": "A maintenance release across Elasticsearch, Kibana, Observability, and Security addressing issues carried over from 9.5.2, including correcting nested sorts on integer fields returning wrong values on older indices an...",
+    "category": "Open Source News",
+    "date": "2026-09-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "A maintenance release across Elasticsearch, Kibana, Observability, and Security addressing issues carried over from 9.5.2, including correcting nested sorts on integer fields returning wrong values on older indices and preserving scroll contexts under transient search-queue rejection.",
+      "Elastic explicitly recommends upgrading from 9.5.2 to 9.5.3.",
+      "Full details: https://www.elastic.co/blog/elastic-stack-9-5-3-released"
+    ]
+  },
+  {
+    "slug": "vs-code-1-136",
+    "title": "VS Code 1.136",
+    "excerpt": "VS Code's September monthly release shipped with Agent Merge (Preview), letting AI agents resolve PR review feedback, fix failed checks, and address merge conflicts directly from the editor.",
+    "category": "Open Source News",
+    "date": "2026-09-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vscode.png",
+    "content": [
+      "VS Code's September monthly release shipped with Agent Merge (Preview), letting AI agents resolve PR review feedback, fix failed checks, and address merge conflicts directly from the editor.",
+      "It also adds experimental multi-root workspace support for Copilot and agent chat sessions, working across all folders in a workspace from one session.",
+      "Full details: https://code.visualstudio.com/updates/v1_136"
+    ]
+  },
+  {
+    "slug": "terraform-1-16-0-released",
+    "title": "Terraform 1.16.0 Released",
+    "excerpt": "This minor release adds a new store block in terraform_data to preserve provider-specific, ephemeral, and sensitive state across plan and apply, and lets providers use nested blocks as computed values.",
+    "category": "Open Source News",
+    "date": "2026-08-26",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/terraform.png",
+    "content": [
+      "This minor release adds a new store block in terraform_data to preserve provider-specific, ephemeral, and sensitive state across plan and apply, and lets providers use nested blocks as computed values.",
+      "It also adds a Linux s390x binary, resource action triggers with halt, taint, and continue failure modes, and Mermaid-format graph output.",
+      "Full details: https://github.com/hashicorp/terraform/releases/tag/v1.16.0"
+    ]
+  },
+  {
+    "slug": "terraform-1-17-0-alpha-published",
+    "title": "Terraform 1.17.0 Alpha Published",
+    "excerpt": "An early alpha build for the next Terraform minor line, adding a -minimal-refresh planning option and enriching log output with provider version info.",
+    "category": "Open Source News",
+    "date": "2026-08-27",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/terraform.png",
+    "content": [
+      "An early alpha build for the next Terraform minor line, adding a -minimal-refresh planning option and enriching log output with provider version info.",
+      "This is a developer-preview build, not intended for production use.",
+      "Full details: https://github.com/hashicorp/terraform/releases"
+    ]
+  },
+  {
+    "slug": "terraform-1-16-1-patch-released",
+    "title": "Terraform 1.16.1 Patch Released",
+    "excerpt": "A bug-fix release addressing seven issues, most notably a hang where the CLI would pause indefinitely after a Terraform Cloud run-task failure with pending policy evaluations still outstanding.",
+    "category": "Open Source News",
+    "date": "2026-09-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/terraform.png",
+    "content": [
+      "A bug-fix release addressing seven issues, most notably a hang where the CLI would pause indefinitely after a Terraform Cloud run-task failure with pending policy evaluations still outstanding.",
+      "It also fixes crashes in import blocks referencing sensitive values and corrects state show behavior with attribute-path arguments.",
+      "Full details: https://github.com/hashicorp/terraform/releases/tag/v1.16.1"
+    ]
+  },
+  {
+    "slug": "august-2026-security-release-two-critical-rces-patched",
+    "title": "August 2026 Security Release: Two Critical RCEs Patched",
+    "excerpt": "Next.js confirmed the previously flagged 'advance notice' security release actually shipped, moved forward a day after a second critical vulnerability was identified. Versions 16.3.3 and 15.5.24 addressed two critical...",
+    "category": "Open Source News",
+    "date": "2026-08-25",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Next.js confirmed the previously flagged 'advance notice' security release actually shipped, moved forward a day after a second critical vulnerability was identified. Versions 16.3.3 and 15.5.24 addressed two critical-severity, unauthenticated remote-code-execution vulnerabilities.",
+      "The first, tied to an upstream AVIF-decoding flaw, affects the Image Optimization API. The second affects Windows-hosted servers using both the Pages Router and App Router without Cache Components, with no known workaround for affected Windows deployments; Linux and macOS are unaffected. All users on 15.5.x or 16.3.x are urged to upgrade immediately.",
+      "Full details: https://nextjs.org/blog/august-2026-security-release"
+    ]
+  },
+  {
+    "slug": "python-3-15-0-candidate-2-released",
+    "title": "Python 3.15.0 Candidate 2 Released",
+    "excerpt": "Python 3.15.0rc2 shipped as the final testing milestone before the scheduled October 1 general-availability date. Notable items bundled in this release include frozendict and sentinel types, explicit lazy imports, UTF...",
+    "category": "Open Source News",
+    "date": "2026-09-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "Python 3.15.0rc2 shipped as the final testing milestone before the scheduled October 1 general-availability date. Notable items bundled in this release include frozendict and sentinel types, explicit lazy imports, UTF-8 as the default text encoding, and unpacking inside comprehensions.",
+      "A JIT compiler gives roughly an 8-9% speedup on x86-64 Linux, and official macOS installers now ship the free-threaded build by default.",
+      "Full details: https://blog.python.org/2026/09/python-3150rc2.html"
+    ]
+  },
+  {
+    "slug": "2026-psf-board-election-opens",
+    "title": "2026 PSF Board Election Opens",
+    "excerpt": "The Python Software Foundation opened voting for four open board seats, with 17 candidates in the running.",
+    "category": "Open Source News",
+    "date": "2026-09-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "The Python Software Foundation opened voting for four open board seats, with 17 candidates in the running.",
+      "Voting runs through September 15 and is limited to Contributing, Supporting, and Fellow members who affirmed their intent to vote by August 25.",
+      "Full details: https://pyfound.blogspot.com/2026/09/the-2026-psf-board-election-is-open.html"
+    ]
+  },
+  {
+    "slug": "inaugural-python-packaging-council-election-opens",
+    "title": "Inaugural Python Packaging Council Election Opens",
+    "excerpt": "Voting opened for the first-ever Python Packaging Council, a new governance body created to oversee the packaging ecosystem.",
+    "category": "Open Source News",
+    "date": "2026-09-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "Voting opened for the first-ever Python Packaging Council, a new governance body created to oversee the packaging ecosystem.",
+      "Ballots went out to eligible PSF members, with voting closing September 15.",
+      "Full details: https://pyfound.blogspot.com/2026/09/inaugural-python-packaging-council.html"
+    ]
+  },
+  {
+    "slug": "enabling-the-next-generation-trait-solver-on-nightly",
+    "title": "Enabling the Next-Generation Trait Solver on Nightly",
+    "excerpt": "After nearly four years of development, Rust's next-generation trait solver, the largest single change to the compiler since its inception, was enabled by default on nightly to surface remaining bugs ahead of stabiliz...",
+    "category": "Open Source News",
+    "date": "2026-08-21",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "After nearly four years of development, Rust's next-generation trait solver, the largest single change to the compiler since its inception, was enabled by default on nightly to surface remaining bugs ahead of stabilization.",
+      "It replaces how the compiler proves where-clauses and normalizes associated types, fixing over 200 tracked issues and unblocking features like Type Alias Impl Trait.",
+      "Full details: https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/"
+    ]
+  },
+  {
+    "slug": "announcing-our-first-maintainers-in-residence",
+    "title": "Announcing Our First Maintainers in Residence",
+    "excerpt": "The Rust Project announced its first cohort under the Maintainer in Residence program, which gives core contributors funded time to focus on critical maintenance work across the compiler, standard library, Cargo, and ...",
+    "category": "Open Source News",
+    "date": "2026-08-26",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "The Rust Project announced its first cohort under the Maintainer in Residence program, which gives core contributors funded time to focus on critical maintenance work across the compiler, standard library, Cargo, and Clippy.",
+      "Funding comes from the Rust Foundation Maintainers Fund, backed by Google, AWS, OpenAI, and other sponsors.",
+      "Full details: https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/"
+    ]
+  },
+  {
+    "slug": "announcing-rustup-1-29-1",
+    "title": "Announcing rustup 1.29.1",
+    "excerpt": "A point release of rustup, the official Rust toolchain installer, bundling accumulated fixes since the prior 1.29.x release.",
+    "category": "Open Source News",
+    "date": "2026-09-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "A point release of rustup, the official Rust toolchain installer, bundling accumulated fixes since the prior 1.29.x release.",
+      "Full details: https://blog.rust-lang.org"
+    ]
+  },
+  {
+    "slug": "announcing-rust-1-98-1",
+    "title": "Announcing Rust 1.98.1",
+    "excerpt": "A point release fixing a critical miscompilation regression introduced in 1.98.0, where rustc could generate a trait object vtable containing a null pointer instead of a valid function pointer.",
+    "category": "Open Source News",
+    "date": "2026-09-03",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "A point release fixing a critical miscompilation regression introduced in 1.98.0, where rustc could generate a trait object vtable containing a null pointer instead of a valid function pointer.",
+      "Left unpatched, this could trigger undefined behavior in compiled programs, so users on 1.98.0 are advised to upgrade.",
+      "Full details: https://blog.rust-lang.org/2026/09/03/Rust-1.98.1/"
+    ]
+  },
+  {
+    "slug": "rust-debugging-survey-2026-results",
+    "title": "Rust Debugging Survey 2026 Results",
+    "excerpt": "The Rust Project published results from its 2026 debugging survey, gathering community feedback on debugging tools and workflows to guide future tooling investment.",
+    "category": "Open Source News",
+    "date": "2026-09-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "The Rust Project published results from its 2026 debugging survey, gathering community feedback on debugging tools and workflows to guide future tooling investment.",
+      "Full details: https://blog.rust-lang.org"
+    ]
+  },
+  {
+    "slug": "docker-desktop-4-89-0",
+    "title": "Docker Desktop 4.89.0",
+    "excerpt": "This release updated Docker Compose to v5.5.0 and the NVIDIA Container Toolkit to v1.20.0, fixed background polling that was needlessly waking the engine during Resource Saver mode, and resolved slow Zsh startup cause...",
+    "category": "Open Source News",
+    "date": "2026-08-31",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/docker.png",
+    "content": [
+      "This release updated Docker Compose to v5.5.0 and the NVIDIA Container Toolkit to v1.20.0, fixed background polling that was needlessly waking the engine during Resource Saver mode, and resolved slow Zsh startup caused by duplicate CLI completion setup.",
+      "Full details: https://docs.docker.com/desktop/release-notes/"
+    ]
+  },
+  {
+    "slug": "docker-desktop-4-90-0",
+    "title": "Docker Desktop 4.90.0",
+    "excerpt": "This release made 'Ask Gordon,' Docker's AI assistant, accessible as a persistent right-side drawer and added one-click AI diagnosis for containers, images, and volumes with detected issues.",
+    "category": "Open Source News",
+    "date": "2026-09-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/docker.png",
+    "content": [
+      "This release made 'Ask Gordon,' Docker's AI assistant, accessible as a persistent right-side drawer and added one-click AI diagnosis for containers, images, and volumes with detected issues.",
+      "It also added Kubernetes cloud cluster start and stop via Docker Offload, and updated the Kind cloud provider image to patch two disclosed CVEs.",
+      "Full details: https://docs.docker.com/desktop/release-notes/"
+    ]
+  },
+  {
+    "slug": "typescript-7-0-2-released",
+    "title": "TypeScript 7.0.2 Released",
+    "excerpt": "A patch release following the July 8 TypeScript 7.0 GA, the native Go-based compiler port. Benchmarks continue to show 8-12x faster builds on codebases like VS Code and Sentry versus TypeScript 6.0.",
+    "category": "Open Source News",
+    "date": "2026-08-20",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/typescript.png",
+    "content": [
+      "A patch release following the July 8 TypeScript 7.0 GA, the native Go-based compiler port. Benchmarks continue to show 8-12x faster builds on codebases like VS Code and Sentry versus TypeScript 6.0.",
+      "The release deliberately still excludes a public programmatic compiler API, so tooling and plugin authors need to stay on the prior compiler until 7.1.",
+      "Full details: https://github.com/microsoft/TypeScript/releases/tag/v7.0.2"
+    ]
   }
 ]

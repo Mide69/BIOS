@@ -11,7 +11,10 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/news/:slug",
+        // Slug has no dot in it (blog slugs are dash-separated words).
+        // This excludes static assets like /news/rust-1-98.png from
+        // matching, so post images keep serving from their real path.
+        source: "/news/:slug([^.]+)",
         destination: "/resources/:slug",
         permanent: true,
       },
