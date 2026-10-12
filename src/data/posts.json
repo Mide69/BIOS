@@ -4529,5 +4529,724 @@
       "Docker Desktop 4.92.0 updated bundled containerd to v2.3.5 and Docker Agent to v1.140.0, fixing issues where published container ports became unreachable and Kubernetes cluster initialization failures.",
       "Full details: https://docs.docker.com/desktop/release-notes/"
     ]
+  },
+  {
+    "slug": "vs-code-1-141",
+    "title": "VS Code 1.141",
+    "excerpt": "VS Code 1.141 adds cross-platform terminal sandboxing for agent operations on Windows, macOS and Linux, which limits agent access to files and network resources. The release notes say it does not replace endpoint secu...",
+    "category": "Open Source News",
+    "date": "2026-10-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vscode.png",
+    "content": [
+      "VS Code 1.141 adds cross-platform terminal sandboxing for agent operations on Windows, macOS and Linux, which limits agent access to files and network resources. The release notes say it does not replace endpoint security.",
+      "The Agents window gets a session grid for arranging several agent sessions side by side, and local Copilot CLI, GitHub Copilot app and Codex conversations can now be continued without losing history. Enterprises can require sandboxing through unified managed settings in preview.",
+      "Full details: https://code.visualstudio.com/updates/v1_141"
+    ]
+  },
+  {
+    "slug": "terraform-v1-16-5",
+    "title": "Terraform v1.16.5",
+    "excerpt": "A bug-fix patch for the 1.16 line. It fixes a crash when a tainted instance state is found without a valid status, and an issue where resource identity could be nil during delete.",
+    "category": "Open Source News",
+    "date": "2026-10-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/terraform.png",
+    "content": [
+      "A bug-fix patch for the 1.16 line. It fixes a crash when a tainted instance state is found without a valid status, and an issue where resource identity could be nil during delete.",
+      "Full details: https://github.com/hashicorp/terraform/releases/tag/v1.16.5"
+    ]
+  },
+  {
+    "slug": "terraform-v1-17-0-rc1",
+    "title": "Terraform v1.17.0-rc1",
+    "excerpt": "The first release candidate for Terraform 1.17. Variables and locals can now be used in provider requirements, and a new -minimal-refresh planning option refreshes only resources with proposed changes.",
+    "category": "Open Source News",
+    "date": "2026-10-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/terraform.png",
+    "content": [
+      "The first release candidate for Terraform 1.17. Variables and locals can now be used in provider requirements, and a new -minimal-refresh planning option refreshes only resources with proposed changes.",
+      "Terraform Policy is now generally available, so the -policies flag no longer needs an experimental build. The terraform version -json output also gains a format_version field.",
+      "Full details: https://github.com/hashicorp/terraform/releases/tag/v1.17.0-rc1"
+    ]
+  },
+  {
+    "slug": "ansible-core-2-22-0b2",
+    "title": "ansible-core 2.22.0b2",
+    "excerpt": "The second beta of ansible-core 2.22. The maintenance releases 2.19.14rc1, 2.20.10rc1 and 2.21.5rc1 were cut the same day, ahead of the October 5 releases.",
+    "category": "Open Source News",
+    "date": "2026-09-29",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/ansible.png",
+    "content": [
+      "The second beta of ansible-core 2.22. The maintenance releases 2.19.14rc1, 2.20.10rc1 and 2.21.5rc1 were cut the same day, ahead of the October 5 releases.",
+      "Release notes mention that ansible-core 2.22 and later will use the secret documentation key to mask values.",
+      "Full details: https://github.com/ansible/ansible/releases/tag/v2.22.0b2"
+    ]
+  },
+  {
+    "slug": "ansible-core-2-19-14-2-20-10-and-2-21-5-released",
+    "title": "ansible-core 2.19.14, 2.20.10 and 2.21.5 Released",
+    "excerpt": "Three coordinated bug-fix releases across the supported ansible-core branches. The 2.21.5 changelog lists no security fixes.",
+    "category": "Open Source News",
+    "date": "2026-10-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/ansible.png",
+    "content": [
+      "Three coordinated bug-fix releases across the supported ansible-core branches. The 2.21.5 changelog lists no security fixes.",
+      "It makes the ansible-connection persistent directory private, fixes the ansible-test validate-modules check failing when a plugin documents an option with the secret key, and sets the dnf5 module destdir from download_dir when download_only is true.",
+      "Full details: https://github.com/ansible/ansible/releases"
+    ]
+  },
+  {
+    "slug": "ansible-community-package-14-5-0",
+    "title": "Ansible Community Package 14.5.0",
+    "excerpt": "The monthly community package release, built on ansible-core 2.21.5. It updates many collections, including ansible.netcommon, cisco.ios, community.general, community.crypto, containers.podman, google.cloud, kubernete...",
+    "category": "Open Source News",
+    "date": "2026-10-06",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/ansible.png",
+    "content": [
+      "The monthly community package release, built on ansible-core 2.21.5. It updates many collections, including ansible.netcommon, cisco.ios, community.general, community.crypto, containers.podman, google.cloud, kubernetes.core and vmware.vmware.",
+      "Several collections now mark sensitive options and outputs as secrets for use with ansible-core 2.22 and later. The community.general proton_pass lookup no longer leaks its access token in error messages, verbose output or the process list.",
+      "Full details: https://github.com/ansible-community/ansible-build-data/blob/main/14/CHANGELOG-v14.rst"
+    ]
+  },
+  {
+    "slug": "redis-open-source-now-available-on-aws-marketplace",
+    "title": "Redis Open Source Now Available on AWS Marketplace",
+    "excerpt": "Redis announced an official AWS Marketplace listing for Redis Open Source, owned by Redis. It includes a Redis-published Amazon Machine Image that runs Redis OSS 8.2 on Ubuntu 24.04 on EC2.",
+    "category": "Open Source News",
+    "date": "2026-10-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/redis.png",
+    "content": [
+      "Redis announced an official AWS Marketplace listing for Redis Open Source, owned by Redis. It includes a Redis-published Amazon Machine Image that runs Redis OSS 8.2 on Ubuntu 24.04 on EC2.",
+      "The post says 8.2 is the latest Open Source release eligible for extended support, with up to five years of maintenance, security scanning and CVE patches. Customers can buy it through AWS procurement.",
+      "Full details: https://redis.io/blog/redis-oss-is-now-available-on-aws-marketplace/"
+    ]
+  },
+  {
+    "slug": "next-js-16-4",
+    "title": "Next.js 16.4",
+    "excerpt": "Next.js 16.4 recommends Cache Components for every app. New create-next-app projects have it enabled by default, and it becomes the default in Next.js 17. It adds ensureStatic to guarantee that a route's shell, prefet...",
+    "category": "Open Source News",
+    "date": "2026-10-06",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Next.js 16.4 recommends Cache Components for every app. New create-next-app projects have it enabled by default, and it becomes the default in Next.js 17. It adds ensureStatic to guarantee that a route's shell, prefetch or navigation is static.",
+      "Turbopack's disk cache is 20 to 25 percent smaller, with lazy server HMR and a shared runtime chunk. The release ships React 19.3 with stable View Transitions and Fragment Refs, and adds a next upgrade --agent command for agent-driven upgrades.",
+      "Full details: https://nextjs.org/blog/next-16-4"
+    ]
+  },
+  {
+    "slug": "upcoming-next-js-security-update-advance-notice",
+    "title": "Upcoming Next.js Security Update: Advance Notice",
+    "excerpt": "Next.js announced an out-of-band security update planned for October 14, 2026. It will address three vulnerabilities in upstream dependencies, two rated Critical and one High.",
+    "category": "Open Source News",
+    "date": "2026-10-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nextjs-project.png",
+    "content": [
+      "Next.js announced an out-of-band security update planned for October 14, 2026. It will address three vulnerabilities in upstream dependencies, two rated Critical and one High.",
+      "Two of the fixes were postponed from the September security release because of upstream coordination. This post is an advance notice, and the full advisories, affected versions and upgrade steps will ship with the update.",
+      "Full details: https://nextjs.org/blog/upcoming-nextjs-security-update-october-2026"
+    ]
+  },
+  {
+    "slug": "platform-independent-simd-in-go",
+    "title": "Platform-Independent SIMD in Go",
+    "excerpt": "The Go team introduces an experimental portable simd package in Go 1.27, built on the architecture-specific archsimd package. It is enabled with GOEXPERIMENT=simd, and vector types are size-agnostic, such as simd.Uint...",
+    "category": "Open Source News",
+    "date": "2026-09-24",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/go.png",
+    "content": [
+      "The Go team introduces an experimental portable simd package in Go 1.27, built on the architecture-specific archsimd package. It is enabled with GOEXPERIMENT=simd, and vector types are size-agnostic, such as simd.Uint8s and simd.Float32s.",
+      "Operations missing from the hardware are emulated, so the same code runs on amd64, arm64 and wasm. The post also covers GODEBUG=simd controls, a ToArch() escape hatch for architecture-specific code, and a Go 1.28 roadmap that includes SVE support.",
+      "Full details: https://go.dev/blog/simd-experiment"
+    ]
+  },
+  {
+    "slug": "arch-specific-simd-in-go",
+    "title": "Arch-Specific SIMD in Go",
+    "excerpt": "Go 1.27 extends the experimental simd/archsimd package, introduced for amd64 in Go 1.26, to arm64 (NEON, with SVE and SVE2 in progress) and wasm.",
+    "category": "Open Source News",
+    "date": "2026-10-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/go.png",
+    "content": [
+      "Go 1.27 extends the experimental simd/archsimd package, introduced for amd64 in Go 1.26, to arm64 (NEON, with SVE and SVE2 in progress) and wasm.",
+      "The post covers the API design, with readable operation names, vector and mask types, and zero-cost reinterpretation methods. It advises checking CPU features to avoid SIGILL, and plans riscv64, ppc64, s390x and loong64 work for Go 1.28 and later.",
+      "Full details: https://go.dev/blog/archsimd"
+    ]
+  },
+  {
+    "slug": "go-1-27-2-and-go-1-26-9-released-with-15-security-fixes",
+    "title": "Go 1.27.2 and Go 1.26.9 Released with 15 Security Fixes",
+    "excerpt": "The point releases fix 15 security issues. Most are in net/http: HTTP/2 server crashes, memory and CPU exhaustion, and HTTP/1 CONNECT-related request smuggling and desync.",
+    "category": "Open Source News",
+    "date": "2026-10-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/go.png",
+    "content": [
+      "The point releases fix 15 security issues. Most are in net/http: HTTP/2 server crashes, memory and CPU exhaustion, and HTTP/1 CONNECT-related request smuggling and desync.",
+      "Others cover crypto/tls ECH memory exhaustion, cmd/go checksum bypasses, html/template escaping bugs, MIME header limit bypasses and a Windows os.Root junction escape. Go 1.27.2 also has bug fixes for the compiler, linker, runtime and encoding/json, so users on 1.27 and 1.26 should upgrade.",
+      "Full details: https://go.dev/doc/devel/release#go1.27.2"
+    ]
+  },
+  {
+    "slug": "django-security-releases-6-1-2-6-0-9-and-5-2-18",
+    "title": "Django Security Releases: 6.1.2, 6.0.9 and 5.2.18",
+    "excerpt": "Django issued security releases for the 6.1, 6.0 and 5.2 series, fixing five issues. They include a low-severity denial of service in get_supported_language_variant() and a moderate denial of service from quadratic he...",
+    "category": "Open Source News",
+    "date": "2026-10-06",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/django.png",
+    "content": [
+      "Django issued security releases for the 6.1, 6.0 and 5.2 series, fixing five issues. They include a low-severity denial of service in get_supported_language_variant() and a moderate denial of service from quadratic header parsing in parse_header_parameters().",
+      "The other fixes cover a moderate request forgery through spatial lookup byte values, which now requires GDALRaster wrapping and is backward-incompatible, and a moderate privilege abuse in model formsets with editable primary keys. A stronger follow-up fix for the nested geometry collection denial of service is also included. Django recommends upgrading as soon as possible.",
+      "Full details: https://www.djangoproject.com/weblog/2026/oct/06/security-releases/"
+    ]
+  },
+  {
+    "slug": "django-security-reporting-update",
+    "title": "Django Security Reporting Update",
+    "excerpt": "The Django Security Team no longer accepts new security reports through HackerOne. Reports already submitted there stay open and will still be handled.",
+    "category": "Open Source News",
+    "date": "2026-10-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/django.png",
+    "content": [
+      "The Django Security Team no longer accepts new security reports through HackerOne. Reports already submitted there stay open and will still be handled.",
+      "New reports should be sent by email to security@djangoproject.com, following the published security policies.",
+      "Full details: https://www.djangoproject.com/weblog/2026/oct/08/django-security-reporting-update/"
+    ]
+  },
+  {
+    "slug": "vue-3-6-0-rc-9",
+    "title": "Vue 3.6.0-rc.9",
+    "excerpt": "This release candidate has no new features and about 60 bug fixes. Most are in the Vapor compiler and runtime, covering expression caching, v-for key handling, hydration of multi-root async components, v-show, KeepAli...",
+    "category": "Open Source News",
+    "date": "2026-09-18",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vuejs.png",
+    "content": [
+      "This release candidate has no new features and about 60 bug fixes. Most are in the Vapor compiler and runtime, covering expression caching, v-for key handling, hydration of multi-root async components, v-show, KeepAlive caching, transitions and dev warnings.",
+      "It is part of the stabilisation run toward Vue 3.6.0.",
+      "Full details: https://github.com/vuejs/core/releases"
+    ]
+  },
+  {
+    "slug": "vue-3-6-0-rc-10",
+    "title": "Vue 3.6.0-rc.10",
+    "excerpt": "This release candidate has about 90 bug fixes and no new features. The largest group is Vapor runtime fixes for slot fallbacks, async components, hydration of empty branches, transitions, KeepAlive and form values.",
+    "category": "Open Source News",
+    "date": "2026-09-30",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/vuejs.png",
+    "content": [
+      "This release candidate has about 90 bug fixes and no new features. The largest group is Vapor runtime fixes for slot fallbacks, async components, hydration of empty branches, transitions, KeepAlive and form values.",
+      "Compiler fixes cover event listener binding, SVG detection and v-if key conflicts. It also fixes reactivity error handling, useModel and CSS variable injection.",
+      "Full details: https://github.com/vuejs/core/releases"
+    ]
+  },
+  {
+    "slug": "vue-3-6-0-rc-11",
+    "title": "Vue 3.6.0-rc.11",
+    "excerpt": "The latest release candidate adds one feature: Vapor slot content can now transition inside a VDOM Transition. It also has about 60 bug fixes, mainly in the Vapor compiler and runtime.",
+    "category": "Open Source News",
+    "date": "2026-10-10",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/vuejs.png",
+    "content": [
+      "The latest release candidate adds one feature: Vapor slot content can now transition inside a VDOM Transition. It also has about 60 bug fixes, mainly in the Vapor compiler and runtime.",
+      "These include rejecting Vapor scripts without script setup, v-model on const bindings, hydration, teleport and VDOM interop. Stable Vue 3.6.0 is still pending.",
+      "Full details: https://github.com/vuejs/core/releases/tag/v3.6.0-rc.11"
+    ]
+  },
+  {
+    "slug": "elastic-stack-8-19-22-released",
+    "title": "Elastic Stack 8.19.22 Released",
+    "excerpt": "Elastic released 8.19.22, a maintenance update for the 8.19 line, recommended over 8.19.21.",
+    "category": "Open Source News",
+    "date": "2026-09-23",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "Elastic released 8.19.22, a maintenance update for the 8.19 line, recommended over 8.19.21.",
+      "The announcement lists no specific fixes and points to the release notes. It is a routine patch for users on the 8.19 line.",
+      "Full details: https://www.elastic.co/blog/elastic-stack-8-19-22-released"
+    ]
+  },
+  {
+    "slug": "elastic-stack-9-5-5-9-4-8-and-8-19-23-released-with-security-fixes",
+    "title": "Elastic Stack 9.5.5, 9.4.8 and 8.19.23 Released with Security Fixes",
+    "excerpt": "Elastic published coordinated patch releases for the 9.5, 9.4 and 8.19 lines. Each includes fixes for potential security vulnerabilities, and Elastic recommends upgrading from 9.5.4, 9.4.7 and 8.19.22.",
+    "category": "Open Source News",
+    "date": "2026-10-06",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/elasticsearch.png",
+    "content": [
+      "Elastic published coordinated patch releases for the 9.5, 9.4 and 8.19 lines. Each includes fixes for potential security vulnerabilities, and Elastic recommends upgrading from 9.5.4, 9.4.7 and 8.19.22.",
+      "The Elasticsearch 9.5.5 release notes add a 128-field limit on multi_terms aggregations, new kibana_system privileges, and Jackson and Netty upgrades. They also fix replica divergence on indices with sequence numbers disabled.",
+      "Full details: https://www.elastic.co/blog/elastic-stack-9-5-5-released"
+    ]
+  },
+  {
+    "slug": "python-language-summit-2026-write-ups",
+    "title": "Python Language Summit 2026 Write-Ups",
+    "excerpt": "The Python Insider blog published a series of Language Summit 2026 posts. They cover PEP 827 on type manipulation, a free-threaded Python session, a developer-in-residence update and lightning talks.",
+    "category": "Open Source News",
+    "date": "2026-09-30",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "The Python Insider blog published a series of Language Summit 2026 posts. They cover PEP 827 on type manipulation, a free-threaded Python session, a developer-in-residence update and lightning talks.",
+      "Together they give a view of the core team's near-term priorities.",
+      "Full details: https://blog.python.org/2026/09/language-summit-2026"
+    ]
+  },
+  {
+    "slug": "python-3-10-22-3-11-17-3-12-15-3-13-16-and-3-14-8-security-releases",
+    "title": "Python 3.10.22, 3.11.17, 3.12.15, 3.13.16 and 3.14.8 Security Releases",
+    "excerpt": "Five security releases went out together. They fix tarfile extraction-filter flaws that could write outside the destination directory, unbounded allocation in zipfile, and urllib.request credential scoping by URL sche...",
+    "category": "Open Source News",
+    "date": "2026-10-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "Five security releases went out together. They fix tarfile extraction-filter flaws that could write outside the destination directory, unbounded allocation in zipfile, and urllib.request credential scoping by URL scheme.",
+      "They also fix ssl and asyncio argument validation, restrict stringprep and the IDNA codec to RFC 3454 codepoints, and update bundled libexpat to 2.8.5. Python 3.10.22 is the final 3.10 release, and 3.13.16 is the last full maintenance release of 3.13.",
+      "Full details: https://blog.python.org/2026/10/python-31022-31117"
+    ]
+  },
+  {
+    "slug": "python-3-15-0-release-candidate-3",
+    "title": "Python 3.15.0 Release Candidate 3",
+    "excerpt": "This was the last planned release candidate, with about 156 fixes from 82 contributors since rc2. It was added because late lazy-import release blockers were found, which moved the final release from October 1 to Octo...",
+    "category": "Open Source News",
+    "date": "2026-10-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "This was the last planned release candidate, with about 156 fixes from 82 contributors since rc2. It was added because late lazy-import release blockers were found, which moved the final release from October 1 to October 9.",
+      "The post asks maintainers to publish 3.15 wheels, and warns that IDLE and tkinter apps may hang on macOS 27.0.",
+      "Full details: https://blog.python.org/2026/10/python-3150-rc3"
+    ]
+  },
+  {
+    "slug": "python-3-15-0-is-here",
+    "title": "Python 3.15.0 Is Here",
+    "excerpt": "Python 3.15.0 is the stable release of the 3.15 series, built from 5,643 commits by 1,012 contributors. Headline changes are explicit lazy imports (PEP 810), a frozendict built-in (PEP 814), a sentinel built-in (PEP 6...",
+    "category": "Open Source News",
+    "date": "2026-10-09",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/python-3-14-7.png",
+    "content": [
+      "Python 3.15.0 is the stable release of the 3.15 series, built from 5,643 commits by 1,012 contributors. Headline changes are explicit lazy imports (PEP 810), a frozendict built-in (PEP 814), a sentinel built-in (PEP 661) and UTF-8 as the default encoding (PEP 686).",
+      "The experimental JIT gets a 7 to 8 percent geometric-mean speedup on x86-64 Linux. A new profiling package with the Tachyon sampling profiler also lands, along with frame pointers by default (PEP 831) and a stable ABI for free-threaded builds.",
+      "Full details: https://blog.python.org/2026/10/python-3150-final-is-here"
+    ]
+  },
+  {
+    "slug": "postgresql-19-beta-4-released",
+    "title": "PostgreSQL 19 Beta 4 Released",
+    "excerpt": "Beta 4 reverts several planned features so the project can keep a predictable schedule. These include SQL/PGQ property graph queries, online enabling and disabling of data checksums, and temporal FOR PORTION OF update...",
+    "category": "Open Source News",
+    "date": "2026-09-24",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "Beta 4 reverts several planned features so the project can keep a predictable schedule. These include SQL/PGQ property graph queries, online enabling and disabling of data checksums, and temporal FOR PORTION OF updates and deletes.",
+      "It also fixes issues in foreign key checks, REPACK, WAIT FOR, logical replication, autovacuum scoring and pg_plan_advice.",
+      "Full details: https://www.postgresql.org/about/news/postgresql-19-beta-4-released-3386/"
+    ]
+  },
+  {
+    "slug": "postgresql-jdbc-42-7-14-security-update",
+    "title": "PostgreSQL JDBC 42.7.14 Security Update",
+    "excerpt": "The PostgreSQL JDBC project released version 42.7.14 as a security update for two CVEs. The news page gives no vulnerability details or affected-version range, so users should check the linked GitHub advisories.",
+    "category": "Open Source News",
+    "date": "2026-10-09",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/postgresql-18-6.png",
+    "content": [
+      "The PostgreSQL JDBC project released version 42.7.14 as a security update for two CVEs. The news page gives no vulnerability details or affected-version range, so users should check the linked GitHub advisories.",
+      "This is a driver release, not a PostgreSQL server release.",
+      "Full details: https://www.postgresql.org/about/news/2026-10-07-postgresql-jdbc-42714-security-update-for-multiple-cves-3399/"
+    ]
+  },
+  {
+    "slug": "announcing-rust-1-99-0",
+    "title": "Announcing Rust 1.99.0",
+    "excerpt": "Rust 1.99.0 stabilizes defining C-ABI variadic functions with a VaList type and a VaArgSafe trait. It also stabilizes Layout::for_value_raw, mem::size_of_val_raw and mem::align_of_val_raw for raw-pointer size and alig...",
+    "category": "Open Source News",
+    "date": "2026-10-01",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "Rust 1.99.0 stabilizes defining C-ABI variadic functions with a VaList type and a VaArgSafe trait. It also stabilizes Layout::for_value_raw, mem::size_of_val_raw and mem::align_of_val_raw for raw-pointer size and alignment.",
+      "New stable APIs include Vec::into_parts and from_parts, VecDeque::retain_back, Box::into_non_null and from_non_null, String::from_utf8_lossy_owned and fs::set_times.",
+      "Full details: https://blog.rust-lang.org/2026/10/01/Rust-1.99.0/"
+    ]
+  },
+  {
+    "slug": "rust-demotes-i686-windows-targets-to-std-only",
+    "title": "Rust Demotes i686 Windows Targets to Std-Only",
+    "excerpt": "With Rust 1.100.0, i686-pc-windows-msvc drops from Tier 1 with host tools to Tier 1 without host tools, and i686-pc-windows-gnu drops from Tier 2 with host tools to Tier 2 without them. The standard library is still s...",
+    "category": "Open Source News",
+    "date": "2026-10-02",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/rust-1-98.png",
+    "content": [
+      "With Rust 1.100.0, i686-pc-windows-msvc drops from Tier 1 with host tools to Tier 1 without host tools, and i686-pc-windows-gnu drops from Tier 2 with host tools to Tier 2 without them. The standard library is still shipped, and the MSVC target stays in CI.",
+      "Developers on 32-bit Windows will need to cross-compile from a 64-bit host. The team cites crashes and out-of-memory failures when building the toolchains.",
+      "Full details: https://blog.rust-lang.org/2026/10/02/demoting-i686-windows-targets-to-std-only/"
+    ]
+  },
+  {
+    "slug": "docker-sandbox-kit-spec-heads-to-the-cncf",
+    "title": "Docker Sandbox Kit Spec Heads to the CNCF",
+    "excerpt": "Docker published the open Sandbox Kit Spec under Apache 2.0 and said it will take it to the CNCF for neutral governance. A Kit is an ordinary OCI image that bundles an AI agent, its tools and a typed list of hosts, cr...",
+    "category": "Open Source News",
+    "date": "2026-09-24",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/docker.png",
+    "content": [
+      "Docker published the open Sandbox Kit Spec under Apache 2.0 and said it will take it to the CNCF for neutral governance. A Kit is an ordinary OCI image that bundles an AI agent, its tools and a typed list of hosts, credentials and volumes it may access.",
+      "Existing registries, scanners and signing tools work with it, and Docker Sandboxes is the first runtime to enforce it. Partners include AWS, Datadog, JFrog, Palo Alto Networks and Snyk.",
+      "Full details: https://www.docker.com/blog/docker-sandbox-kit-spec-cncf/"
+    ]
+  },
+  {
+    "slug": "introducing-docker-cloud-sandboxes",
+    "title": "Introducing Docker Cloud Sandboxes",
+    "excerpt": "Cloud Sandboxes are microVM-based sandboxes for coding agents running on Docker-managed cloud compute. The command sbx move my-project --to cloud moves a project between local and cloud in either direction.",
+    "category": "Open Source News",
+    "date": "2026-09-24",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/docker.png",
+    "content": [
+      "Cloud Sandboxes are microVM-based sandboxes for coding agents running on Docker-managed cloud compute. The command sbx move my-project --to cloud moves a project between local and cloud in either direction.",
+      "They are billed per second on a pay-as-you-go basis and need sbx 0.45.1 or later on a Personal or Pro account.",
+      "Full details: https://www.docker.com/blog/introducing-cloud-sandboxes-start-on-your-laptop-finish-in-the-cloud/"
+    ]
+  },
+  {
+    "slug": "docker-engine-29-8-2-security-release",
+    "title": "Docker Engine 29.8.2 Security Release",
+    "excerpt": "This release fixes three Engine vulnerabilities: unbounded CPU and memory use when pulling a crafted OCI image index, a malicious DNS response that could skip TLS verification or fall back to HTTP for registry connect...",
+    "category": "Open Source News",
+    "date": "2026-09-30",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/docker.png",
+    "content": [
+      "This release fixes three Engine vulnerabilities: unbounded CPU and memory use when pulling a crafted OCI image index, a malicious DNS response that could skip TLS verification or fall back to HTTP for registry connections, and forged Ethernet frames on encrypted Swarm overlay networks.",
+      "It also fixes about ten BuildKit issues, including build cache poisoning, and ships BuildKit 0.33.1, containerd 2.3.6 and runc 1.5.2.",
+      "Full details: https://docs.docker.com/engine/release-notes/29/"
+    ]
+  },
+  {
+    "slug": "docker-engine-29-9-0",
+    "title": "Docker Engine 29.9.0",
+    "excerpt": "This release fixes four HTTP/2 denial-of-service vulnerabilities in the daemon and a Windows junction directory issue. It adds a lazy-pull feature for the containerd image store, enabled by default for the nydus, over...",
+    "category": "Open Source News",
+    "date": "2026-10-08",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/docker.png",
+    "content": [
+      "This release fixes four HTTP/2 denial-of-service vulnerabilities in the daemon and a Windows junction directory issue. It adds a lazy-pull feature for the containerd image store, enabled by default for the nydus, overlaybd, soci and stargz snapshotters.",
+      "It also fixes a case where encrypted overlay errors could send traffic in cleartext, and ships BuildKit 0.34.0, containerd 2.4.1 and Go 1.26.9.",
+      "Full details: https://docs.docker.com/engine/release-notes/29/"
+    ]
+  },
+  {
+    "slug": "docker-hub-security-advisory-personal-access-token-transfer",
+    "title": "Docker Hub Security Advisory: Personal Access Token Transfer",
+    "excerpt": "Docker Hub's account-to-organization conversion could reassign a converted account's personal access tokens to a named new owner without rotating the secret or notifying that owner. Docker rated the issue critical.",
+    "category": "Open Source News",
+    "date": "2026-10-12",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/docker.png",
+    "content": [
+      "Docker Hub's account-to-organization conversion could reassign a converted account's personal access tokens to a named new owner without rotating the secret or notifying that owner. Docker rated the issue critical.",
+      "It was reported and fixed on September 30, and the exposure window ran from August 26, 2024. After reviewing about 304,000 pushes, Docker found no evidence of exploitation. It notified affected users on October 2 and deactivated the transferred tokens on October 8.",
+      "Full details: https://www.docker.com/blog/docker-hub-security-advisory-cve-2026-105445/"
+    ]
+  },
+  {
+    "slug": "typescript-7-1-beta-delayed",
+    "title": "TypeScript 7.1 Beta Delayed",
+    "excerpt": "The TypeScript team said infrastructure issues will make the 7.1 beta at least a few days late, with no new date given. The beta had already been pushed back about two weeks for more API testing.",
+    "category": "Open Source News",
+    "date": "2026-10-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/typescript.png",
+    "content": [
+      "The TypeScript team said infrastructure issues will make the 7.1 beta at least a few days late, with no new date given. The beta had already been pushed back about two weeks for more API testing.",
+      "The planned 7.1 theme is a stable programmatic API, an es2026 target and Promise.allKeyed typings. The official iteration plan has not yet updated the RC and stable dates.",
+      "Full details: https://github.com/microsoft/TypeScript/issues/63703"
+    ]
+  },
+  {
+    "slug": "linux-7-3-rc5-released",
+    "title": "Linux 7.3-rc5 Released",
+    "excerpt": "Linus Torvalds tagged 7.3-rc5 with 577 commits from 275 contributors. He flagged an unusual diffstat: drivers were under a third of the patches and selftests about a quarter, which he put down to patch size rather tha...",
+    "category": "Open Source News",
+    "date": "2026-09-27",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/linux.png",
+    "content": [
+      "Linus Torvalds tagged 7.3-rc5 with 577 commits from 275 contributors. He flagged an unusual diffstat: drivers were under a third of the patches and selftests about a quarter, which he put down to patch size rather than missing driver work.",
+      "Phoronix reports that the Logitech Bolt receiver HID++ support was reverted, and that the 7.3 final is targeted for October 18.",
+      "Full details: https://phoronix.com/news/Linux-7.3-rc5-Released"
+    ]
+  },
+  {
+    "slug": "linux-7-3-rc6-released",
+    "title": "Linux 7.3-rc6 Released",
+    "excerpt": "The sixth release candidate had 524 commits from 281 contributors, with driver fixes back to roughly half of the diff. Torvalds said the commit counts are normal for what he called the new AI normal, meaning many smal...",
+    "category": "Open Source News",
+    "date": "2026-10-04",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/linux.png",
+    "content": [
+      "The sixth release candidate had 524 commits from 281 contributors, with driver fixes back to roughly half of the diff. Torvalds said the commit counts are normal for what he called the new AI normal, meaning many small error-path fixes.",
+      "The fixes spanned KVM, SMB and netfs, USB-serial and GPU drivers, and the Logitech Bolt change was reverted again. Maintainer Summit and Plumbers travel was not expected to move the schedule.",
+      "Full details: https://phoronix.com/news/Linux-7.3-rc6-Released"
+    ]
+  },
+  {
+    "slug": "git-2-56-0-released",
+    "title": "Git 2.56.0 Released",
+    "excerpt": "Git 2.56.0 is the first feature release since 2.55.0. The headline is git add --resolved, which stages only still-unmerged paths, and which stages nothing if any leftover conflict markers remain.",
+    "category": "Open Source News",
+    "date": "2026-09-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/git.png",
+    "content": [
+      "Git 2.56.0 is the first feature release since 2.55.0. The headline is git add --resolved, which stages only still-unmerged paths, and which stages nothing if any leftover conflict markers remain.",
+      "Other additions include git branch --delete-merged, new git refs create, update, delete and rename subcommands, an experimental git history drop, git replay --linearize and git bisect run --reset-when-found. git log --follow now tracks renames per parent, and -h and --help now exit with 0 instead of 129.",
+      "Full details: https://raw.githubusercontent.com/git/git/v2.56.0/Documentation/RelNotes/2.56.0.adoc"
+    ]
+  },
+  {
+    "slug": "highlights-from-git-2-56",
+    "title": "Highlights from Git 2.56",
+    "excerpt": "The GitHub Blog walks through the release. Merge-base searches got much faster: one monorepo traversal dropped from 0.68 seconds to 0.01 seconds, and a Linux kernel case from 167,441 steps to 3,887.",
+    "category": "Open Source News",
+    "date": "2026-09-28",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/git.png",
+    "content": [
+      "The GitHub Blog walks through the release. Merge-base searches got much faster: one monorepo traversal dropped from 0.68 seconds to 0.01 seconds, and a Linux kernel case from 167,441 steps to 3,887.",
+      "Path-walk repacking now works with bitmaps and delta islands, and a Fluent UI benchmark pack shrank by about 71 percent. The feature is off by default. Reftable and untracked-file performance also improved, and one Chromium git diff fell from about eight minutes to 0.07 seconds.",
+      "Full details: https://github.blog/open-source/git/highlights-from-git-2-56/"
+    ]
+  },
+  {
+    "slug": "kubernetes-v1-37-1-and-backport-patch-releases",
+    "title": "Kubernetes v1.37.1 and Backport Patch Releases",
+    "excerpt": "These are the first patch releases after v1.37.0, covering v1.37.1, v1.36.5, v1.35.9 and v1.34.12. The 1.37.1 changelog lists a Go 1.26.8 build switch, a conformance-test adjustment and a few fixes, with no CVEs listed.",
+    "category": "Open Source News",
+    "date": "2026-09-23",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "These are the first patch releases after v1.37.0, covering v1.37.1, v1.36.5, v1.35.9 and v1.34.12. The 1.37.1 changelog lists a Go 1.26.8 build switch, a conformance-test adjustment and a few fixes, with no CVEs listed.",
+      "A DeviceTaintRule with no spec.deviceSelector now matches no devices instead of every device cluster-wide. Other fixes cover a Windows kube-proxy panic, a kube-scheduler DRA allocator crash and a kubeadm init resolvConf issue.",
+      "Full details: https://github.com/kubernetes/kubernetes/releases/tag/v1.37.1"
+    ]
+  },
+  {
+    "slug": "spotlight-on-sig-apps",
+    "title": "Spotlight on SIG Apps",
+    "excerpt": "An interview with SIG Apps chairs Janet Kuo and Maciej Szulik about the group that owns Deployments, StatefulSets, DaemonSets, Jobs and CronJobs. Current focus has returned to rollout and scale performance, and to res...",
+    "category": "Open Source News",
+    "date": "2026-09-22",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "An interview with SIG Apps chairs Janet Kuo and Maciej Szulik about the group that owns Deployments, StatefulSets, DaemonSets, Jobs and CronJobs. Current focus has returned to rollout and scale performance, and to resilience for stuck rollouts and node failures.",
+      "They also cover AI and distributed workloads, including JobSet, LeaderWorkerSet and the new Agent Sandbox subproject. KEP-4443 adds a name field to PodFailurePolicyRule and targets v1.38.",
+      "Full details: https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/"
+    ]
+  },
+  {
+    "slug": "scaling-kubernetes-workloads-with-node-swap",
+    "title": "Scaling Kubernetes Workloads with Node Swap",
+    "excerpt": "The post argues that memory is the first hard limit in many clusters, and that agentic AI workloads make it worse. Node swap on fast local SSDs helps, and it has been GA since v1.34. The config uses failSwapOn: false ...",
+    "category": "Open Source News",
+    "date": "2026-10-05",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "The post argues that memory is the first hard limit in many clusters, and that agentic AI workloads make it worse. Node swap on fast local SSDs helps, and it has been GA since v1.34. The config uses failSwapOn: false with memorySwap.swapBehavior: LimitedSwap, which applies to Burstable pods.",
+      "Reported benchmarks on a GKE c4-standard-32 node include 50 percent lower RAM for a kernel build and up to 3x pod density for gVisor Python sandboxes. The authors warn that swap is insurance rather than a RAM replacement, and that results are hardware-specific.",
+      "Full details: https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/"
+    ]
+  },
+  {
+    "slug": "the-shift-to-cgroup-v2-in-kubernetes",
+    "title": "The Shift to cgroup v2 in Kubernetes",
+    "excerpt": "cgroup v1 has been in maintenance mode since v1.31 and is deprecated. Since v1.35 the kubelet failCgroupV1 setting defaults to true, so the kubelet refuses to start on cgroup v1 nodes unless it is overridden with fail...",
+    "category": "Open Source News",
+    "date": "2026-10-06",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/kubernetes.png",
+    "content": [
+      "cgroup v1 has been in maintenance mode since v1.31 and is deprecated. Since v1.35 the kubelet failCgroupV1 setting defaults to true, so the kubelet refuses to start on cgroup v1 nodes unless it is overridden with failCgroupV1: false.",
+      "Removal of the v1 fallback is tracked in KEP-5573, which says no earlier than 1.38. Operators should confirm their nodes report cgroup2fs and run kernel 5.8 or later.",
+      "Full details: https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/"
+    ]
+  },
+  {
+    "slug": "node-js-26-9-0-current",
+    "title": "Node.js 26.9.0 (Current)",
+    "excerpt": "Node.js 26.9.0 adds a generic crypto MAC API and OpenSSL provider cipher and hash discovery, and node:ffi is now enabled by default. It also adds histogram meanCI and CBOR export and import, an experimental DTLS API a...",
+    "category": "Open Source News",
+    "date": "2026-09-16",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js 26.9.0 adds a generic crypto MAC API and OpenSSL provider cipher and hash discovery, and node:ffi is now enabled by default. It also adds histogram meanCI and CBOR export and import, an experimental DTLS API and VFS integration with the CJS and ESM loaders.",
+      "Fixes cover HTTP/2 write deadlocks, fs.cp() on the thread pool and a glob maxDepth option. Hmac.digest() also no longer returns uninitialized memory.",
+      "Full details: https://nodejs.org/en/blog/release/v26.9.0"
+    ]
+  },
+  {
+    "slug": "node-js-26-10-0-current",
+    "title": "Node.js 26.10.0 (Current)",
+    "excerpt": "Node.js 26.10.0 adds crypto.parsePKCS12(), fs.openAsBlobSync, util.markPromiseAsHandled and util.throttle and util.debounce. You can also send a net.BoundSocket to threads and child processes.",
+    "category": "Open Source News",
+    "date": "2026-09-22",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js 26.10.0 adds crypto.parsePKCS12(), fs.openAsBlobSync, util.markPromiseAsHandled and util.throttle and util.debounce. You can also send a net.BoundSocket to threads and child processes.",
+      "Other changes include SlidingWindowHistogram in perf_hooks, loading FFI libraries from a mounted VFS and binding undefined to NULL in node:sqlite. Hybrid KEMs were added to Web Cryptography, and there are QUIC, HTTP/3 and zlib zstd fixes.",
+      "Full details: https://nodejs.org/en/blog/release/v26.10.0"
+    ]
+  },
+  {
+    "slug": "node-js-22-23-3-lts-jod",
+    "title": "Node.js 22.23.3 (LTS Jod)",
+    "excerpt": "A maintenance LTS release with dependency refreshes: root certificates to NSS 3.125, OpenSSL 3.5.8, Undici 6.28.1, ICU 78.3, npm 10.9.9 and timezone data 2026c.",
+    "category": "Open Source News",
+    "date": "2026-09-23",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "gold",
+    "image": "/news/nodejs.png",
+    "content": [
+      "A maintenance LTS release with dependency refreshes: root certificates to NSS 3.125, OpenSSL 3.5.8, Undici 6.28.1, ICU 78.3, npm 10.9.9 and timezone data 2026c.",
+      "It adds Node-API support for SharedArrayBuffer in napi_create_typedarray, and fixes a use-after-free in HTTP/2 around RST_STREAM, along with URL setter and Windows task-runner fixes.",
+      "Full details: https://nodejs.org/en/blog/release/v22.23.3"
+    ]
+  },
+  {
+    "slug": "node-js-26-11-0-current",
+    "title": "Node.js 26.11.0 (Current)",
+    "excerpt": "Node.js 26.11.0 adds Buffer.stringLength(), http.isValidHeaderName() and isValidHeaderValue(), an HTTP/2 connectionWindowSize option, a --process-timeout flag, and histogram diff() and snapshot(). process.ref and unre...",
+    "category": "Open Source News",
+    "date": "2026-10-07",
+    "author": "BIOS Founding Team",
+    "readTime": "2 min read",
+    "accent": "white",
+    "image": "/news/nodejs.png",
+    "content": [
+      "Node.js 26.11.0 adds Buffer.stringLength(), http.isValidHeaderName() and isValidHeaderValue(), an HTTP/2 connectionWindowSize option, a --process-timeout flag, and histogram diff() and snapshot(). process.ref and unref graduate to stable, and Alpine Linux is promoted to tier 2.",
+      "Dependencies move to OpenSSL 3.5.9, npm 11.20.0 and undici 8.11.2. A same-day patch, 26.11.1, has no new features and only reverts three build and doc tooling commits.",
+      "Full details: https://nodejs.org/en/blog/release/v26.11.0"
+    ]
   }
 ]
